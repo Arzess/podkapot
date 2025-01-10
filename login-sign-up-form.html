@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Minimalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/additional.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <!-- Adaptive -->
+    <link rel="stylesheet" href="/styles/additional-adaptive.css" />
+    <title>Account</title>
+  </head>
+  <body>
+    <form class="header-modal shown authorisation-form sign-in">
+      <div class="top">
+        <p class="sub-heading">Вхід</p>
+        <button type="button">
+          <img src="./images/icons/close.svg" alt="close icon" />
+        </button>
+      </div>
+      <!-- Sign in section -->
+      <main class="sign-in">
+        <ul class="inputs-list">
+          <li>
+            <input type="email" placeholder="E-mail" />
+          </li>
+          <li>
+            <input type="password" placeholder="Пароль" />
+          </li>
+          <li class="sign-in-help">
+            <a href="#" class="small-text">Забули пароль?</a>
+          </li>
+        </ul>
+      </main>
+      <!-- Sign up section -->
+      <main class="sign-up">
+        <ul class="switch">
+          <li>
+            <button type="button"></button>
+          </li>
+        </ul>
+        <section class="seller"></section>
+        <section class="buyer"></section>
+      </main>
+      <!-- Options -->
+      <section class="options-section">
+        <button class="primary-button">Зайти</button>
+        <div class="or">
+          <p class="small-text">Або</p>
+        </div>
+        <button class="primary-button outline">
+          <img src="./images/icons/google-icon.svg" alt="google icon" />
+          <p class="main-text">Продовжити з Google</p>
+        </button>
+      </section>
+      <div class="help">
+        <p class="small-text">
+          Ще не зареєстровані?
+          <span><a href="#" class="small-text"> Створити акаунт</a></span>
+        </p>
+      </div>
+    </form>
+  </body>
+  <script src="scripts/script.js"></script>
+</html>

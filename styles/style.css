@@ -29,7 +29,10 @@
 body{
     font-family: Inter, sans-serif;
 }
-
+body.steady{
+    height: 100vh;
+    overflow: hidden;
+}
 main{
     position: relative;
 }
@@ -316,7 +319,7 @@ form label{
     font-size: 0.75rem;
     line-height: 1.5;
 }
-form input[type="text"], form input[type="email"], form input[type="tel"]{
+form input[type="text"], form input[type="email"], form input[type="tel"], form input[type="password"]{
     padding: 0.5rem 0.75rem;
     border-radius: 0.25rem;
     border: 1px solid rgba(0, 0, 0, 0.23);
@@ -902,12 +905,16 @@ input.wrong~p{
 .shopping-cart .shopping-cart-container .products:nth-last-of-type(3) .apply-button{
     display: flex;
 }
-
+.shopping-cart::-webkit-scrollbar{
+    display: none;
+}
 .shopping-cart{
     display: none;
     /* max-width: 1120px; */
     max-width: 1150px;
     width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
     z-index: 10;
     background-color: #fff;
     position: absolute;
@@ -3586,4 +3593,51 @@ align-self: stretch;
 }
 .copyright p{
     color: var(--text-color-2);
+}
+
+
+/* Authorisation form */
+.authorisation-form input{
+    width: 100%;
+}
+.authorisation-form{
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    padding: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;    
+    
+    border-radius: 8px;
+    background: #FFF;
+    
+    /* 1 */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+.authorisation-form .top .sub-heading{
+    font-weight: 700;
+}
+.authorisation-form section, .authorisation-form main{
+    width: 100%;
+}
+.authorisation-form .inputs-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.authorisation-form .sign-in-help{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.authorisation-form .top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
 }

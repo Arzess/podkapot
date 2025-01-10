@@ -187,12 +187,14 @@ shoppingCartButton.forEach(b => {
     b.addEventListener("click", () => {
         closeAllModals();
         shoppingCart.classList.add("shown");
+        document.body.classList.add("steady");
         updateOverlay();
     });
 })
 
 closeCart.addEventListener("click", () => {
     shoppingCart.classList.remove("shown");
+    document.body.classList.remove("steady");
     updateOverlay(); 
 });
 
@@ -210,6 +212,7 @@ footerSections.forEach(footerSection => {
 document.addEventListener("keydown", (e)=>{
     if (e.key === "Escape"){
         closeAllModals();
+        document.body.classList.remove("steady");
     }
 })
 // To leave modal if clicked somewhere else
@@ -219,6 +222,7 @@ document.addEventListener("click", (e) => {
     const clickedInsideModal = Array.from(openedModals).some(modal => modal.contains(e.target));
     if (!clickedInsideModal && !e.target.closest("button")) {
         closeAllModals();
+        document.body.classList.remove("steady");
     }
     opened = Array.from(openedModals).some(modal => modal.classList.contains("shown"));
 });
