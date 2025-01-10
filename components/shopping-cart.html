@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Minimalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/additional.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <!-- Adaptive -->
+    <link rel="stylesheet" href="/styles/additional-adaptive.css" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <!-- Shopping cart overlay -->
+    <div class="shopping-cart shown">
+      <nav class="shopping-cart-nav">
+        <div class="cart">
+          <img src="./images/icons/shopping-cart.svg" alt="shopping-cart" />
+          <h6 class="sub-minor-heading">Кошик</h6>
+        </div>
+        <button>
+          <img src="./images/icons/cross.svg" alt="cross icons" />
+        </button>
+      </nav>
+      <div class="shopping-cart-container">
+        <!-- Empty -->
+        <section class="empty-section">
+          <div class="shopping-cart-image-container">
+            <img src="./images/shopping-cart.png" alt="shopping cart" />
+          </div>
+          <div class="shopping-cart-text-container">
+            <h3 class="section-heading">Ваш кошик порожній</h3>
+            <p class="text-main">Але це не пізно виправити</p>
+          </div>
+          <button class="primary-button">
+            <img src="./images/icons/grid.svg" alt="grid icons" />Каталог
+          </button>
+        </section>
+        <!-- Product -->
+        <section class="products">
+          <div class="shop">
+            <img src="./images/tesla-company.png" alt="tesla" />
+            <p class="text-main">Інтернет-магазин Ducato.in.ua</p>
+            <p class="fill-tag nitro">Maximum</p>
+          </div>
+          <!-- Products -->
+          <div class="product">
+            <div class="product-desc-image product-element">
+              <img
+                src="./images/tires.png"
+                alt="tires"
+                class="product-img product-element"
+              />
+              <div class="product-desc">
+                <p class="text-main">
+                  Комплект сцепления на Peugeot Partner MєдфлЛЗФЧЬФЬЧ
+                  ісісіфсфісісфісфумімкі
+                </p>
+                <p class="small-text">CT-8-8090A</p>
+              </div>
+            </div>
+            <div class="price-per-piece product-element">
+              <p class="text-main">4896.95 Грн/Шт</p>
+            </div>
+            <div class="count product-element">
+              <div class="count-container">
+                <button class="count-less">
+                  <img src="./images/-.svg" alt="less button" />
+                </button>
+                <p class="count-text">1</p>
+                <button class="count-more">
+                  <img src="./images/+.svg" alt="plus button" />
+                </button>
+              </div>
+            </div>
+            <div class="quantity product-element">
+              <p class="text-main">6 шт</p>
+            </div>
+            <div class="total-price product-element">
+              <p class="text-main">4896.95 Грн</p>
+            </div>
+            <button class="remove">
+              <img
+                src="./images/icons/cart-remove.svg"
+                alt="remove from the cart icon"
+              />
+            </button>
+          </div>
+          <div class="product">
+            <div class="product-desc-image product-element">
+              <img
+                src="./images/tires.png"
+                alt="tires"
+                class="product-img product-element"
+              />
+              <div class="product-desc">
+                <p class="text-main">
+                  Комплект сцепления на Peugeot Partner MєдфлЛЗФЧЬФЬЧ
+                  ісісіфсфісісфісфумімкі
+                </p>
+                <p class="small-text">CT-8-8090A</p>
+              </div>
+            </div>
+            <div class="price-per-piece product-element no-wrap">
+              <p class="text-main">4896.95 Грн/Шт</p>
+            </div>
+            <div class="count product-element">
+              <div class="count-container">
+                <button class="count-less">
+                  <img src="./images/-.svg" alt="less button" />
+                </button>
+                <p class="count-text">1</p>
+                <button class="count-more">
+                  <img src="./images/+.svg" alt="plus button" />
+                </button>
+              </div>
+            </div>
+            <div class="quantity product-element no-wrap">
+              <p class="text-main">6 шт</p>
+            </div>
+            <div class="total-price product-element no-wrap">
+              <p class="text-main">4896.95 Грн</p>
+            </div>
+            <button class="remove">
+              <img
+                src="./images/icons/cart-remove.svg"
+                alt="remove from the cart icon"
+              />
+            </button>
+          </div>
+          <div class="checkout">
+            <div class="price">
+              <p class="text-main">Всього :</p>
+              <p class="section-heading">76 900.00 Грн</p>
+            </div>
+            <button class="primary-button">Оформити замовлення</button>
+          </div>
+        </section>
+        <!-- Apply -->
+        <section class="application-section">
+          <!-- Application nav -->
+          <nav class="application-nav">
+            <a href="#"
+              ><img
+                src="./images/icons/arrow-right.svg"
+                alt="arrows"
+                class="invert-x"
+            /></a>
+            <p class="section-heading">Оформленя замовлення</p>
+          </nav>
+          <!-- Product -->
+          <section class="products">
+            <div class="shop">
+              <img src="./images/tesla-company.png" alt="tesla" />
+              <p class="text-main">Інтернет-магазин Ducato.in.ua</p>
+              <p class="fill-tag nitro">Maximum</p>
+            </div>
+            <!-- Products -->
+            <div class="product">
+              <div class="product-desc-image product-element">
+                <img
+                  src="./images/tires.png"
+                  alt="tires"
+                  class="product-img product-element"
+                />
+                <div class="product-desc">
+                  <p class="text-main">
+                    Комплект сцепления на Peugeot Partner MєдфлЛЗФЧЬФЬЧ
+                    ісісіфсфісісфісфумімкі
+                  </p>
+                  <p class="small-text">CT-8-8090A</p>
+                </div>
+              </div>
+              <div class="price-per-piece product-element">
+                <p class="text-main">4896.95 Грн/Шт</p>
+              </div>
+              <div class="quantity product-element">
+                <p class="text-main">6 шт</p>
+              </div>
+              <div class="total-price product-element">
+                <p class="text-main">4896.95 Грн</p>
+              </div>
+              <button class="remove">
+                <img
+                  src="./images/icons/cart-remove.svg"
+                  alt="remove from the cart icon"
+                />
+              </button>
+            </div>
+            <div class="checkout">
+              <div class="price">
+                <p class="text-main">Всього :</p>
+                <p class="section-heading">76 900.00 Грн</p>
+              </div>
+            </div>
+          </section>
+          <!-- Application form -->
+          <form action="application">
+            <section class="application-form-section">
+              <div class="step">
+                <p class="counter">1</p>
+                <h4 class="sub-section-heading">Контактні дані</h4>
+              </div>
+              <ul class="application-section-list">
+                <li class="condition">
+                  <input
+                    type="text"
+                    placeholder="Ваше ім’я та Прізвище"
+                    class="main-text"
+                  />
+                </li>
+                <li class="condition">
+                  <input
+                    type="text"
+                    class="main-text"
+                    placeholder="Ваш e-mail"
+                  />
+                </li>
+                <li class="condition">
+                  <input
+                    type="text"
+                    class="main-text"
+                    placeholder="Ваш телефон"
+                  />
+                </li>
+              </ul>
+            </section>
+            <section class="application-form-section">
+              <div class="step">
+                <p class="counter">2</p>
+                <h4 class="sub-section-heading">Доставка і оплата</h4>
+              </div>
+              <ul class="application-section-list">
+                <li class="condition">
+                  <label for="delivery">Спосіб доставки</label>
+                  <select name="" id="delivery" class="main-text">
+                    <option value="placeholder" class="main-text">
+                      -Спосіб доставки-
+                    </option>
+                  </select>
+                </li>
+                <li class="condition">
+                  <input
+                    type="text"
+                    class="main-text"
+                    placeholder="Ваш e-mail"
+                  />
+                </li>
+                <li class="condition">
+                  <label for="payment">Спосіб оплати</label>
+                  <select name="" id="payment" class="main-text">
+                    <option value="placeholder">-Спосіб оплати-</option>
+                  </select>
+                </li>
+              </ul>
+            </section>
+            <section class="application-form-section">
+              <div class="step">
+                <p class="counter">3</p>
+                <h4 class="sub-section-heading">Коментар до замовлення</h4>
+              </div>
+              <ul class="application-section-list">
+                <li class="condition">
+                  <label for="comment">Коментар</label>
+                  <div class="comment-container">
+                    <textarea
+                      class="main-text"
+                      id="comment"
+                      rows="4"
+                      cols="40"
+                      placeholder="Параметри доставки / оплати. Наприклад склад Нової Пошти / Накладений платіж"
+                    ></textarea>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </form>
+          <button type="submit" class="primary-button">
+            Оформити замовлення
+          </button>
+        </section>
+        <!-- Sucess -->
+        <section class="success-section">
+          <div class="shopping-cart-image-container">
+            <img src="./images/success.svg" alt="sucess" />
+          </div>
+          <div class="shopping-cart-text-container">
+            <h3 class="section-heading">Дякуємо за замовлення!</h3>
+            <p class="text-main">
+              Повідомлення про деталі поупки прийде вам на елетронну адресу
+            </p>
+          </div>
+          <button class="primary-button">Повернутись до покупок</button>
+        </section>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/script.js"></script>
+</html>

@@ -1,0 +1,3044 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Minimalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- Adaptive -->
+    <link rel="stylesheet" href="styles/adaptive.css" />
+    <title>Product</title>
+  </head>
+  <body>
+    <!-- Shopping cart overlay -->
+    <div class="shopping-cart header-modal">
+      <nav class="shopping-cart-nav">
+        <div class="cart">
+          <img src="./images/icons/shopping-cart.svg" alt="shopping-cart" />
+          <h6 class="sub-minor-heading">Кошик</h6>
+        </div>
+        <button>
+          <img src="./images/icons/cross.svg" alt="cross icons" />
+        </button>
+      </nav>
+      <div class="shopping-cart-container">
+        <!-- Empty -->
+        <section class="empty-section">
+          <div class="shopping-cart-image-container">
+            <img src="./images/shopping-cart.png" alt="shopping cart" />
+          </div>
+          <div class="shopping-cart-text-container">
+            <h3 class="section-heading">Ваш кошик порожній</h3>
+            <p class="text-main">Але це не пізно виправити</p>
+          </div>
+          <button class="primary-button">
+            <img src="./images/icons/grid.svg" alt="grid icons" />Каталог
+          </button>
+        </section>
+        <!-- Product -->
+        <section class="products">
+          <div class="products-inner-container">
+            <div class="shop">
+              <img src="./images/tesla-company.png" alt="tesla" />
+              <p class="text-main">Інтернет-магазин Ducato.in.ua</p>
+              <p class="fill-tag nitro">Maximum</p>
+            </div>
+            <!-- Products -->
+            <div class="product">
+              <div class="product-desc-image product-element">
+                <img
+                  src="./images/tires.png"
+                  alt="tires"
+                  class="product-img product-element"
+                />
+                <div class="product-desc">
+                  <p class="text-main">
+                    Комплект сцепления на Peugeot Partner MєдфлЛЗФЧЬФЬЧ
+                    ісісіфсфісісфісфумімкі
+                  </p>
+                  <p class="small-text">CT-8-8090A</p>
+                </div>
+              </div>
+              <div class="price-per-piece product-element">
+                <p class="text-main">4896.95 Грн/Шт</p>
+              </div>
+              <div class="count product-element">
+                <div class="count-container">
+                  <button class="count-less inactive">
+                    <img src="./images/-.svg" alt="less button" />
+                  </button>
+                  <input
+                    type="number"
+                    class="count-text"
+                    value="1"
+                    min="1"
+                    oninput="checkInputCounter(this)"
+                    onchange="checkSaved(this)"
+                  />
+                  <button class="count-more">
+                    <img src="./images/+.svg" alt="plus button" />
+                  </button>
+                </div>
+              </div>
+              <div class="quantity product-element">
+                <p class="text-main">6 шт</p>
+              </div>
+              <div class="total-price product-element">
+                <p class="text-main">4896.95 Грн</p>
+              </div>
+              <button class="remove">
+                <img
+                  src="./images/icons/cart-remove.svg"
+                  alt="remove from the cart icon"
+                />
+              </button>
+            </div>
+            <div class="product">
+              <div class="product-desc-image product-element">
+                <img
+                  src="./images/tires.png"
+                  alt="tires"
+                  class="product-img product-element"
+                />
+                <div class="product-desc">
+                  <p class="text-main">
+                    Комплект сцепления на Peugeot Partner MєдфлЛЗФЧЬФЬЧ
+                    ісісіфсфісісфісфумімкі
+                  </p>
+                  <p class="small-text">CT-8-8090A</p>
+                </div>
+              </div>
+              <div class="price-per-piece product-element no-wrap">
+                <p class="text-main">4896.95 Грн/Шт</p>
+              </div>
+              <div class="count product-element">
+                <div class="count-container">
+                  <button class="count-less inactive">
+                    <img src="./images/-.svg" alt="less button" />
+                  </button>
+                  <input
+                    type="number"
+                    class="count-text"
+                    value="1"
+                    min="1"
+                    oninput="checkInputCounter(this)"
+                    onchange="checkSaved(this)"
+                  />
+                  <button class="count-more">
+                    <img src="./images/+.svg" alt="plus button" />
+                  </button>
+                </div>
+              </div>
+              <div class="quantity product-element no-wrap">
+                <p class="text-main">6 шт</p>
+              </div>
+              <div class="total-price product-element no-wrap">
+                <p class="text-main">4896.95 Грн</p>
+              </div>
+              <button class="remove">
+                <img
+                  src="./images/icons/cart-remove.svg"
+                  alt="remove from the cart icon"
+                />
+              </button>
+            </div>
+            <div class="checkout">
+              <div class="price">
+                <p class="text-main">Всього :</p>
+                <p class="section-heading">76 900.00 Грн</p>
+              </div>
+              <button class="primary-button apply-button">
+                Оформити замовлення
+              </button>
+            </div>
+          </div>
+          <button class="primary-button mobile apply-button">
+            Оформити замовлення
+          </button>
+        </section>
+        <section class="products">
+          <div class="products-inner-container">
+            <div class="shop">
+              <img src="./images/tesla-company.png" alt="tesla" />
+              <p class="text-main">Інтернет-магазин Ducato.in.ua</p>
+              <p class="fill-tag nitro">Maximum</p>
+            </div>
+            <!-- Products -->
+            <div class="product">
+              <div class="product-desc-image product-element">
+                <img
+                  src="./images/tires.png"
+                  alt="tires"
+                  class="product-img product-element"
+                />
+                <div class="product-desc">
+                  <p class="text-main">
+                    Комплект сцепления на Peugeot Partner MєдфлЛЗФЧЬФЬЧ
+                    ісісіфсфісісфісфумімкі
+                  </p>
+                  <p class="small-text">CT-8-8090A</p>
+                </div>
+              </div>
+              <div class="price-per-piece product-element">
+                <p class="text-main">4896.95 Грн/Шт</p>
+              </div>
+              <div class="count product-element">
+                <div class="count-container">
+                  <button class="count-less inactive">
+                    <img src="./images/-.svg" alt="less button" />
+                  </button>
+                  <input
+                    type="number"
+                    class="count-text"
+                    value="1"
+                    min="1"
+                    oninput="checkInputCounter(this)"
+                    onchange="checkSaved(this)"
+                  />
+                  <button class="count-more">
+                    <img src="./images/+.svg" alt="plus button" />
+                  </button>
+                </div>
+              </div>
+              <div class="quantity product-element">
+                <p class="text-main">6 шт</p>
+              </div>
+              <div class="total-price product-element">
+                <p class="text-main">4896.95 Грн</p>
+              </div>
+              <button class="remove">
+                <img
+                  src="./images/icons/cart-remove.svg"
+                  alt="remove from the cart icon"
+                />
+              </button>
+            </div>
+            <div class="product">
+              <div class="product-desc-image product-element">
+                <img
+                  src="./images/tires.png"
+                  alt="tires"
+                  class="product-img product-element"
+                />
+                <div class="product-desc">
+                  <p class="text-main">
+                    Комплект сцепления на Peugeot Partner MєдфлЛЗФЧЬФЬЧ
+                    ісісіфсфісісфісфумімкі
+                  </p>
+                  <p class="small-text">CT-8-8090A</p>
+                </div>
+              </div>
+              <div class="price-per-piece product-element no-wrap">
+                <p class="text-main">4896.95 Грн/Шт</p>
+              </div>
+              <div class="count product-element">
+                <div class="count-container">
+                  <button class="count-less inactive">
+                    <img src="./images/-.svg" alt="less button" />
+                  </button>
+                  <input
+                    type="number"
+                    class="count-text"
+                    value="1"
+                    min="1"
+                    oninput="checkInputCounter(this)"
+                    onchange="checkSaved(this)"
+                  />
+                  <button class="count-more">
+                    <img src="./images/+.svg" alt="plus button" />
+                  </button>
+                </div>
+              </div>
+              <div class="quantity product-element no-wrap">
+                <p class="text-main">6 шт</p>
+              </div>
+              <div class="total-price product-element no-wrap">
+                <p class="text-main">4896.95 Грн</p>
+              </div>
+              <button class="remove">
+                <img
+                  src="./images/icons/cart-remove.svg"
+                  alt="remove from the cart icon"
+                />
+              </button>
+            </div>
+            <div class="checkout">
+              <div class="price">
+                <p class="text-main">Всього :</p>
+                <p class="section-heading">76 900.00 Грн</p>
+              </div>
+              <button class="primary-button apply-button">
+                Оформити замовлення
+              </button>
+            </div>
+          </div>
+          <button class="primary-button mobile apply-button">
+            Оформити замовлення
+          </button>
+        </section>
+        <!-- Apply -->
+        <section class="application-section">
+          <!-- Application nav -->
+          <nav class="application-nav">
+            <a href="#"
+              ><img
+                src="./images/icons/arrow-right.svg"
+                alt="arrows"
+                class="invert-x"
+            /></a>
+            <p class="section-heading">Оформленя замовлення</p>
+          </nav>
+          <!-- Product -->
+          <section class="products">
+            <div class="inner-products-container">
+              <div class="shop">
+                <img src="./images/tesla-company.png" alt="tesla" />
+                <p class="text-main">Інтернет-магазин Ducato.in.ua</p>
+                <p class="fill-tag nitro">Maximum</p>
+              </div>
+              <!-- Products -->
+              <div class="product">
+                <div class="product-desc-image product-element">
+                  <img
+                    src="./images/tires.png"
+                    alt="tires"
+                    class="product-img product-element"
+                  />
+                  <div class="product-desc">
+                    <p class="text-main">
+                      Комплект сцепления на Peugeot Partner MєдфлЛЗФЧЬФЬЧ
+                      ісісіфсфісісфісфумімкі
+                    </p>
+                    <p class="small-text">CT-8-8090A</p>
+                  </div>
+                </div>
+                <div class="price-per-piece product-element">
+                  <p class="text-main">4896.95 Грн/Шт</p>
+                </div>
+                <div class="quantity product-element">
+                  <p class="text-main">6 шт</p>
+                </div>
+                <div class="total-price-mobile-counter product-element">
+                  <div class="count mobile">
+                    <div class="count-container">
+                      <button class="count-less inactive">
+                        <img src="./images/mobile-.svg" alt="less button" />
+                      </button>
+                      <input
+                        type="number"
+                        class="count-text"
+                        value="1"
+                        min="1"
+                        oninput="checkInputCounter(this)"
+                        onchange="checkSaved(this)"
+                      />
+                      <button class="count-more">
+                        <img src="./images/mobile+.svg" alt="plus button" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="total-price">
+                    <p class="text-main">4896.95 Грн</p>
+                  </div>
+                </div>
+                <!-- <button class="remove">
+                  <img
+                    src="./images/icons/cart-remove.svg"
+                    alt="remove from the cart icon"
+                  />
+                </button> -->
+              </div>
+              <div class="checkout">
+                <div class="price">
+                  <p class="text-main">Всього :</p>
+                  <p class="section-heading">76 900.00 Грн</p>
+                </div>
+              </div>
+            </div>
+            <button class="primary-button">Оформити замовлення</button>
+          </section>
+          <!-- Application form -->
+          <form class="application">
+            <section class="application-form-section">
+              <div class="step">
+                <p class="counter">1</p>
+                <h4 class="sub-section-heading">Контактні дані</h4>
+              </div>
+              <ul class="application-section-list">
+                <li class="condition">
+                  <div class="input-container">
+                    <p class="small-text">Invalid input</p>
+                    <input
+                      type="text"
+                      placeholder="Ваше ім’я та Прізвище"
+                      class="main-text"
+                    />
+                  </div>
+                </li>
+                <li class="condition">
+                  <div class="input-container">
+                    <p class="small-text">Invalid input</p>
+                    <input
+                      type="text"
+                      class="main-text"
+                      placeholder="Ваш e-mail"
+                    />
+                  </div>
+                </li>
+                <li class="condition">
+                  <div class="input-container">
+                    <p class="small-text">Invalid input</p>
+                    <input
+                      type="text"
+                      class="main-text"
+                      placeholder="Ваш телефон"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="application-form-section">
+              <div class="step">
+                <p class="counter">2</p>
+                <h4 class="sub-section-heading">Доставка і оплата</h4>
+              </div>
+              <ul class="application-section-list">
+                <li class="condition">
+                  <label for="delivery">Спосіб доставки</label>
+                  <select name="" id="delivery" class="main-text">
+                    <option value="placeholder" class="main-text">
+                      -Спосіб доставки-
+                    </option>
+                  </select>
+                </li>
+                <li class="condition">
+                  <div class="input-container">
+                    <p class="small-text">Invalid input</p>
+                    <input
+                      type="text"
+                      class="main-text"
+                      placeholder="Ваш e-mail"
+                    />
+                  </div>
+                </li>
+                <li class="condition">
+                  <label for="payment">Спосіб оплати</label>
+                  <select name="" id="payment" class="main-text">
+                    <option value="placeholder">-Спосіб оплати-</option>
+                  </select>
+                </li>
+              </ul>
+            </section>
+            <section class="application-form-section">
+              <div class="step">
+                <p class="counter">3</p>
+                <h4 class="sub-section-heading">Коментар до замовлення</h4>
+              </div>
+              <ul class="application-section-list">
+                <li class="condition">
+                  <label for="comment">Коментар</label>
+                  <div class="comment-container">
+                    <textarea
+                      class="main-text"
+                      id="comment"
+                      rows="4"
+                      cols="40"
+                      placeholder="Параметри доставки / оплати. Наприклад склад Нової Пошти / Накладений платіж"
+                    ></textarea>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </form>
+          <button type="submit" class="primary-button">
+            Оформити замовлення
+          </button>
+        </section>
+        <!-- Sucess -->
+        <section class="success-section">
+          <div class="shopping-cart-image-container">
+            <img src="./images/success.svg" alt="sucess" />
+          </div>
+          <div class="shopping-cart-text-container">
+            <h3 class="section-heading">Дякуємо за замовлення!</h3>
+            <p class="text-main">
+              Повідомлення про деталі поупки прийде вам на елетронну адресу
+            </p>
+          </div>
+          <button class="primary-button">Повернутись до покупок</button>
+        </section>
+      </div>
+    </div>
+    <!-- Catalog overlay -->
+    <div class="header-modal catalog-modal">
+      <div class="catalog-header mobile">
+        <div class="get-back-heading">
+          <button class="get-back">
+            <img
+              src="./images/icons/chevron-left.svg"
+              alt="chevron left icon"
+            />
+          </button>
+          <h6 class="sub-minor-heading">Каталог товарів</h6>
+        </div>
+        <button class="close">
+          <img src="./images/icons/cross.svg" alt="cross icon" />
+        </button>
+      </div>
+      <div class="catalog-inner">
+        <ul class="category-list">
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Інтерєр авто</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">АКПП і КПП</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li class="selected">
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Гальмівна система</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Двері, Багажники і Компоненти</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Деталі двигуна</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Додаткове обладнання і Тюнінг</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Електрообладнання двигуна</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Електрообладнання кузова</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Запчастини для спецтехніки</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Колеса та Шини</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Кондиціонер, Обігрівач, Вентиляція</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+          <li>
+            <div class="category-img-name">
+              <img src="./images/icons/fan.svg" alt="fan icon" />
+              <p class="main-text">Кузов</p>
+            </div>
+            <img
+              src="./images/icons/chevron-down.svg"
+              alt="chevron down icon"
+            />
+          </li>
+        </ul>
+        <ul class="category-inside-list">
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомагнітола</a></li>
+          <li><a href="#" class="main-text">Автомобільні коврики</a></li>
+          <li><a href="#" class="main-text">Авточохли і накидки</a></li>
+          <li><a href="#" class="main-text">Бардачок</a></li>
+          <li><a href="#" class="main-text">Внутрішні компоненти кузова</a></li>
+          <li><a href="#" class="main-text">Дзеркало заднього виду</a></li>
+          <li><a href="#" class="main-text">Замок бардачка</a></li>
+          <li><a href="#" class="main-text">Звукоізоляція</a></li>
+          <li><a href="#" class="main-text">Карта багажного відсіку</a></li>
+          <li>
+            <a href="#" class="main-text">Переднатягувач ременя безпеки</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="menu-logo">
+          <button class="menu">
+            <img src="./images/icons/burger-menu.svg" alt="burger menu icon" />
+          </button>
+          <div class="logo">
+            <img src="./images/icons/podkapot-logo.svg" alt="Pod Kapot logo" />
+          </div>
+        </div>
+        <button class="catalog primary-button">
+          <img src="./images/icons/grid.svg" alt="grid icon" />
+          Каталог
+        </button>
+        <div class="search-bar">
+          <input
+            type="text"
+            class="search-bar-input"
+            placeholder="Введіть назву або код запчастини"
+          />
+          <button class="search">
+            <img src="./images/icons/search.svg" alt="magnifying glass icon" />
+          </button>
+        </div>
+        <button class="find-part-button primary-button">
+          <img
+            src="./images/icons/lightning.svg"
+            alt="lightning bolt icon"
+          />Знайти запчастину
+        </button>
+        <ul class="header-list">
+          <li>
+            <button class="language">
+              <img src="./images/icons/globe.svg" alt="globe icon" />
+            </button>
+            <!-- Language -->
+            <div class="header-modal language-modal">
+              <ul class="language-list">
+                <li>
+                  <p class="minor-heading">UA</p>
+                </li>
+                <li>
+                  <p class="minor-heading">EN</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <button class="account">
+              <img src="./images/icons/person.svg" alt="person icon" />
+            </button>
+            <div class="header-modal account-modal">
+              <!-- Signed in -->
+              <ul class="account-list logged-in">
+                <li class="account-details">
+                  <img src="./images/avatar.png" alt="avatar" />
+                  <p class="sub-minor-heading">Олександр Потужненко</p>
+                </li>
+                <li>
+                  <button class="log-out">
+                    <img
+                      src="./images/icons/download.svg"
+                      alt="download icon"
+                    />
+                    <p class="big-button">Вихід</p>
+                  </button>
+                </li>
+              </ul>
+              <!-- Signed out -->
+              <ul class="account-list sign-out">
+                <li>
+                  <button class="primary-button small-button">Вхід</button>
+                </li>
+                <li>
+                  <button class="primary-button outline small-button">
+                    Реєстрація
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <button class="cart">
+              <img
+                src="./images/icons/shopping-cart.svg"
+                alt="shopping cart icon"
+              />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Sidebar menu -->
+    <aside class="sidebar-menu no-scroll header-modal">
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <img src="./images/icons/podkapot-logo.svg" alt="Pod Kapot logo" />
+          </div>
+          <ul class="header-list">
+            <li>
+              <button class="language">
+                <img src="./images/icons/globe.svg" alt="globe" />
+              </button>
+            </li>
+            <li>
+              <button class="account">
+                <img src="./images/icons/person.svg" alt="person icon" />
+              </button>
+            </li>
+            <li>
+              <button class="cart">
+                <img
+                  src="./images/icons/shopping-cart.svg"
+                  alt="shopping cart icon"
+                />
+              </button>
+            </li>
+          </ul>
+          <button class="close">
+            <img src="./images/icons/close.svg" alt="close icon" />
+          </button>
+        </div>
+      </header>
+      <section class="options">
+        <div class="container">
+          <ul class="options-list">
+            <li>
+              <div class="search-bar">
+                <input
+                  type="text"
+                  class="search-bar-input"
+                  placeholder="Введіть назву або код запчастини"
+                />
+                <button class="search">
+                  <img
+                    src="./images/icons/search.svg"
+                    alt="magnifying glass icon"
+                  />
+                </button>
+              </div>
+            </li>
+            <li>
+              <button class="catalog primary-button">
+                <img src="./images/icons/grid.svg" alt="grid icon" />
+                Каталог
+              </button>
+            </li>
+            <li>
+              <button class="find-part-button primary-button">
+                <img
+                  src="./images/icons/lightning.svg"
+                  alt="lightning bolt icon"
+                />Знайти запчастину
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="blocks">
+            <div class="footer-block">
+              <p class="footer-category">Покупцям</p>
+              <ul class="footer-block-list">
+                <li>
+                  <a href="#"><p class="main-text">Довідка покупцям</p></a>
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Нові запчастини</p></a>
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Авторозбірки України</p></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p class="main-text">Політика конфіденційності</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Користувацька угода</p></a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-block">
+              <p class="footer-category">Продавцям</p>
+              <ul class="footer-block-list">
+                <li>
+                  <a href="#"><p class="main-text">Довідка продавцям</p></a>
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Реєстрація продавця</p></a>
+                </li>
+                <li>
+                  <a href="services.html"
+                    ><p class="main-text">Створити сайт</p></a
+                  >
+                </li>
+                <li>
+                  <a href="plans.html"><p class="main-text">Тарифи</p></a>
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Рейтинг заявок</p></a>
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Звязок для продавців</p></a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="footer-block">
+              <p class="footer-category">Партнери</p>
+              <ul class="footer-block-list">
+                <li>
+                  <a href="#"><p class="main-text">Agrobiz.net</p></a>
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Bigopt.com</p></a>
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Lvivmarket.net</p></a>
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Navolyni.com</p></a>
+                </li>
+                <li>
+                  <a href="#"><p class="main-text">Paulownia.energy</p></a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+
+          <a href="#" class="afu-donation">
+            <img src="./images/icons/heart.svg" alt="heart icon" />
+            Допомога ЗСУ
+          </a>
+          <div class="pod-kapot footer-block">
+            <!-- Logo and description -->
+            <div class="logo-desc">
+              <img
+                src="./images/icons/podkapot-logo.svg"
+                alt="Pod Kapot logo"
+                class="logo"
+              />
+              <p class="main-text">
+                Маркетплейс ПодКапот - сервіс пошуку запчастин та платформа зі
+                створення сайтів автотематики
+              </p>
+            </div>
+            <!-- Social networks -->
+            <p class="footer-category">Ми у соціальних мережах</p>
+            <ul class="social-list">
+              <li class="social-network">
+                <a href="#"
+                  ><img src="./images/icons/instagram.png" alt="instagram icon"
+                /></a>
+              </li>
+              <li class="social-network">
+                <a href="#"
+                  ><img src="./images/icons/youtube.png" alt="youtube icon"
+                /></a>
+              </li>
+              <li class="social-network">
+                <a href="#"
+                  ><img src="./images/icons/telegram.png" alt="telegram icon"
+                /></a>
+              </li>
+              <li class="social-network">
+                <a href="#"
+                  ><img src="./images/icons/viber.png" alt="viber icon"
+                /></a>
+              </li>
+              <li class="social-network">
+                <a href="#"
+                  ><img src="./images/icons/facebook.png" alt="facebook icon"
+                /></a>
+              </li>
+              <li class="social-network">
+                <a href="#"
+                  ><img src="./images/icons/blogger.png" alt="blogger icon"
+                /></a>
+              </li>
+            </ul>
+            <ul class="footer-info-list mobile">
+              <li class="info-block">
+                <div class="info-block-top">
+                  <h6 class="sub-minor-heading">Покупцям</h6>
+                  <img
+                    src="./images/icons/chevron-down.svg"
+                    alt="chevron down"
+                  />
+                </div>
+                <ul class="footer-info-block-list">
+                  <li>
+                    <a href="#"><p class="main-text">Довідка покупцям</p></a>
+                  </li>
+                  <li>
+                    <a href="#"><p class="main-text">Нові запчастини</p></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p class="main-text">Авторозбірки України</p></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p class="main-text">Політика конфіденційності</p></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><p class="main-text">Користувацька угода</p></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="info-block">
+                <div class="info-block-top">
+                  <h6 class="sub-minor-heading">Продавцям</h6>
+                  <img
+                    src="./images/icons/chevron-down.svg"
+                    alt="chevron down"
+                  />
+                </div>
+                <ul class="footer-info-block-list">
+                  <li>
+                    <a href="#"><p class="main-text">Довідка покупцям</p></a>
+                  </li>
+                  <li>
+                    <a href="#"><p class="main-text">Нові запчастини</p></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p class="main-text">Авторозбірки України</p></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p class="main-text">Політика конфіденційності</p></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><p class="main-text">Користувацька угода</p></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="info-block">
+                <div class="info-block-top">
+                  <h6 class="sub-minor-heading">Партнерам</h6>
+                  <img
+                    src="./images/icons/chevron-down.svg"
+                    alt="chevron down"
+                  />
+                </div>
+                <ul class="footer-info-block-list">
+                  <li>
+                    <a href="#"><p class="main-text">Довідка покупцям</p></a>
+                  </li>
+                  <li>
+                    <a href="#"><p class="main-text">Нові запчастини</p></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p class="main-text">Авторозбірки України</p></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><p class="main-text">Політика конфіденційності</p></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><p class="main-text">Користувацька угода</p></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- Copyright -->
+      <div class="copyright">
+        <p class="main-text">© 2013 - 2024 ПодКапот</p>
+      </div>
+    </aside>
+    <!-- Find part form overlay -->
+    <div class="find-part header-modal">
+      <div class="container">
+        <div class="find-part-top mobile">
+          <h4 class="sub-section-heading">Заявка на запчастину</h4>
+          <button class="close">
+            <img src="./images/icons/cross.svg" alt="cross icon" />
+          </button>
+        </div>
+        <div class="find-part-inner">
+          <aside class="find-part-text">
+            <h4 class="sub-section-heading">
+              Заповніть форму заявки на запчастину та перевірені продавці самі з
+              Вами зв'яжуться
+            </h4>
+            <p class="main-text">3 причини залишити заявку прямо зараз</p>
+            <ul class="advantages">
+              <li class="advantage">
+                <img src="./images/handshake.svg" alt="handshake" />
+                <h6 class="sub-minor-heading">
+                  Тільки реальні продавці (не кидали)
+                </h6>
+              </li>
+              <li class="advantage">
+                <img src="./images/rocket.svg" alt="rocket icon" />
+                <h6 class="sub-minor-heading">
+                  Швидка відповідь (до 30 хвилин у робочий час)
+                </h6>
+              </li>
+              <li class="advantage">
+                <img src="./images/free.svg" alt="free icon" />
+                <h6 class="sub-minor-heading">
+                  Це безкоштовно (Ви платите лише за запчастини)
+                </h6>
+              </li>
+            </ul>
+          </aside>
+          <div class="form-container">
+            <p class="heading">Заявка на запчастину</p>
+            <form class="search-form">
+              <ul class="select-list">
+                <li>
+                  <!-- Brand-->
+                  <label for="car-brand">Марка</label>
+                  <select name="" aria-placeholder="Всі марки" id="car-brand">
+                    <option value="">-Всі марки-</option>
+                  </select>
+                </li>
+                <li>
+                  <!-- Model -->
+                  <label for="car-model">Модель</label>
+                  <select name="" aria-placeholder="Всі моделі" id="car-model">
+                    <option value="">-Всі моделі-</option>
+                  </select>
+                </li>
+                <li>
+                  <!-- Year -->
+                  <label for="year">Рік</label>
+                  <select name="" aria-placeholder="Виберіть рік" id="year">
+                    <option value="">-Виберіть рік-</option>
+                  </select>
+                </li>
+                <li>
+                  <!-- Car part name -->
+                  <label for="part-name">Назва запчастини</label>
+                  <select
+                    name=""
+                    aria-placeholder="Назва запчастини"
+                    id="part-name"
+                  >
+                    <option value="">-Назва запчастини-</option>
+                  </select>
+                </li>
+                <li>
+                  <!-- Placeholder -->
+                  <label for="phone">Телефон</label>
+                  <input type="text" id="phone" value="+38(" />
+                </li>
+              </ul>
+              <div class="condition-contact">
+                <div class="condition">
+                  <p class="condiiton-text">Стан</p>
+                  <ul class="radio-list">
+                    <li>
+                      <input type="radio" id="all" name="condition" />
+                      <label for="all">Всі</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="used" name="condition" />
+                      <label for="used">Б/В</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="new" name="condition" />
+                      <label for="new">Нові</label>
+                    </li>
+                  </ul>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Ваше ім’я"
+                  class="small-button"
+                />
+                <input type="email" placeholder="E-mail" class="small-button" />
+              </div>
+              <button type="submit" class="primary-button">
+                <img src="./images/icons/lightning.svg" alt="lightning" />
+                Надіслати заяву на запчастину
+              </button>
+            </form>
+          </div>
+          <!-- Background -->
+          <div class="background">
+            <img src="./images/form-bg.png" alt="form background" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main -->
+    <main class="main">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs-list">
+            <li class="breadcrumb home">
+              <a href="#"
+                ><img src="./images/icons/house-icon.svg" alt="" /> Home</a
+              >
+            </li>
+            <li class="breadcrumb"><a href="#">Item 1</a></li>
+            <li class="breadcrumb"><a href="#">Item 2</a></li>
+            <li class="breadcrumb current"><a href="#">Page now</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Product -->
+      <section class="product-section">
+        <div class="container">
+          <section class="product-seller">
+            <div class="product-card">
+              <h4 class="sub-section-heading">
+                Насос гидроусилителя руля ГУР AUDI A4 B7 2.0 TDI, 8E0145155N
+                Насос гидроусилителя руля ГУР AUDI A4 B7 2.0 TDI, 8E0145155N
+              </h4>
+              <div class="gallery-info">
+                <!-- Product gallery -->
+                <div class="gallery">
+                  <div class="gallery-main-image">
+                    <div class="controls">
+                      <ul class="controls-list">
+                        <li>
+                          <button>
+                            <img
+                              src="./images/icons/chevron-left.svg"
+                              alt="chevron"
+                            />
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <img src="./images/yellow-car.jpg" alt="yellow car" />
+                  </div>
+                  <ul class="gallery-list">
+                    <li class="current">
+                      <img src="./images/yellow-car.jpg" alt="yellow car" />
+                    </li>
+                    <li>
+                      <img src="./images/yellow-car.jpg" alt="yellow car" />
+                    </li>
+                    <li>
+                      <img src="./images/yellow-car.jpg" alt="yellow car" />
+                    </li>
+                    <li>
+                      <img src="./images/yellow-car.jpg" alt="yellow car" />
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-options">
+                  <!-- Info -->
+                  <div class="info">
+                    <p class="sub-section-heading">900,00 грн. /шт</p>
+                    <div class="condition">
+                      <p class="sub-minor-heading">Стан</p>
+                      <p class="small-text">Нове</p>
+                    </div>
+                    <div class="status">
+                      <p class="main-text">Під замовлення</p>
+                    </div>
+                    <div class="product-category">
+                      <p class="sub-minor-heading">Рубрика</p>
+                      <ul class="product-categories-list">
+                        <li class="category">
+                          <a href="#">
+                            <p class="small-text">Рульове управління</p>
+                          </a>
+                        </li>
+                        <li class="category">
+                          <a href="#">
+                            <p class="small-text">Насос ГУР</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Options -->
+                  <aside class="options">
+                    <button class="primary-button">
+                      <img src="./images/icons/chat.svg" alt="chat icon" />
+                      <p class="big-button">Уточнити ціну</p>
+                    </button>
+                    <button class="primary-button outline">
+                      <img
+                        src="./images/icons/lightning-red.svg"
+                        alt="lightning bolt"
+                      />
+                      <p class="small-button">Купити в один клік</p>
+                    </button>
+                  </aside>
+                </div>
+              </div>
+            </div>
+            <!-- Seller -->
+            <div class="seller-card">
+              <h4 class="sub-section-heading">Продавець</h4>
+              <div class="seller-name-image">
+                <div class="seller-image">
+                  <img src="./images/razborka.png" alt="razborka" />
+                </div>
+                <p class="main-text">Bi-Bi Opel Parts Розборка Opel</p>
+              </div>
+              <ul class="advantages-list">
+                <li class="advantage">
+                  <img src="./images/icons/two-checks.svg" alt="two checks" />
+                  <p class="small-text">Перевірений постачальник</p>
+                </li>
+                <li class="advantage">
+                  <img src="./images/icons/calendar.svg" alt="calendar" />
+                  <p class="small-text">На PodKapot 5 років</p>
+                </li>
+                <li class="advantage">
+                  <img src="./images/razborka.png" alt="razborka" />
+                  <p class="small-text">Оригінал</p>
+                </li>
+              </ul>
+              <button class="primary-button">
+                <p class="main-text">Написати продавцю</p>
+              </button>
+              <ul class="seller-contacts">
+                <li class="contact">
+                  <img src="./images/icons/location.svg" alt="location" />
+                  <p class="main-text">
+                    Україна, Чернівецька, Чернівці, ул. Василия Лесина 4а
+                  </p>
+                </li>
+                <li class="contact">
+                  <img src="./images/icons/phone.svg" alt="phone icon" />
+                  <div class="contact-container">
+                    <p class="main-text">+3805058xxxxx +3805067xxxxx,</p>
+                    <div class="tag-link maximum">
+                      <p class="small-button">Відкрити контакти</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="contact">
+                  <p class="main-text">Кількість переглядів: 49694648</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- Product description -->
+          <section class="product-desc">
+            <h4 class="sub-section-heading">Опис</h4>
+            <p class="main-text">
+              Renault – відома на сьогодні французька компанія по виробництву
+              автомобілів, яка була заснована більш ніж 110 років тому трьома
+              братами – Луї, Марселем і Фернаном. Компанія Renault у 2016 році
+              ввійшла в десятку найбільших автовиробників світу у зв’язку з
+              неймовірним обсягом виробництва автомобілів. Кілька інших
+              автовиробників з часом стали підпорядковуватись Renault – Nissan,
+              Mitsubishi, Alpine, Dacia, Samsung Motors та АвтоВАЗ. Компанія
+              Renault випускає широкий асортимент автомобілів: легкові,
+              комерційні та вантажні, трактори і автобуси. Штаб-квартира Renault
+              розташована у передмісті Парижа, де і колись був збудований перший
+              завод. Сьогодні Renault активно розвиває виробництво
+              електромобілів, прикладом чого є такі бестселери
+            </p>
+          </section>
+          <section class="properties-payment-and-delivery">
+            <div class="properties">
+              <h4 class="sub-section-heading">Характеристика</h4>
+              <ul class="properties-list">
+                <li class="property">
+                  <div class="property-name">
+                    <p class="text-main">Дата публікації</p>
+                  </div>
+                  <p class="sub-minor-heading">13.11.2021</p>
+                </li>
+                <li class="property">
+                  <div class="property-name">
+                    <p class="text-main">Дата публікації</p>
+                  </div>
+                  <p class="sub-minor-heading">13.11.2021</p>
+                </li>
+                <li class="property">
+                  <div class="property-name">
+                    <p class="text-main">Дата публікації</p>
+                  </div>
+                  <p class="sub-minor-heading">13.11.2021</p>
+                </li>
+                <li class="property">
+                  <div class="property-name">
+                    <p class="text-main">Дата публікації</p>
+                  </div>
+                  <p class="sub-minor-heading">13.11.2021</p>
+                </li>
+                <li class="property">
+                  <div class="property-name">
+                    <p class="text-main">Марка автомобіля</p>
+                  </div>
+                  <p class="sub-minor-heading">
+                    <span><a href="#">Renault Trafic II</a></span
+                    >, <span><a href="#">Renault Trafic III</a></span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="payment-and-delivery">
+              <h4 class="sub-section-heading">Оплата і доставка</h4>
+              <ul class="payment-and-delivery-list">
+                <li>
+                  <h6 class="sub-minor-heading">Оплата</h6>
+                </li>
+                <li>
+                  <p class="main-text">Передоплата</p>
+                </li>
+              </ul>
+              <ul class="payment-and-delivery-list">
+                <li>
+                  <h6 class="sub-minor-heading">Доставка</h6>
+                </li>
+                <li>
+                  <p class="main-text">Передоплата</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- New products -->
+      <section class="new-products-grid list-section">
+        <div class="container">
+          <h3 class="section-heading">Новинки продавця</h3>
+          <div class="products-review">
+            <!-- Products list -->
+            <ul class="products-list f-4-2">
+              <li class="product f-el">
+                <img src="./images/product-card-photo.png" alt="tires" />
+                <p class="small-text availability">Нема в наявності</p>
+                <p class="product-heading main-text">
+                  Переднатягувач ременя безпекивмвммв
+                </p>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
+                </div>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
+                <a href="#" class="manufacturer">
+                  <div class="manufacturer-details">
+                    <img
+                      src="./images/avtrans.png"
+                      alt="av vans company logo"
+                    />
+                    <p class="small-text">Разборка бусов AV VANS</p>
+                  </div>
+                  <img
+                    src="./images/icons/chevron-down.svg"
+                    class="chevron-down"
+                    alt="chevron looking down"
+                  />
+                </a>
+              </li>
+              <li class="product f-el">
+                <img src="./images/product-card-photo.png" alt="tires" />
+                <p class="small-text availability">Нема в наявності</p>
+                <p class="product-heading main-text">
+                  Переднатягувач ременя безпекивмвммв
+                </p>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
+                </div>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
+                <a href="#" class="manufacturer">
+                  <div class="manufacturer-details">
+                    <img
+                      src="./images/avtrans.png"
+                      alt="av vans company logo"
+                    />
+                    <p class="small-text">Разборка бусов AV VANS</p>
+                  </div>
+                  <img
+                    src="./images/icons/chevron-down.svg"
+                    class="chevron-down"
+                    alt="chevron looking down"
+                  />
+                </a>
+              </li>
+              <li class="product f-el">
+                <img src="./images/product-card-photo.png" alt="tires" />
+                <p class="small-text availability">Нема в наявності</p>
+                <p class="product-heading main-text">
+                  Переднатягувач ременя безпекивмвммв
+                </p>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
+                </div>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
+                <a href="#" class="manufacturer">
+                  <div class="manufacturer-details">
+                    <img
+                      src="./images/avtrans.png"
+                      alt="av vans company logo"
+                    />
+                    <p class="small-text">Разборка бусов AV VANS</p>
+                  </div>
+                  <img
+                    src="./images/icons/chevron-down.svg"
+                    class="chevron-down"
+                    alt="chevron looking down"
+                  />
+                </a>
+              </li>
+              <li class="product f-el">
+                <img src="./images/product-card-photo.png" alt="tires" />
+                <p class="small-text availability">Нема в наявності</p>
+                <p class="product-heading main-text">
+                  Переднатягувач ременя безпекивмвммв
+                </p>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
+                </div>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
+                <a href="#" class="manufacturer">
+                  <div class="manufacturer-details">
+                    <img
+                      src="./images/avtrans.png"
+                      alt="av vans company logo"
+                    />
+                    <p class="small-text">Разборка бусов AV VANS</p>
+                  </div>
+                  <img
+                    src="./images/icons/chevron-down.svg"
+                    class="chevron-down"
+                    alt="chevron looking down"
+                  />
+                </a>
+              </li>
+            </ul>
+            <!-- Review form -->
+            <form class="review-form">
+              <h4 class="sub-section-heading">Залишити відгук</h4>
+              <div class="rating">
+                <ul class="stars">
+                  <li>
+                    <img
+                      src="./images/icons/star-outline.svg"
+                      alt="star outline"
+                    />
+                    <p class="main-text">Погано</p>
+                  </li>
+                  <li>
+                    <img
+                      src="./images/icons/star-outline.svg"
+                      alt="star outline"
+                    />
+                    <p class="main-text">Так собі</p>
+                  </li>
+                  <li>
+                    <img
+                      src="./images/icons/star-outline.svg"
+                      alt="star outline"
+                    />
+                    <p class="main-text">Нормально</p>
+                  </li>
+                  <li>
+                    <img
+                      src="./images/icons/star-outline.svg"
+                      alt="star outline"
+                    />
+                    <p class="main-text">Добре</p>
+                  </li>
+                  <li>
+                    <img
+                      src="./images/icons/star-outline.svg"
+                      alt="star outline"
+                    />
+                    <p class="main-text">Відмінно</p>
+                  </li>
+                </ul>
+                <p class="main-text">Або</p>
+                <div class="question">
+                  <img src="./images/icons/question.svg" alt="question mark" />
+                  <p class="main-text">Це питання</p>
+                </div>
+              </div>
+              <div class="condition">
+                <label for="comment">Коментар</label>
+                <div class="comment-container">
+                  <textarea
+                    class="main-text"
+                    id="comment"
+                    rows="4"
+                    cols="40"
+                    placeholder="Залишити відгук"
+                  ></textarea>
+                </div>
+              </div>
+              <button class="add" type="button">
+                <input type="file" id="" style="display: none" />
+                <img src="./images/icons/plus-icon.svg" alt="plus icon" />
+                <p class="main-text">Додати фото</p>
+              </button>
+              <div class="contacts-submit">
+                <div class="contacts">
+                  <input
+                    type="email"
+                    placeholder="E-mail"
+                    class="small-button"
+                  />
+                  <div class="name">
+                    <input
+                      type="text"
+                      class="small-button"
+                      oninput="checkInputName(this)"
+                    />
+                    <p class="placeholder small-button">
+                      Ваше ім’я<span class="asterisk small-button">*</span>
+                    </p>
+                  </div>
+                </div>
+                <button type="submit" class="primary-button">
+                  Залишити відгук
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Sellers review -->
+      <section class="seller-reviews list-section">
+        <div class="container">
+          <h3 class="section-heading">Відгуки продавця</h3>
+          <ul class="seller-reviews-list">
+            <li class="seller-review">
+              <h5 class="minor-heading">Анна</h5>
+              <p class="small-text">
+                Замовляв трубку відводу масла з турбіни Опель Астра g 2.0
+                дизель, швидко відповіли та відправили. Все підійшло чудово.
+                Ціна в порівнянні з іншими мінімальна. Дякую. В подальшому буду
+                звертатись.
+              </p>
+              <ul class="review-details-list">
+                <li>
+                  <div class="rating">
+                    <p class="main-text">Оцінка:</p>
+                    <ul class="stars">
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li><p class="main-text">19 грудня 2023г. в 22:14</p></li>
+                <li>
+                  <a href="#"><p class="main-text">Відповісти</p></a>
+                </li>
+              </ul>
+            </li>
+            <li class="seller-review">
+              <h5 class="minor-heading">Анна</h5>
+              <p class="small-text">
+                Замовляв трубку відводу масла з турбіни Опель Астра g 2.0
+                дизель, швидко відповіли та відправили. Все підійшло чудово.
+                Ціна в порівнянні з іншими мінімальна. Дякую. В подальшому буду
+                звертатись.
+              </p>
+              <ul class="review-details-list">
+                <li>
+                  <div class="rating">
+                    <p class="main-text">Оцінка:</p>
+                    <ul class="stars">
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li><p class="main-text">19 грудня 2023г. в 22:14</p></li>
+                <li>
+                  <a href="#"><p class="main-text">Відповісти</p></a>
+                </li>
+              </ul>
+            </li>
+            <li class="seller-review">
+              <h5 class="minor-heading">Анна</h5>
+              <p class="small-text">
+                Замовляв трубку відводу масла з турбіни Опель Астра g 2.0
+                дизель, швидко відповіли та відправили. Все підійшло чудово.
+                Ціна в порівнянні з іншими мінімальна. Дякую. В подальшому буду
+                звертатись.
+              </p>
+              <ul class="review-details-list">
+                <li>
+                  <div class="rating">
+                    <p class="main-text">Оцінка:</p>
+                    <ul class="stars">
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li><p class="main-text">19 грудня 2023г. в 22:14</p></li>
+                <li>
+                  <a href="#"><p class="main-text">Відповісти</p></a>
+                </li>
+              </ul>
+            </li>
+            <li class="seller-review">
+              <h5 class="minor-heading">Анна</h5>
+              <p class="small-text">
+                Замовляв трубку відводу масла з турбіни Опель Астра g 2.0
+                дизель, швидко відповіли та відправили. Все підійшло чудово.
+                Ціна в порівнянні з іншими мінімальна. Дякую. В подальшому буду
+                звертатись.
+              </p>
+              <ul class="review-details-list">
+                <li>
+                  <div class="rating">
+                    <p class="main-text">Оцінка:</p>
+                    <ul class="stars">
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star" />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li><p class="main-text">19 грудня 2023г. в 22:14</p></li>
+                <li>
+                  <a href="#"><p class="main-text">Відповісти</p></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Verified sellers -->
+      <section class="verified-sellers list-section">
+        <div class="container">
+          <h3 class="section-heading">Перевірені продавці</h3>
+          <ul class="verified-sellers-list f-2-1">
+            <li class="seller f-el">
+              <div class="company-location">
+                <div class="company-image">
+                  <img
+                    src="./images/tesla-company.png"
+                    alt="Tesla company logo"
+                  />
+                </div>
+                <p class="main-text">Новоград-Волинський</p>
+              </div>
+              <div class="seller-container">
+                <ul class="seller-desc-list">
+                  <li>
+                    <p class="main-text">Разборка бусов AVO VANS</p>
+                  </li>
+                  <li>
+                    <div class="fill-tag maximum">Maximum</div>
+                  </li>
+                  <li class="location">
+                    <p class="main-text">Новоград-Волинський</p>
+                  </li>
+                </ul>
+                <ul class="seller-contact-list">
+                  <li>
+                    <p class="phone-number">+38095********</p>
+                  </li>
+                  <li>
+                    <button class="maximum tag-link open-contacts">
+                      Відкрити контакти
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="seller f-el">
+              <div class="company-location">
+                <div class="company-image">
+                  <img
+                    src="./images/tesla-company.png"
+                    alt="Tesla company logo"
+                  />
+                </div>
+                <p class="main-text">Новоград-Волинський</p>
+              </div>
+              <div class="seller-container">
+                <ul class="seller-desc-list">
+                  <li>
+                    <p class="main-text">Разборка бусов AVO VANS</p>
+                  </li>
+                  <li>
+                    <div class="fill-tag maximum">Maximum</div>
+                  </li>
+                  <li class="location">
+                    <p class="main-text">Новоград-Волинський</p>
+                  </li>
+                </ul>
+                <ul class="seller-contact-list">
+                  <li>
+                    <p class="phone-number">+38095********</p>
+                  </li>
+                  <li>
+                    <button class="maximum tag-link open-contacts">
+                      Відкрити контакти
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="seller f-el">
+              <div class="company-location">
+                <div class="company-image">
+                  <img
+                    src="./images/tesla-company.png"
+                    alt="Tesla company logo"
+                  />
+                </div>
+                <p class="main-text">Новоград-Волинський</p>
+              </div>
+              <div class="seller-container">
+                <ul class="seller-desc-list">
+                  <li>
+                    <p class="main-text">Разборка бусов AVO VANS</p>
+                  </li>
+                  <li>
+                    <div class="fill-tag maximum">Maximum</div>
+                  </li>
+                  <li class="location">
+                    <p class="main-text">Новоград-Волинський</p>
+                  </li>
+                </ul>
+                <ul class="seller-contact-list">
+                  <li>
+                    <p class="phone-number">+38095********</p>
+                  </li>
+                  <li>
+                    <button class="maximum tag-link open-contacts">
+                      Відкрити контакти
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="seller f-el">
+              <div class="company-location">
+                <div class="company-image">
+                  <img
+                    src="./images/tesla-company.png"
+                    alt="Tesla company logo"
+                  />
+                </div>
+                <p class="main-text">Новоград-Волинський</p>
+              </div>
+              <div class="seller-container">
+                <ul class="seller-desc-list">
+                  <li>
+                    <p class="main-text">Разборка бусов AVO VANS</p>
+                  </li>
+                  <li>
+                    <div class="fill-tag maximum">Maximum</div>
+                  </li>
+                  <li class="location">
+                    <p class="main-text">Новоград-Волинський</p>
+                  </li>
+                </ul>
+                <ul class="seller-contact-list">
+                  <li>
+                    <p class="phone-number">+38095********</p>
+                  </li>
+                  <li>
+                    <button class="maximum tag-link open-contacts">
+                      Відкрити контакти
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div class="list-section-additional-features centered">
+            <!-- Show all -->
+            <button class="show-all-button small-button">
+              Більше компаній
+              <img
+                src="./images/icons/arrow-right.svg"
+                alt="arrow"
+                style="transform: rotate(90deg)"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Find part -->
+      <section class="find-part">
+        <div class="container">
+          <div class="find-part-top mobile">
+            <h4 class="sub-section-heading">Заявка на запчастину</h4>
+            <button class="close">
+              <img src="./images/icons/cross.svg" alt="cross icon" />
+            </button>
+          </div>
+          <div class="find-part-inner">
+            <aside class="find-part-text">
+              <h4 class="sub-section-heading">
+                Заповніть форму заявки на запчастину та перевірені продавці самі
+                з Вами зв'яжуться
+              </h4>
+              <p class="main-text">3 причини залишити заявку прямо зараз</p>
+              <ul class="advantages">
+                <li class="advantage">
+                  <img src="./images/handshake-white.svg" alt="handshake" />
+                  <h6 class="sub-minor-heading">
+                    Тільки реальні продавці (не кидали)
+                  </h6>
+                </li>
+                <li class="advantage">
+                  <img src="./images/rocket-white.svg" alt="rocket icon" />
+                  <h6 class="sub-minor-heading">
+                    Швидка відповідь (до 30 хвилин у робочий час)
+                  </h6>
+                </li>
+                <li class="advantage">
+                  <img src="./images/free-white.svg" alt="free icon" />
+                  <h6 class="sub-minor-heading">
+                    Це безкоштовно (Ви платите лише за запчастини)
+                  </h6>
+                </li>
+              </ul>
+            </aside>
+            <div class="form-container">
+              <p class="heading">Заявка на запчастину</p>
+              <form action="" class="search-form">
+                <ul class="select-list">
+                  <li>
+                    <!-- Brand-->
+                    <label for="car-brand">Марка</label>
+                    <select name="" aria-placeholder="Всі марки" id="car-brand">
+                      <option value="">-Всі марки-</option>
+                    </select>
+                  </li>
+                  <li>
+                    <!-- Model -->
+                    <label for="car-model">Модель</label>
+                    <select
+                      name=""
+                      aria-placeholder="Всі моделі"
+                      id="car-model"
+                    >
+                      <option value="">-Всі моделі-</option>
+                    </select>
+                  </li>
+                  <li>
+                    <!-- Year -->
+                    <label for="year">Рік</label>
+                    <select name="" aria-placeholder="Виберіть рік" id="year">
+                      <option value="">-Виберіть рік-</option>
+                    </select>
+                  </li>
+                  <li>
+                    <!-- Car part name -->
+                    <label for="part-name">Назва запчастини</label>
+                    <select
+                      name=""
+                      aria-placeholder="Назва запчастини"
+                      id="part-name"
+                    >
+                      <option value="">-Назва запчастини-</option>
+                    </select>
+                  </li>
+                  <li>
+                    <!-- Placeholder -->
+                    <label for="phone">Телефон</label>
+                    <div class="input-container">
+                      <p class="small-text">Invalid input</p>
+                      <input type="text" id="phone" value="+38(" />
+                    </div>
+                  </li>
+                </ul>
+                <div class="condition-contact">
+                  <div class="condition">
+                    <p class="condiiton-text">Стан</p>
+                    <ul class="radio-list">
+                      <li>
+                        <input type="radio" id="all" name="condition" />
+                        <label for="all">Всі</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="used" name="condition" />
+                        <label for="used">Б/В</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="new" name="condition" />
+                        <label for="new">Нові</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="input-container">
+                    <input
+                      type="text"
+                      placeholder="Ваше ім’я"
+                      class="small-button"
+                    />
+                    <p class="small-text">Invalid input</p>
+                  </div>
+                  <div class="input-container">
+                    <input
+                      type="text"
+                      placeholder="E-mail"
+                      class="small-button"
+                    />
+                    <p class="small-text">Invalid input</p>
+                  </div>
+                </div>
+                <button type="submit" class="primary-button">
+                  <img src="./images/icons/lightning.svg" alt="lightning" />
+                  Надіслати заяву на запчастину
+                </button>
+              </form>
+            </div>
+            <!-- Background -->
+            <div class="background">
+              <img
+                src="./images/find-part-mobile-bg.jpg"
+                alt="form background"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- New products -->
+      <section class="new-products list-section">
+        <div class="container">
+          <h3 class="section-heading">Новинки продавця</h3>
+          <div class="table-container no-scroll">
+            <div class="table-and-list">
+              <ul class="table-columns">
+                <li class="date">
+                  <p class="small-text">Дата</p>
+                </li>
+                <li class="article">
+                  <p class="small-text">Артикул</p>
+                </li>
+                <li class="product-desc">
+                  <p class="small-text">Товар</p>
+                </li>
+                <li class="availability">
+                  <p class="small-text">Наявність</p>
+                </li>
+                <li class="price">
+                  <p class="small-text">Ціна</p>
+                </li>
+                <li class="shopping-cart-button"></li>
+                <li class="go-to-button"></li>
+              </ul>
+              <ul class="products-list rows">
+                <li class="product">
+                  <div class="date">
+                    <p class="small-text">03.09.2024</p>
+                  </div>
+                  <div class="article">
+                    <p class="small-text">264181906302-ISB</p>
+                  </div>
+                  <div class="product-desc">
+                    <div class="img-name">
+                      <img src="./images/yellow-car.jpg" alt="yellow car" />
+                      <p class="small-text">Кришка багажника Двері,багажн...</p>
+                    </div>
+                  </div>
+                  <div class="availability">
+                    <p class="small-text">Нема в навності</p>
+                  </div>
+                  <div class="price">
+                    <p class="sub-minor-heading">104 000 грн\шт</p>
+                  </div>
+                  <div class="shopping-cart-button">
+                    <button class="primary-button">
+                      <img
+                        src="./images/icons/shopping-cart-small.svg"
+                        alt="shopping cart icon"
+                      />
+                    </button>
+                  </div>
+                  <div class="go-to-button">
+                    <button class="go-to">
+                      <img
+                        src="./images/icons/chevron-left.svg"
+                        alt="chevron left"
+                      />
+                    </button>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="date">
+                    <p class="small-text">03.09.2024</p>
+                  </div>
+                  <div class="article">
+                    <p class="small-text">264181906302-ISB</p>
+                  </div>
+                  <div class="product-desc">
+                    <div class="img-name">
+                      <img src="./images/yellow-car.jpg" alt="yellow car" />
+                      <p class="small-text">Кришка багажника Двері,багажн...</p>
+                    </div>
+                  </div>
+                  <div class="availability">
+                    <p class="small-text">Нема в навності</p>
+                  </div>
+                  <div class="price">
+                    <p class="sub-minor-heading">104 000 грн\шт</p>
+                  </div>
+                  <div class="shopping-cart-button">
+                    <button class="primary-button">
+                      <img
+                        src="./images/icons/shopping-cart-small.svg"
+                        alt="shopping cart icon"
+                      />
+                    </button>
+                  </div>
+                  <div class="go-to-button">
+                    <button class="go-to">
+                      <img
+                        src="./images/icons/chevron-left.svg"
+                        alt="chevron left"
+                      />
+                    </button>
+                  </div>
+                </li>
+                <li class="product">
+                  <div class="date">
+                    <p class="small-text">03.09.2024</p>
+                  </div>
+                  <div class="article">
+                    <p class="small-text">264181906302-ISB</p>
+                  </div>
+                  <div class="product-desc">
+                    <div class="img-name">
+                      <img src="./images/yellow-car.jpg" alt="yellow car" />
+                      <p class="small-text">Кришка багажника Двері,багажн...</p>
+                    </div>
+                  </div>
+                  <div class="availability">
+                    <p class="small-text">Нема в навності</p>
+                  </div>
+                  <div class="price">
+                    <p class="sub-minor-heading">104 000 грн\шт</p>
+                  </div>
+                  <div class="shopping-cart-button">
+                    <button class="primary-button">
+                      <img
+                        src="./images/icons/shopping-cart-small.svg"
+                        alt="shopping cart icon"
+                      />
+                    </button>
+                  </div>
+                  <div class="go-to-button">
+                    <button class="go-to">
+                      <img
+                        src="./images/icons/chevron-left.svg"
+                        alt="chevron left"
+                      />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Recent applies -->
+      <section class="recent list-section">
+        <div class="container">
+          <h3 class="section-heading">Останні заявки на запчастини</h3>
+          <ul class="recent-list">
+            <li class="recent-application">
+              <ul class="recent-application-inner-list">
+                <li>
+                  <p class="main-text">03.09.2024</p>
+                </li>
+                <li>
+                  <p class="main-text">05:23</p>
+                </li>
+                <li class="car-details">
+                  <img src="./images/yellow-car.jpg" alt="yellow-car" />
+                  <p class="text-main">Кришка багажника (Двері,багажн...</p>
+                </li>
+                <li class="car-brand">
+                  <img src="./images/subaru-logo.png" alt="subaru logo" />
+                  <p class="text-main">Mercedes-Benz S 65 ...</p>
+                </li>
+                <li class="contact">
+                  <div class="contact-name">
+                    <p class="text-main">Володимир</p>
+                    <p class="text-main">+38095********</p>
+                  </div>
+                  <a href="#" class="tag-link maximum small-text"
+                    >Відкрити контакти</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="recent-application">
+              <ul class="recent-application-inner-list">
+                <li>
+                  <p class="main-text">03.09.2024</p>
+                </li>
+                <li>
+                  <p class="main-text">05:23</p>
+                </li>
+                <li class="car-details">
+                  <img src="./images/yellow-car.jpg" alt="yellow-car" />
+                  <p class="text-main">Кришка багажника (Двері,багажн...</p>
+                </li>
+                <li class="car-brand">
+                  <img src="./images/subaru-logo.png" alt="subaru logo" />
+                  <p class="text-main">Mercedes-Benz S 65 ...</p>
+                </li>
+                <li class="contact">
+                  <div class="contact-name">
+                    <p class="text-main">Володимир</p>
+                    <p class="text-main">+38095********</p>
+                  </div>
+                  <a href="#" class="tag-link maximum small-text"
+                    >Відкрити контакти</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="recent-application">
+              <ul class="recent-application-inner-list">
+                <li>
+                  <p class="main-text">03.09.2024</p>
+                </li>
+                <li>
+                  <p class="main-text">05:23</p>
+                </li>
+                <li class="car-details">
+                  <img src="./images/yellow-car.jpg" alt="yellow-car" />
+                  <p class="text-main">Кришка багажника (Двері,багажн...</p>
+                </li>
+                <li class="car-brand">
+                  <img src="./images/subaru-logo.png" alt="subaru logo" />
+                  <p class="text-main">Mercedes-Benz S 65 ...</p>
+                </li>
+                <li class="contact">
+                  <div class="contact-name">
+                    <p class="text-main">Володимир</p>
+                    <p class="text-main">+38095********</p>
+                  </div>
+                  <a href="#" class="tag-link maximum small-text"
+                    >Відкрити контакти</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- News -->
+      <section class="news list-section">
+        <div class="container">
+          <h3 class="section-heading">Статі та новини</h3>
+          <ul class="news-list f-4-2-1">
+            <li class="news-piece f-el">
+              <div class="news-heading-background">
+                <img
+                  src="./images/news-background.jpg"
+                  class="news-background"
+                  alt="ukraine europe car"
+                />
+                <div class="news-heading">
+                  <h6 class="sub-minor-heading">
+                    Дизельний двигун на Рено Канго
+                  </h6>
+                  <p class="small-text">20.09.2024</p>
+                </div>
+              </div>
+              <div class="publisher">
+                <img src="./images/avtrans.png" alt="ducato" />
+                <p class="small-text">Інтернет-магазин Ducato.in.ua</p>
+              </div>
+            </li>
+            <li class="news-piece f-el">
+              <div class="news-heading-background">
+                <img
+                  src="./images/news-background.jpg"
+                  class="news-background"
+                  alt="ukraine europe car"
+                />
+                <div class="news-heading">
+                  <h6 class="sub-minor-heading">
+                    Дизельний двигун на Рено Канго
+                  </h6>
+                  <p class="small-text">20.09.2024</p>
+                </div>
+              </div>
+              <div class="publisher">
+                <img src="./images/avtrans.png" alt="ducato" />
+                <p class="small-text">Інтернет-магазин Ducato.in.ua</p>
+              </div>
+            </li>
+            <li class="news-piece f-el">
+              <div class="news-heading-background">
+                <img
+                  src="./images/news-background.jpg"
+                  class="news-background"
+                  alt="ukraine europe car"
+                />
+                <div class="news-heading">
+                  <h6 class="sub-minor-heading">
+                    Дизельний двигун на Рено Канго
+                  </h6>
+                  <p class="small-text">20.09.2024</p>
+                </div>
+              </div>
+              <div class="publisher">
+                <img src="./images/avtrans.png" alt="ducato" />
+                <p class="small-text">Інтернет-магазин Ducato.in.ua</p>
+              </div>
+            </li>
+            <li class="news-piece f-el">
+              <div class="news-heading-background">
+                <img
+                  src="./images/news-background.jpg"
+                  class="news-background"
+                  alt="ukraine europe car"
+                />
+                <div class="news-heading">
+                  <h6 class="sub-minor-heading">
+                    Дизельний двигун на Рено Канго
+                  </h6>
+                  <p class="small-text">20.09.2024</p>
+                </div>
+              </div>
+              <div class="publisher">
+                <img src="./images/avtrans.png" alt="ducato" />
+                <p class="small-text">Інтернет-магазин Ducato.in.ua</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Reviews -->
+      <section class="reviews list-section">
+        <div class="container">
+          <h3 class="section-heading">Відгуки</h3>
+          <ul class="reviews-list f-3-2-1">
+            <li class="review f-el">
+              <a class="seller-desc" href="#">
+                <img src="./images/tesla-company.png" alt="tesla company" />
+                <h5 class="minor-heading">Tesla Company</h5>
+              </a>
+              <div class="inner">
+                <div class="author">
+                  <h4 class="author-name sub-section-heading">Olha K.</h4>
+                  <p class="small-text">23.05.2024</p>
+                </div>
+                <div class="rating">
+                  <div>
+                    <h5 class="minor-heading">5.0</h5>
+                    <ul class="rating-list">
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="review-text text-main">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="review f-el">
+              <a class="seller-desc" href="#">
+                <img src="./images/tesla-company.png" alt="tesla company" />
+                <h5 class="minor-heading">Tesla Company</h5>
+              </a>
+              <div class="inner">
+                <div class="author">
+                  <h4 class="author-name sub-section-heading">Olha K.</h4>
+                  <p class="small-text">23.05.2024</p>
+                </div>
+                <div class="rating">
+                  <div>
+                    <h5 class="minor-heading">5.0</h5>
+                    <ul class="rating-list">
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="review-text text-main">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="review f-el">
+              <a class="seller-desc" href="#">
+                <img src="./images/tesla-company.png" alt="tesla company" />
+                <h5 class="minor-heading">Tesla Company</h5>
+              </a>
+              <div class="inner">
+                <div class="author">
+                  <h4 class="author-name sub-section-heading">Olha K.</h4>
+                  <p class="small-text">23.05.2024</p>
+                </div>
+                <div class="rating">
+                  <div>
+                    <h5 class="minor-heading">5.0</h5>
+                    <ul class="rating-list">
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                      <li>
+                        <img src="./images/icons/star.svg" alt="star icon" />
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="review-text text-main">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="list-section-additional-features">
+            <div class="slider-show">
+              <!-- Show all -->
+              <a href="#" class="show-all-button"
+                >Дивитись все
+                <img
+                  src="./images/icons/arrow-right.svg"
+                  alt="arrow pointing to the right side"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Scan section -->
+      <section class="scan text-image-section">
+        <div class="container">
+          <aside>
+            <h1 class="heading">
+              Автоматизована система обліку складу для продавців автозапчастин
+            </h1>
+            <h5 class="minor-heading">
+              Мобільний сканер QR-кодів, Добавлення товарів, продаж та
+              резервування. Управління залишками, складами і працівниками
+            </h5>
+            <a href="#" class="primary-button registration-button small-button"
+              >Зареєструватись</a
+            >
+          </aside>
+          <img
+            src="./images/scan.png"
+            alt="marketplace illustration two people are shaking hands"
+          />
+        </div>
+      </section>
+      <!-- Parts all over Ukraine section-->
+      <section class="parts-from-ukraine list-section">
+        <div class="container">
+          <h3 class="section-heading">Запчастини по Україні</h3>
+          <ul class="parts-list link-list f-4-2">
+            <div class="parts-list-block f-el">
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Києві (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Харкові (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Львові (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Одесі (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Луцьку (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Рівному (10 000)</a>
+              </li>
+            </div>
+            <div class="parts-list-block f-el">
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Дніпрі (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Чернівцях (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Сумах (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Чернігові (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Івано-Франківську (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Запоріжжі (10 000)</a>
+              </li>
+            </div>
+            <div class="parts-list-block f-el">
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Вінниці (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Хмельницькому (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Полтаві (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Тернополі (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Черкасах (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Миколаєві (10 000)</a>
+              </li>
+            </div>
+            <div class="parts-list-block f-el">
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Житомирі (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Кропивницькому (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Ужгороді (10 000)</a>
+              </li>
+              <li class="parts-link small-text">
+                <a href="#">Автозапчастини в Херсоні (10 000)</a>
+              </li>
+            </div>
+          </ul>
+          <div class="list-section-additional-features mobile">
+            <div class="slider-show">
+              <!-- Slider -->
+              <ul class="slider">
+                <li class="page"><a href="#"></a></li>
+                <li class="page selected"><a href="#"></a></li>
+                <li class="page"><a href="#"></a></li>
+                <li class="page"><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Media gallery section -->
+      <section class="media-gallery list-section">
+        <div class="container">
+          <h3 class="section-heading">Медіагалерея</h3>
+          <ul class="media-gallery-list f-4-2-1">
+            <li class="media f-el">
+              <img src="./images/mediagalery-image.jpg" alt="traffic" />
+              <p class="main-text">
+                Some quick example text to build on the card title and ma...
+              </p>
+            </li>
+            <li class="media f-el">
+              <img src="./images/mediagalery-image.jpg" alt="traffic" />
+              <p class="main-text">
+                Some quick example text to build on the card title and ma...
+              </p>
+            </li>
+            <li class="media f-el">
+              <img src="./images/mediagalery-image.jpg" alt="traffic" />
+              <p class="main-text">
+                Some quick example text to build on the card title and ma...
+              </p>
+            </li>
+            <li class="media f-el">
+              <img src="./images/mediagalery-image.jpg" alt="traffic" />
+              <p class="main-text">
+                Some quick example text to build on the card title and ma...
+              </p>
+            </li>
+            <li class="media f-el">
+              <img src="./images/mediagalery-image.jpg" alt="traffic" />
+              <p class="main-text">
+                Some quick example text to build on the card title and ma...
+              </p>
+            </li>
+            <li class="media f-el">
+              <img src="./images/mediagalery-image.jpg" alt="traffic" />
+              <p class="main-text">
+                Some quick example text to build on the card title and ma...
+              </p>
+            </li>
+            <li class="media f-el">
+              <img src="./images/mediagalery-image.jpg" alt="traffic" />
+              <p class="main-text">
+                Some quick example text to build on the card title and ma...
+              </p>
+            </li>
+            <li class="media f-el">
+              <img src="./images/mediagalery-image.jpg" alt="traffic" />
+              <p class="main-text">
+                Some quick example text to build on the card title and ma...
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Viewed products section -->
+      <section class="viewed-products list-section">
+        <div class="container">
+          <h3 class="section-heading">Переглянуті товари</h3>
+          <ul class="products-list flex-start f-4-2-1">
+            <li class="product f-el">
+              <img src="./images/product-card-photo.png" alt="tires" />
+              <p class="small-text availability">Нема в наявності</p>
+              <p class="product-heading main-text">
+                Переднатягувач ременя безпекивмвммв...
+              </p>
+              <div class="time-model">
+                <div class="time">
+                  <img
+                    src="./images/icons/stopwatch.svg"
+                    alt="stopwatch icon"
+                  />
+                  <p class="small-text">09.06.2019</p>
+                </div>
+                <p class="small-text">CT-8-8090A</p>
+              </div>
+              <div class="product-price">
+                <p class="price">10 000</p>
+                <p class="main-text">Грн/компл.</p>
+              </div>
+              <button class="buy primary-button">
+                <img
+                  src="./images/icons/shopping-cart-small.svg"
+                  alt="shopping cart icon"
+                />Купити
+              </button>
+              <a href="#" class="manufacturer">
+                <div class="manufacturer-details">
+                  <img src="./images/avtrans.png" alt="av vans company logo" />
+                  <p class="small-text">Разборка бусов AV VANS</p>
+                </div>
+                <img
+                  src="./images/icons/chevron-down.svg"
+                  class="chevron-down"
+                  alt="chevron looking down"
+                />
+              </a>
+            </li>
+            <li class="product f-el">
+              <img src="./images/product-card-photo.png" alt="tires" />
+              <p class="small-text availability">Нема в наявності</p>
+              <p class="product-heading main-text">
+                Переднатягувач ременя безпекивмвммв...
+              </p>
+              <div class="time-model">
+                <div class="time">
+                  <img
+                    src="./images/icons/stopwatch.svg"
+                    alt="stopwatch icon"
+                  />
+                  <p class="small-text">09.06.2019</p>
+                </div>
+                <p class="small-text">CT-8-8090A</p>
+              </div>
+              <div class="product-price">
+                <p class="price">10 000</p>
+                <p class="main-text">Грн/компл.</p>
+              </div>
+              <button class="buy primary-button">
+                <img
+                  src="./images/icons/shopping-cart-small.svg"
+                  alt="shopping cart icon"
+                />Купити
+              </button>
+              <a href="#" class="manufacturer">
+                <div class="manufacturer-details">
+                  <img src="./images/avtrans.png" alt="av vans company logo" />
+                  <p class="small-text">Разборка бусов AV VANS</p>
+                </div>
+                <img
+                  src="./images/icons/chevron-down.svg"
+                  class="chevron-down"
+                  alt="chevron looking down"
+                />
+              </a>
+            </li>
+            <li class="product f-el">
+              <img src="./images/product-card-photo.png" alt="tires" />
+              <p class="small-text availability">Нема в наявності</p>
+              <p class="product-heading main-text">
+                Переднатягувач ременя безпекивмвммв...
+              </p>
+              <div class="time-model">
+                <div class="time">
+                  <img
+                    src="./images/icons/stopwatch.svg"
+                    alt="stopwatch icon"
+                  />
+                  <p class="small-text">09.06.2019</p>
+                </div>
+                <p class="small-text">CT-8-8090A</p>
+              </div>
+              <div class="product-price">
+                <p class="price">10 000</p>
+                <p class="main-text">Грн/компл.</p>
+              </div>
+              <button class="buy primary-button">
+                <img
+                  src="./images/icons/shopping-cart-small.svg"
+                  alt="shopping cart icon"
+                />Купити
+              </button>
+              <a href="#" class="manufacturer">
+                <div class="manufacturer-details">
+                  <img src="./images/avtrans.png" alt="av vans company logo" />
+                  <p class="small-text">Разборка бусов AV VANS</p>
+                </div>
+                <img
+                  src="./images/icons/chevron-down.svg"
+                  class="chevron-down"
+                  alt="chevron looking down"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Most searched section -->
+      <section class="most-searched list-section">
+        <div class="container">
+          <h3 class="section-heading">Що шукають</h3>
+          <ul class="searched-list">
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Двигун</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Трансмісія</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Гальма</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Масляний фільтр</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Паливний фільтр</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Підвіска</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Амортизатори</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Колеса</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Акумулятори</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Свічки запалювання</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Глушник</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Коробка передач</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Ремені ГРМ</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Автомобільні аксесуари</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Популярні товари</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Повернення товарів</a>
+            </li>
+            <li class="searched-item">
+              <a href="#" class="big-button tag">Запчастини бу</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Marketplace section -->
+      <section class="marketplace text-image-section">
+        <div class="container">
+          <aside>
+            <h2 class="sub-heading">Продавайте запчастини на PodKapot!</h2>
+            <h5 class="minor-heading">
+              Найкращий маркетплейс для інтернет-магазинів запчастин,
+              авторозбірок та СТО. Більше 300 тисяч користувачів щомісяця
+              обирають та купують запчастини та послуги на PodKapot
+            </h5>
+            <a href="#" class="primary-button registration-button small-button"
+              >Зареєструватись</a
+            >
+          </aside>
+          <img
+            src="./images/marketplace.png"
+            alt="marketplace illustration two people are shaking hands"
+          />
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="pod-kapot footer-block">
+          <!-- Logo and description -->
+          <div class="logo-desc">
+            <img
+              src="./images/icons/podkapot-logo.svg"
+              alt="Pod Kapot logo"
+              class="logo"
+            />
+            <p class="main-text">
+              Маркетплейс ПодКапот - сервіс пошуку запчастин та платформа зі
+              створення сайтів автотематики
+            </p>
+          </div>
+          <!-- Social networks -->
+          <p class="footer-category">Ми у соціальних мережах</p>
+          <ul class="social-list">
+            <li class="social-network">
+              <a href="#"
+                ><img src="./images/icons/instagram.png" alt="instagram icon"
+              /></a>
+            </li>
+            <li class="social-network">
+              <a href="#"
+                ><img src="./images/icons/youtube.png" alt="youtube icon"
+              /></a>
+            </li>
+            <li class="social-network">
+              <a href="#"
+                ><img src="./images/icons/telegram.png" alt="telegram icon"
+              /></a>
+            </li>
+            <li class="social-network">
+              <a href="#"
+                ><img src="./images/icons/viber.png" alt="viber icon"
+              /></a>
+            </li>
+            <li class="social-network">
+              <a href="#"
+                ><img src="./images/icons/facebook.png" alt="facebook icon"
+              /></a>
+            </li>
+            <li class="social-network">
+              <a href="#"
+                ><img src="./images/icons/blogger.png" alt="blogger icon"
+              /></a>
+            </li>
+          </ul>
+          <ul class="footer-info-list mobile">
+            <li class="info-block">
+              <div class="info-block-top">
+                <h6 class="sub-minor-heading">Покупцям</h6>
+                <img src="./images/icons/chevron-down.svg" alt="chevron down" />
+              </div>
+              <ul class="footer-info-block-list">
+                <li><p class="main-text">Довідка покупцям</p></li>
+                <li><p class="main-text">Нові запчастини</p></li>
+                <li><p class="main-text">Авторозбірки України</p></li>
+                <li><p class="main-text">Політика конфіденційності</p></li>
+                <li><p class="main-text">Користувацька угода</p></li>
+              </ul>
+            </li>
+            <li class="info-block">
+              <div class="info-block-top">
+                <h6 class="sub-minor-heading">Продавцям</h6>
+                <img src="./images/icons/chevron-down.svg" alt="chevron down" />
+              </div>
+              <ul class="footer-info-block-list">
+                <li><p class="main-text">Довідка покупцям</p></li>
+                <li><p class="main-text">Нові запчастини</p></li>
+                <li><p class="main-text">Авторозбірки України</p></li>
+                <li><p class="main-text">Політика конфіденційності</p></li>
+                <li><p class="main-text">Користувацька угода</p></li>
+              </ul>
+            </li>
+            <li class="info-block">
+              <div class="info-block-top">
+                <h6 class="sub-minor-heading">Партнерам</h6>
+                <img src="./images/icons/chevron-down.svg" alt="chevron down" />
+              </div>
+              <ul class="footer-info-block-list">
+                <li><p class="main-text">Довідка покупцям</p></li>
+                <li><p class="main-text">Нові запчастини</p></li>
+                <li><p class="main-text">Авторозбірки України</p></li>
+                <li><p class="main-text">Політика конфіденційності</p></li>
+                <li><p class="main-text">Користувацька угода</p></li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#" class="afu-donation">
+            <img src="./images/icons/heart.svg" alt="heart icon" />
+            Допомога ЗСУ
+          </a>
+        </div>
+        <div class="footer-block">
+          <p class="footer-category">Покупцям</p>
+          <ul class="footer-block-list">
+            <li><p class="main-text">Довідка покупцям</p></li>
+            <li><p class="main-text">Нові запчастини</p></li>
+            <li><p class="main-text">Авторозбірки України</p></li>
+            <li><p class="main-text">Політика конфіденційності</p></li>
+            <li><p class="main-text">Користувацька угода</p></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <p class="footer-category">Продавцям</p>
+          <ul class="footer-block-list">
+            <li><p class="main-text">Довідка продавцям</p></li>
+            <li><p class="main-text">Реєстрація продавця</p></li>
+            <li><p class="main-text">Створити сайт</p></li>
+            <li><p class="main-text">Тарифи</p></li>
+            <li><p class="main-text">Рейтинг заявок</p></li>
+            <li><p class="main-text">Звязок для продавців</p></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <p class="footer-category">Партнери</p>
+          <ul class="footer-block-list">
+            <li><p class="main-text">Agrobiz.net</p></li>
+            <li><p class="main-text">Bigopt.com</p></li>
+            <li><p class="main-text">Lvivmarket.net</p></li>
+            <li><p class="main-text">Navolyni.com</p></li>
+            <li><p class="main-text">Paulownia.energy</p></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Copyright -->
+    <div class="copyright">
+      <p class="main-text">© 2013 - 2024 ПодКапот</p>
+    </div>
+  </body>
+  <script src="scripts/script.js"></script>
+  <!-- Add files -->
+  <script src="scripts/add-files.js"></script>
+  <!-- Seller -->
+  <script src="scripts/seller.js"></script>
+  <!-- News -->
+  <script src="scripts/news.js"></script>
+  <!-- Product -->
+  <script src="scripts/product.js"></script>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Minimalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/additional.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <!-- Adaptive -->
+    <link rel="stylesheet" href="/styles/additional-adaptive.css" />
+    <title>Find part form</title>
+  </head>
+  <body>
+    <!-- Find part form -->
+    <div class="find-part header modal shown">
+      <div class="container">
+        <aside class="find-part-text">
+          <h4 class="sub-section-heading">
+            Заповніть форму заявки на запчастину та перевірені продавці самі з
+            Вами зв'яжуться
+          </h4>
+          <p class="main-text">3 причини залишити заявку прямо зараз</p>
+          <ul class="advantages">
+            <li class="advantage">
+              <img src="./images/handshake.svg" alt="handshake" />
+              <h6 class="sub-minor-heading">
+                Тільки реальні продавці (не кидали)
+              </h6>
+            </li>
+            <li class="advantage">
+              <img src="./images/rocket.svg" alt="rocket icon" />
+              <h6 class="sub-minor-heading">
+                Швидка відповідь (до 30 хвилин у робочий час)
+              </h6>
+            </li>
+            <li class="advantage">
+              <img src="./images/free.svg" alt="free icon" />
+              <h6 class="sub-minor-heading">
+                Це безкоштовно (Ви платите лише за запчастини)
+              </h6>
+            </li>
+          </ul>
+        </aside>
+        <div class="form-container">
+          <p class="heading">Заявка на запчастину</p>
+          <form action="" class="search-form">
+            <ul class="select-list">
+              <li>
+                <!-- Brand-->
+                <label for="car-brand">Марка</label>
+                <select name="" aria-placeholder="Всі марки" id="car-brand">
+                  <option value="">-Всі марки-</option>
+                </select>
+              </li>
+              <li>
+                <!-- Model -->
+                <label for="car-model">Модель</label>
+                <select name="" aria-placeholder="Всі моделі" id="car-model">
+                  <option value="">-Всі моделі-</option>
+                </select>
+              </li>
+              <li>
+                <!-- Year -->
+                <label for="year">Рік</label>
+                <select name="" aria-placeholder="Виберіть рік" id="year">
+                  <option value="">-Виберіть рік-</option>
+                </select>
+              </li>
+              <li>
+                <!-- Car part name -->
+                <label for="part-name">Назва запчастини</label>
+                <select
+                  name=""
+                  aria-placeholder="Назва запчастини"
+                  id="part-name"
+                >
+                  <option value="">-Назва запчастини-</option>
+                </select>
+              </li>
+              <li>
+                <!-- Placeholder -->
+                <label for="phone">Телефон</label>
+                <input type="text" id="phone" value="+38(" />
+              </li>
+            </ul>
+            <div class="condition-contact">
+              <div class="condition">
+                <p class="condiiton-text">Стан</p>
+                <ul class="radio-list">
+                  <li>
+                    <input type="radio" id="all" name="condition" />
+                    <label for="all">Всі</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="used" name="condition" />
+                    <label for="used">Б/В</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="new" name="condition" />
+                    <label for="new">Нові</label>
+                  </li>
+                </ul>
+              </div>
+              <input type="text" placeholder="Ваше ім’я" class="small-button" />
+              <input type="text" placeholder="E-mail" class="small-button" />
+            </div>
+            <button type="submit" class="primary-button">
+              <img src="./images/icons/lightning.svg" alt="lightning" />
+              Надіслати заяву на запчастину
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/script.js"></script>
+</html>
