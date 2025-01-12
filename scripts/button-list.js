@@ -1,5 +1,5 @@
-const buttonList = document.querySelector(".button-list");
-const buttonListPlans = document.querySelector(".plans .button-list");
+const buttonList = document.querySelector(".details .button-list");
+
 const updateButtons = (list) => {
     // Removes every active class from each button
     Array.from(list.children).forEach(button => {
@@ -10,21 +10,12 @@ const updateButtons = (list) => {
 Array.from(buttonList.children).forEach(button => {
     button.addEventListener("click", ()=>{
         // One at a time
-        updateButtons();
-        button.classList.add("active");
-    })
-})
-Array.from(buttonList.children).forEach(button => {
-    button.addEventListener("click", ()=>{
-        // One at a time
-        updateButtons();
+        updateButtons(buttonList);
         button.classList.add("active");
     })
 })
 
-buttonListPlans.addEventListener("click", (e)=>{
-    
-})
+
 // Location change
 const grid = buttonList.children[1];
 const rows = buttonList.children[0];
