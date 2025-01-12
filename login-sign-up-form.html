@@ -40,12 +40,48 @@
       <!-- Sign up section -->
       <main class="sign-up">
         <ul class="switch">
+          <li class="selected">
+            <button type="button">
+              <p class="minor-heading">Я покупець</p>
+            </button>
+          </li>
           <li>
-            <button type="button"></button>
+            <button type="button">
+              <p class="minor-heading">Я продавець</p>
+            </button>
           </li>
         </ul>
-        <section class="seller"></section>
-        <section class="buyer"></section>
+        <section class="seller">
+          <input
+            type="text"
+            placeholder="Назва підприємства "
+            class="small-button"
+          />
+          <input
+            type="text"
+            placeholder="Вид діяльності"
+            class="small-button"
+          />
+          <input type="text" placeholder="Ваше ім’я" class="small-button" />
+          <input
+            type="tel"
+            placeholder="Контактний телефон"
+            class="small-button"
+          />
+          <input type="email" placeholder="E-mail" class="small-button" />
+          <input type="password" placeholder="Пароль" class="small-button" />
+        </section>
+        <section class="buyer">
+          <input type="text" placeholder="Ваше ім’я" class="small-button" />
+          <input
+            type="tel"
+            placeholder="Контактний телефон"
+            class="small-button"
+          />
+          <input type="text" placeholder="Місто" class="small-button" />
+          <input type="email" placeholder="E-mail" class="small-button" />
+          <input type="password" placeholder="Пароль" class="small-button" />
+        </section>
       </main>
       <!-- Options -->
       <section class="options-section">
@@ -66,5 +102,6 @@
       </div>
     </form>
   </body>
+  <script src="./scripts/authorisation.js"></script>
   <script src="scripts/script.js"></script>
 </html>

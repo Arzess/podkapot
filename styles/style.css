@@ -100,7 +100,7 @@ button{
 }
 .primary-button.outline{
     padding: 0.25rem 0.5rem;
-    background-color: transparent;
+    background-color: transparent !important;
     color: var(--text-color);
     border: 1px solid var(--text-color);
 }
@@ -1969,6 +1969,7 @@ flex-shrink: 0;
 .plan-list{
     display: flex;
     gap: 1.5rem;
+    align-items: center;
     flex-wrap: wrap;
 }
 .plans .button-list{
@@ -2009,6 +2010,18 @@ flex-shrink: 0;
 .plan .heading{
     font-size: 3rem;
 }
+.plan.top.start-plan{
+    border-color: var(--additional-color);
+}
+.plan.top.nitro-plan{
+    border-color: var(--theme-color);
+}
+.plan.top.turbo-plan{
+    border-color: var(--accent-color);
+}
+.plan.top.maximum-plan{
+    border-color: var(--primary-color);
+}
 .plan.start-plan .plan-heading-container{
     background-color: var(--additional-color);
 }
@@ -2029,7 +2042,37 @@ flex-shrink: 0;
     height: 100%;
     width: 282px;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
+    border: solid;
+    border-width: 2px;
+    border-color: transparent;
 }
+.plan.top{
+    border-color: inherit;
+}
+.plan .top-selling{
+    display: none;
+}
+.plan.top .top-selling{
+    display: flex;
+    border-radius: 39px;
+    margin-top: 1.5rem;
+    display: inline-flex;
+    padding: 4px 12px;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: max-content;
+    gap: 6px;
+}
+.plan.top .top-selling p{
+    color: var(--text-color-2);
+}
+.plan.top .image-and-price{
+    margin-top: 2rem;
+}
+
 .plan-heading-container{
     display: flex;
     width: 100%;
@@ -2064,6 +2107,7 @@ flex-shrink: 0;
 .plan .inner-container{
     padding: 0 1rem 1.5rem;
     height: 100%;
+    align-items: center;
     gap: 1rem;
     display: flex;
     flex-direction: column;
@@ -3600,8 +3644,11 @@ align-self: stretch;
 .authorisation-form input{
     width: 100%;
 }
-.authorisation-form{
+.authorisation-form.shown{
     display: flex;
+}
+.authorisation-form{
+    display: none;
     max-width: 480px;
     width: 100%;
     padding: 1.5rem;
@@ -3609,6 +3656,9 @@ align-self: stretch;
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;    
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     
     border-radius: 8px;
     background: #FFF;
@@ -3639,5 +3689,140 @@ align-self: stretch;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid var(--input-color);
+    padding-bottom: 2rem;
+}
+.authorisation-form .sign-up{
+    display: none;
+}
+.authorisation-form.sign-up .sign-up{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.authorisation-form.sign-up .sign-up section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+    display: none;
+    align-self: stretch;
+}
+.authorisation-form.sign-up.buyer .sign-up section.buyer{
+    display: flex;
+}
+.authorisation-form.sign-up.seller .sign-up section.seller{
+    display: flex;
+}
+.authorisation-form .sign-up .switch{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.authorisation-form .sign-up .switch li.selected button{
+    background: #23B643;
+
+}
+.authorisation-form .sign-up .switch li.selected button p{
+    color: var(--text-color-2);
+}
+.authorisation-form .sign-up .switch li{
+    /* width: 50%; */
+    flex-grow: 1;
+}
+.authorisation-form .sign-up .switch button{
+    display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+gap: 4px;
+    width: 100%;
+    border-radius: 4px;
+
+}
+.authorisation-form.sign-up .sign-in{
+    display: none;
+}
+.authorisation-form .seller{
+    box-shadow: none;
+}
+.authorisation-form .options-section{
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.authorisation-form .help .small-text{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.authorisation-form .or{
+    display: flex;
+    gap: 29px;
+    max-width: 309px;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+.authorisation-form .or::before, .authorisation-form .or::after{
+    content: "";
+    max-width: 112px;
+    height: 1px;
+    background: #D9D9D9;
+    width: 100%;
+}
+.authorisation-form a{
+    color: #005AF0;
+}
+.authorisation-form .primary-button{
+    background-color: #23B643;
+}
+/* Personal demonstration */
+.personal-demonstration .container{
+    flex-direction: column;
+    padding: 4.5rem 3.5rem 2rem 3.5rem;
+    border-radius: 8px;
+    gap: 4rem;
+    background-color: var(--theme-color);
+}
+.personal-demonstration p, .personal-demonstration h3{
+    color: var(--text-color-2);
+}
+.personal-demonstration .desc-and-form{
+    display: flex;
+    width: 100%;
+    gap: 1.5rem;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+.personal-demonstration .desc-and-form .desc{
+    max-width: 608px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+.personal-demonstration .personal-demonstration-form{
+    display: flex;
+    max-width: 430px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+.personal-demonstration-form .input-container, .personal-demonstration-form button{
+    width: 100%;
+}
+.personal-demonstration-form button{
+    border-radius: 4px;
+    color: var(--text-color-2);
+    background: #151515;
+}
+.personal-demonstration .bottom p{
+    text-align: center;
 }

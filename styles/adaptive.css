@@ -33,7 +33,13 @@
     .search-bar{
         max-width: unset;
     }
-
+    /* Personal demonstration */
+    .personal-demonstration .desc-and-form{
+        flex-direction: column;
+    }
+    .personal-demonstration .desc-and-form .desc, .personal-demonstration .personal-demonstration-form{
+        max-width: unset;
+    }
     /* Flex grids */
     .f-4-2-1 .f-el{
         width: calc(50% - 1.5rem/2) !important;

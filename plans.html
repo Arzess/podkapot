@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles/style.css" />
     <!-- Adaptive -->
     <link rel="stylesheet" href="styles/adaptive.css" />
+    <!-- Animation -->
+    <link rel="stylesheet" href="styles/animation.css" />
     <title>Details</title>
   </head>
   <body>
@@ -1281,7 +1283,7 @@
                 <button class="primary-button big-button">Активувати</button>
               </div>
             </li>
-            <li class="plan maximum-plan f-el">
+            <li class="plan maximum-plan f-el top">
               <div class="plan-heading-container">
                 <p class="main-text">Базовий тариф</p>
                 <span class="plan-name">
@@ -1289,6 +1291,13 @@
                 </span>
               </div>
               <div class="inner-container">
+                <div class="top-selling maximum">
+                  <img
+                    src="./images/icons/bookmark-icon.svg"
+                    alt="bookmark icon"
+                  />
+                  <p class="small-text">ТОП продажу</p>
+                </div>
                 <!-- Plan image and price -->
                 <div class="image-and-price">
                   <img src="./images/maximum.png" alt="maximum" />
@@ -1513,6 +1522,48 @@
         </div>
       </section>
     </main>
+    <section class="personal-demonstration">
+      <div class="container">
+        <!-- Desc and form -->
+        <div class="desc-and-form">
+          <aside class="desc">
+            <h3 class="section-heading">Персональна демонстрація</h3>
+            <p class="main-text">
+              Заощадимо ваш час на знайомстві з ключовими можливостями сервісу.
+            </p>
+            <p class="main-text">
+              Наш фахівець зв’яжеться з вами і за підсумком запропонує
+              відповідний варіант, який може включати персональну демонстрацію,
+              пробний період, навчальні статті та записи вебінарів, консультацію
+              фахівця, а також комфортні умови для старту використання Sepstat.
+            </p>
+          </aside>
+          <form class="personal-demonstration-form">
+            <div class="input-container">
+              <p class="small-text">Invalid input</p>
+              <input type="text" placeholder="Ваше ім’я" class="main-text" />
+            </div>
+            <div class="input-container">
+              <p class="small-text">Invalid input</p>
+              <input
+                type="tel"
+                placeholder="Номер телефону"
+                class="main-text"
+              />
+            </div>
+            <button type="submit" class="primary-button">
+              Надіслати запит
+            </button>
+          </form>
+        </div>
+        <!-- Bottom text -->
+        <section class="bottom">
+          <p class="small-text">
+            Ми обов'язково з Вами зв'яжемось і проконсультуємо ;)
+          </p>
+        </section>
+      </div>
+    </section>
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -1652,6 +1703,4 @@
   <script src="scripts/dropdown.js"></script>
   <!-- Button list logic -->
   <script src="scripts/button-list.js"></script>
-  <!-- Detail's scripts -->
-  <script src="scripts/details.js"></script>
 </html>

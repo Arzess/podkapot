@@ -1,7 +1,8 @@
 const buttonList = document.querySelector(".button-list");
-const updateButtons = () => {
+const buttonListPlans = document.querySelector(".plans .button-list");
+const updateButtons = (list) => {
     // Removes every active class from each button
-    Array.from(buttonList.children).forEach(button => {
+    Array.from(list.children).forEach(button => {
         button.classList.remove("active");
     });
 }
@@ -13,15 +14,24 @@ Array.from(buttonList.children).forEach(button => {
         button.classList.add("active");
     })
 })
+Array.from(buttonList.children).forEach(button => {
+    button.addEventListener("click", ()=>{
+        // One at a time
+        updateButtons();
+        button.classList.add("active");
+    })
+})
 
-
+buttonListPlans.addEventListener("click", (e)=>{
+    
+})
 // Location change
 const grid = buttonList.children[1];
 const rows = buttonList.children[0];
 
-    grid.addEventListener("click", ()=>{
+grid.addEventListener("click", ()=>{
         location.href = "details.html"
-    })    
-    rows.addEventListener("click", ()=>{
-        location.href = "details-rows.html"
-    })
+})    
+rows.addEventListener("click", ()=>{
+    location.href = "details-rows.html"
+})

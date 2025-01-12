@@ -117,6 +117,35 @@ languageButton.forEach(b => {
 // Account button
 const accountButton = document.querySelectorAll("button.account");
 const accountModal = document.querySelector(".header .account-modal");
+const logOutButton = document.querySelector(".header .account-modal .log-out")
+const accountSignInButton = document.querySelector(".account-list.sign-out li:first-child button");
+const accountSignUpButton = document.querySelector(".account-list.sign-out li:last-child button");
+const accountLogOut = () => {
+    accountModal.classList.add("signed-out")
+}
+const openAuthorisationForm = (type) => {
+    accountModal.classList.remove("shown");
+    authorisationForm.classList.add("shown");
+    adjustAuthorisationForm(type)
+    updateHelpTextReference();
+    attachHelpTextEventListener();
+    if (type == "sign-in"){
+        authorisationForm.classList.add("sign-in");
+    }
+    else{
+        
+        authorisationForm.classList.add("sign-up");
+        authorisationForm.classList.add("buyer")
+    }
+}
+accountSignInButton.addEventListener("click", ()=>{
+    openAuthorisationForm("sign-in")
+})
+
+accountSignUpButton.addEventListener("click", ()=>{
+    openAuthorisationForm("sign-up")
+})
+logOutButton.addEventListener("click", accountLogOut)
 accountButton.forEach(button => {
     button.addEventListener("click", () => {
         closeAllModals();
