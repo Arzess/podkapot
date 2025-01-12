@@ -16,22 +16,47 @@
     background: #8BD39A;
 }
 
-.primary-button.outline{
-    transition: 0.3s;
-}
 .primary-button.outline:hover{
     border: 1px solid  #151515;
     background: #151515;
+    color: var(--text-color-2);
 }
 .primary-button.outline:active{
     border-radius: 3.2px;
     border: 1px solid #151515;
     background: #151515;
     box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.50);
+    color: var(--text-color-2);
 }
 .primary-button.outline:disabled{
     background: #575C60;
     box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.50);
+    color: var(--text-color-2);
 }
+
+.show-all-button{
+    transition: 0.3s;
+}
+
+a.show-all-button:hover{
+    border: 1px solid  #151515;
+    background: #151515;
+    color: var(--text-color-2);
+}
+a.show-all-button:active{
+    border-radius: 3.2px;
+    border: 1px solid #151515;
+    background: #151515;
+    box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.50);
+    color: var(--text-color-2);
+}
+a.show-all-button:disabled{
+    background: #575C60;
+    box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.50);
+    color: var(--text-color-2);
+}
+
+
+
 
 /* Specific styles -- */
