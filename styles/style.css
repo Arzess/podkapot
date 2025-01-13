@@ -610,6 +610,10 @@ input.wrong~p{
     text-overflow: ellipsis;
     cursor: pointer;
     width: 100%;
+    max-height: 50px;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 /* Headings */
 .heading, .sub-heading, .section-heading, .sub-section-heading, .minor-heading, .minor-heading-bold {
