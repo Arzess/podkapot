@@ -284,10 +284,13 @@ const adjustSliders = () => {
     const sliderShow = document.querySelectorAll(".list-section-additional-features");
     sliderShow.forEach(s => {
         if (s.children.length > 0 && s.children[0].children.length > 0) {
-            const childWidth = s.children[0].children[0].clientWidth;
-            const slider = s.children[0];
-            slider.style.width = `calc(50% + ${childWidth/2}px)`;
-        }
+            if (s.children[0].classList.contains("slider-show")){
+                const childWidth = s.children[0].children[0].clientWidth;
+                const slider = s.children[0];
+                slider.style.width = `calc(50% + ${childWidth/2}px)`;
+            
+            }
+           }
     });
 };
 
