@@ -521,6 +521,7 @@ input.wrong~p{
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    align-items: stretch;
     flex-wrap: wrap;
     align-self: stretch;
     /* justify-content: center; */
@@ -532,6 +533,7 @@ input.wrong~p{
     align-items: flex-start;
     border-radius: 0.5rem;
     gap: 0.25rem;
+    justify-content: space-between;
     padding-right: 0.75rem;
     padding-left: 0.75rem;
     background: #FFF;
@@ -610,7 +612,7 @@ input.wrong~p{
     text-overflow: ellipsis;
     cursor: pointer;
     width: 100%;
-    max-height: 50px;
+    max-height: 70px;
     height: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
