@@ -39,8 +39,14 @@ const passDividers = () => {
     }
 }
 
-setUpDividers();
-window.addEventListener("resize", ()=>{
+window.onload = () => {
+    adjustSliders();
     setUpDividers();
     passDividers();
-});
+    window.addEventListener("resize", ()=>{
+        setUpDividers();
+        adjustSliders();
+        passDividers();
+    });
+};
+

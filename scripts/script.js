@@ -1,6 +1,15 @@
 const mobileWidth = 500;
 // --- Header ---
 
+const logos = document.querySelectorAll(".logo");
+
+logos.forEach(logo => {
+    logo.addEventListener("click", ()=>{
+        location.href = "index.html";
+    })
+})
+
+
 // *** Menu ***
 
 const closeAllModals = () => {
@@ -269,3 +278,21 @@ const checkInputName = (i) => {
         placeholder.classList.add("hidden");
     }
 }
+
+
+const adjustSliders = () => {
+    const sliderShow = document.querySelectorAll(".list-section-additional-features");
+    sliderShow.forEach(s => {
+        if (s.children.length > 0 && s.children[0].children.length > 0) {
+            const childWidth = s.children[0].children[0].clientWidth;
+            const slider = s.children[0];
+            slider.style.width = `calc(50% + ${childWidth/2}px)`;
+        }
+    });
+};
+
+window.onload = () => {
+    adjustSliders();
+    window.addEventListener("resize", adjustSliders);
+};
+

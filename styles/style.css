@@ -337,6 +337,7 @@ form select{
     display: flex;
     flex-direction: row;
     width: 100%;
+    position: relative;
     justify-content: flex-end;
 }
 .list-section-additional-features.centered{
@@ -350,6 +351,7 @@ form select{
 }
 .list-section-additional-features .slider-show{
     width: 50%;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1252,6 +1254,9 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     flex-direction: row;
     gap: 41.75px;
 }
+.logo{
+    cursor: pointer;
+}
 .header .menu-logo{
     display: flex;
     flex-direction: row;
@@ -1303,6 +1308,9 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 .main{
     padding-top: 40px;
+}
+.main.has-breadcrumbs{
+    padding-top: 0;
 }
 main.overlay::after{
     opacity: 0.3;
@@ -3425,7 +3433,7 @@ border: 0.25rem solid #23B643;
     background-color: black;
     flex-direction: column;
     position: relative;
-    padding: 0.75rem 1.5rem 0 1.5rem;
+    /* padding: 0.75rem 1.5rem 0 1.5rem; */
 }
 .video .learn-more{
     position: absolute;
