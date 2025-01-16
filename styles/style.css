@@ -1042,6 +1042,7 @@ input.wrong~p{
     padding-bottom: 1.5rem;
     /* border-bottom: 1px solid #D9D9D9; */
 }
+
 .shopping-cart #comment{
     height: 400px;
     width: 100%;
@@ -1300,6 +1301,24 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     padding: 10px;
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
+}
+.header .cart .count-tag{
+    display: none;
+}
+.header .cart.has-tag .count-tag{
+    display: flex;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-2);
+    background-color: var(--theme-color);
+    padding: 1px 0.5rem;
+    border-radius: 100%;
+    top: -0.25rem;
+    position: absolute;
+    right: -0.75rem;
 }
 
 /* Main section */
@@ -3383,6 +3402,17 @@ border: 0.25rem solid #23B643;
 .statistic-list li p{
     text-align: center;
 }
+.statistic-list .icon-price{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+}
+.statistic-list .icon-price img{
+    width: 2rem;
+    height: 2rem;   
+}
 /* Company form */
 .company-form{
     border-radius: 8px;
@@ -3809,20 +3839,25 @@ gap: 4px;
     background-color: #23B643;
 }
 /* Personal demonstration */
+.personal-demonstration{
+    background-color: #D5DFE8;
+}
 .personal-demonstration .container{
     flex-direction: column;
-    padding: 4.5rem 3.5rem 2rem 3.5rem;
-    border-radius: 8px;
+    /* padding: 4.5rem 3.5rem 2rem 3.5rem; */
+    /* border-radius: 8px; */
     gap: 4rem;
-    background-color: var(--theme-color);
+    padding-top: 40px;
+    padding-bottom: 28px;
 }
-.personal-demonstration p, .personal-demonstration h3{
+/* .personal-demonstration p, .personal-demonstration h3{
     color: var(--text-color-2);
-}
+} */
 .personal-demonstration .desc-and-form{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    gap: 1.5rem;
+    gap: 40px;
     justify-content: space-between;
     /* flex-wrap: wrap; */
 }
@@ -3841,6 +3876,17 @@ gap: 4px;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+}
+.personal-demonstration .desc-img{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1.5rem;
+    /* flex-wrap: wrap; */
+}
+.personal-demonstration .desc-img img{
+    max-width: 457px;
+    width: 100%;
 }
 .personal-demonstration-form .input-container, .personal-demonstration-form button{
     width: 100%;
