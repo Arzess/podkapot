@@ -34,29 +34,123 @@
     color: var(--text-color-2);
 }
 
-.show-all-button{
+.show-all-button, .afu-donation{
     transition: 0.3s;
 }
 
-a.show-all-button:hover{
+a.show-all-button:hover, button.show-all-button.small-button:hover, .afu-donation:hover{
     border: 1px solid  #151515;
     background: #151515;
     color: var(--text-color-2);
 }
-a.show-all-button:active{
+svg path{
+    transition: 0.3s;
+}
+a.show-all-button:hover svg path, a.show-all-button:active svg path, button.show-all-button.small-button:hover svg path, button.show-all-button.small-button:active svg path,
+.afu-donation:hover svg path, .afu-donation:active svg path{
+    fill: var(--text-color-2);
+
+}
+a.show-all-button:active, button.show-all-button.small-button:active, .afu-donation:active{
     border-radius: 3.2px;
     border: 1px solid #151515;
     background: #151515;
     box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.50);
     color: var(--text-color-2);
 }
-a.show-all-button:disabled{
+a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-donation:disabled{
     background: #575C60;
     box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.50);
     color: var(--text-color-2);
 }
 
 
+.catalog-list-element h5{
+    transition: 0.3s;
+}
+.catalog-list-element:hover h5{
+    color: var(--theme-color);
+}
 
+.link-list a:hover{
+    color: rgba(0, 122, 255, 1);
+}
+.link-list a{
+    transition: 0.3s;
+}
+
+/* Header buttons */
+.header .primary-button:hover{
+    border: 1px solid #23B643;
+    background: #22A03D;
+}
+.header button:hover svg path{
+    fill: var(--theme-color);
+}
+.header button svg path{
+    transition: 0.3s;
+}
+
+.header .primary-button:active{
+    box-shadow: 0px 0px 0px 4px rgba(50, 203, 79, 0.50);
+}
+
+.tag-link{
+    transition: 0.3s;
+}
+.tag-link:hover{
+    background-color: rgba(128, 121, 218, 1);
+}
+
+
+form select{
+    transition: 0.3s;
+}
+form select:active, form select:hover{
+    border: 1px solid rgba(35, 182, 67, 1);
+}
+
+form input{
+    transition: 0.3s;
+}
+form input:active, form input:active{
+    border: 1px solid rgba(35, 182, 67, 1);
+}
+
+.searched-item a{
+    transition: 0.3s;
+}
+.searched-item a:hover{
+    background-color: rgba(107, 97, 232, 0.12);
+}
+.search-bar input{
+    transition: 0.3s;
+}
+.search-bar input:hover{
+    border-color: rgba(35, 182, 67, 1);
+}
+
+.news-piece .news-heading{
+    transition: 0.3s;
+}
+.news-piece:hover .news-heading{
+    padding-bottom: 2rem;
+}
 
 /* Specific styles -- */
+
+footer .footer-block-list a p{
+    transition: 0.3s;
+}
+footer .footer-block-list a:hover p{
+    color: var(--theme-color);
+}
+
+
+.hero .get-info{
+    transition: 0.3s;
+}
+.hero .get-info:hover {
+    border: 1px solid #d2530a;
+    background: #d2530a;
+}
