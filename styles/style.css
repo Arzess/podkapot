@@ -1284,7 +1284,7 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     position: relative;
 }
 .changing-icon.active img{
-    display: none;
+    display: none !important;
 }
 
 .changing-icon.active .close-cross{
