@@ -2625,7 +2625,7 @@ input[type="checkbox"] {
 .verified-sellers-list .company-image img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 .verified-sellers-list .seller-container{
     gap: 1rem;
@@ -3911,4 +3911,10 @@ gap: 4px;
 }
 .personal-demonstration .bottom p{
     text-align: center;
+}
+.find-part-button.mobile{
+    position: fixed;
+    top: 50%;
+    right: -0.5rem;
+    transform: translateY(-50%);
 }

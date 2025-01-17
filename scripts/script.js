@@ -110,7 +110,7 @@ const findPartClose = document.querySelector(".find-part.header-modal .close");
 findPartClose.addEventListener("click", ()=>{
     findPartModal.classList.remove("shown");
     updateOverlay();
-    findPartButton.classList.add("active");
+    resetChangingIcons();
 })
 
 
@@ -118,6 +118,7 @@ findPartButton.forEach(b => {
     b.addEventListener("click", ()=>{
         closeAllModals();
         findPartModal.classList.toggle("shown");
+        findPartModal.scrollIntoView({behavior: "smooth"})
         updateOverlay();
         b.classList.add("active");
     })
