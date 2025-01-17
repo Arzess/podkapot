@@ -83,6 +83,12 @@ ul{
     z-index: 10;
     position: absolute;
 }
+.close-cross{
+    display: none;
+}
+.close-cross path{
+    fill: white !important;
+}
 button{
     cursor: pointer;
 }
@@ -1276,6 +1282,13 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 .header li{
     position: relative;
+}
+.changing-icon.active img{
+    display: none;
+}
+
+.changing-icon.active .close-cross{
+    display: flex;
 }
 /* Elements */
 .search-bar{

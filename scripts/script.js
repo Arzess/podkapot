@@ -1,6 +1,11 @@
 const mobileWidth = 500;
 // --- Header ---
-
+const resetChangingIcons = () => {
+    const changing = document.querySelectorAll(".changing-icon");
+    changing.forEach(c => {
+        c.classList.remove("active");
+    })
+}
 const logos = document.querySelectorAll(".logo");
 
 logos.forEach(logo => {
@@ -64,6 +69,7 @@ closeButton.addEventListener("click", ()=>{
     catalogModal.classList.remove("shown");
     catalogHeading.innerHTML = defaultText;
     catalogModal.classList.remove("section-opened");
+    resetChangingIcons();
     updateOverlay();
 })
 // For all catalog button
@@ -71,6 +77,7 @@ catalogButton.forEach(button => {
     button.addEventListener("click", () => {
         closeAllModals();
         catalogModal.classList.toggle("shown");
+        button.classList.add("active");
         updateOverlay();
     });
 })
@@ -96,20 +103,24 @@ getBackButton.addEventListener("click", ()=>{
 })
 
 // Find part button
-const findPartButton = document.querySelector(".header .find-part-button");
+const findPartButton = document.querySelectorAll(".find-part-button");
 const findPartModal = document.querySelector(".find-part.header-modal");
 const findPartClose = document.querySelector(".find-part.header-modal .close");
 
 findPartClose.addEventListener("click", ()=>{
     findPartModal.classList.remove("shown");
     updateOverlay();
+    findPartButton.classList.add("active");
 })
 
 
-findPartButton.addEventListener("click", ()=>{
-    closeAllModals();
-    findPartModal.classList.toggle("shown");
-    updateOverlay();
+findPartButton.forEach(b => {
+    b.addEventListener("click", ()=>{
+        closeAllModals();
+        findPartModal.classList.toggle("shown");
+        updateOverlay();
+        b.classList.add("active");
+    })
 })
 
 // Language button
@@ -251,6 +262,7 @@ document.addEventListener("keydown", (e)=>{
     if (e.key === "Escape"){
         closeAllModals();
         document.body.classList.remove("steady");
+        resetChangingIcons();
     }
 })
 // To leave modal if clicked somewhere else
@@ -261,6 +273,7 @@ document.addEventListener("click", (e) => {
     if (!clickedInsideModal && !e.target.closest("button")) {
         closeAllModals();
         document.body.classList.remove("steady");
+        resetChangingIcons();
     }
     opened = Array.from(openedModals).some(modal => modal.classList.contains("shown"));
 });
