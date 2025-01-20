@@ -2081,45 +2081,47 @@ flex-shrink: 0;
     background-color: var(--primary-color);
 }
 /* Images */
-.plan.start-plan .img-container{
+.plan .img-container{
     width: 120px;
     height: 120px;
+    background-repeat: no-repeat;
     display: block;
-    background-image: url(../images/icons/roadster.svg);
+    /* background-position: center center; */
     background-size: cover;
+}
+.plan.start-plan .img-container{
+    background-image: url(../images/icons/roadster.svg);
 }
 .plan.start-plan:hover .img-container{
     background-image: url(../images/animated-icons/roadster-animated.gif);
+    width: 140px;
+    height: 140px;
 }
 
 .plan.nitro-plan .img-container{
-    width: 120px;
-    height: 120px;
-    display: block;
     background-image: url(../images/icons/engine.png);
-    background-size: 100%;
+
 }
 .plan.nitro-plan:hover .img-container{
     background-image: url(../images/animated-icons/engine-animated.gif);
+    background-size: 100% 87%;
+    background-position: center center;
+    
 }
 
 .plan.turbo-plan .img-container{
-    width: 120px;
-    height: 120px;
-    display: block;
     background-image: url(../images/icons/turbo.png);
-    background-size: 100%;
 }
 .plan.turbo-plan:hover .img-container{
     background-image: url(../images/animated-icons/turbo-animated.gif);
+    width: 140px;
+    height: 140px;
+    background-position: 5px 8px;
+
 }
 
 .plan.maximum-plan .img-container{
-    width: 120px;
-    height: 120px;
-    display: block;
     background-image: url(../images/icons/maximum.png);
-    background-size: 100%;
 }
 .plan.maximum-plan:hover .img-container{
     background-image: url(../images/animated-icons/speedometer-animated.gif);
