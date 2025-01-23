@@ -2089,11 +2089,8 @@ flex-shrink: 0;
     /* background-position: center center; */
     background-size: cover;
 }
-.plan.start-plan .img-container{
-    background-image: url(../images/icons/roadster.svg);
-}
-.plan.start-plan:hover .img-container{
-    background-image: url(../images/animated-icons/roadster-animated.gif);
+
+.plan.start-plan .image-and-price img{
     width: 140px;
     height: 140px;
 }
@@ -2112,12 +2109,13 @@ flex-shrink: 0;
 .plan.turbo-plan .img-container{
     background-image: url(../images/icons/turbo.png);
 }
-.plan.turbo-plan:hover .img-container{
-    background-image: url(../images/animated-icons/turbo-animated.gif);
+.plan.turbo-plan .image-and-price img{
     width: 140px;
     height: 140px;
-    background-position: 5px 8px;
-
+}
+.plan.nitro-plan .image-and-price img{
+    width: 140px;
+    height: 120px;
 }
 
 .plan.maximum-plan .img-container{
