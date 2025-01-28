@@ -1260,7 +1260,13 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
+}
 
+.header.floating{
+    position: fixed;
 }
 /* Layout */
 .header .container{
@@ -2001,6 +2007,7 @@ flex-shrink: 0;
 }
 .price-list .table-columns{
     padding-left: 1.5rem;
+    border-bottom: 1px solid #D9D9D9; 
 }
 .price-list .price-category:last-child .price-list li:last-child{
     border-bottom-left-radius: 0.5rem;
