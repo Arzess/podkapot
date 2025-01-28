@@ -136,6 +136,9 @@ form input:active, form input:active{
 .search-bar input:hover{
     border-color: rgba(35, 182, 67, 1);
 }
+.search-bar input:focus{
+    outline: 0;
+}
 
 .news-piece .news-heading{
     transition: 0.3s;

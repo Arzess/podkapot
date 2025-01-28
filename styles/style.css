@@ -777,7 +777,7 @@ input.wrong~p{
     margin-top: 0;
     overflow-y: scroll;
     position: fixed;
-    z-index: 14;
+    z-index: 100;
     top: 0;
     background-color: white;
     display: flex;
@@ -1263,11 +1263,19 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     width: 100%;
     background-color: #fff;
     z-index: 99;
+    position: sticky;
+    top: 0;
     transition: 0.3s;
 }
 
+.header.floating .container{
+    width: calc(100% - 40px);
+}
+.header .container{
+    transition: 0.3s;
+}
 .header.floating{
-    position: fixed;
+    /* position: fixed; */
 }
 /* Layout */
 .header .container{
