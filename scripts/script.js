@@ -313,3 +313,11 @@ window.onload = () => {
     window.addEventListener("resize", adjustSliders);
 };
 
+window.addEventListener("scroll", ()=>{
+    if (window.scrollY > document.querySelector(".header").clientHeight){
+        document.querySelector(".header").classList.add("floating")
+    }
+    else{
+        document.querySelector(".header").classList.remove("floating")
+    }
+})

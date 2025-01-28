@@ -1263,6 +1263,7 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     width: 100%;
     background-color: #fff;
     z-index: 99;
+    transition: 0.3s;
 }
 
 .header.floating{
@@ -2963,7 +2964,7 @@ section.search img{
     /* width: 300px; */
     cursor: pointer;
     overflow: hidden;
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 .news-heading-background{
@@ -2982,6 +2983,7 @@ section.search img{
 }
 .publisher{
     display: flex;
+    background-color: #fff;
     padding: 0.5rem 1rem;
 }
 .publisher img{
