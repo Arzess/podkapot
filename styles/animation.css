@@ -80,6 +80,7 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
 
 .link-list a:hover{
     color: rgba(0, 122, 255, 1);
+    text-decoration: none;
 }
 .link-list a{
     transition: 0.3s;
