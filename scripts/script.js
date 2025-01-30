@@ -17,10 +17,17 @@ logos.forEach(logo => {
 
 // *** Menu ***
 
-const closeAllModals = () => {
+const closeAllModals = (keepSidebar = false) => {
     let allOpenedModals = document.querySelectorAll(".header-modal.shown");
     allOpenedModals.forEach(modal => {
-        modal.classList.remove("shown")
+        if (keepSidebar){
+            if (!modal.classList.contains("sidebar-menu")){
+                modal.classList.remove("shown");
+            }
+        }
+        else{
+            modal.classList.remove("shown");
+        }
     })
     updateOverlay();
 }
@@ -92,7 +99,7 @@ catalogCategories.forEach(cat => {
     }
     else{
         cat.addEventListener("click", ()=>{
-            location.reload();
+            javascript:void(0);
         })
     }
 })
@@ -126,14 +133,23 @@ findPartButton.forEach(b => {
 
 // Language button
 const languageButton = document.querySelectorAll(".header .language");
-const languageModal = document.querySelector(".header .header-modal");
+const languageModal = document.querySelector(".header .language-modal");
+
 languageButton.forEach(b => {
     b.addEventListener("click", ()=>{
-        closeAllModals();
-        languageModal.classList.add("shown");
+        if (languageModal.classList.contains("shown")){
+            closeAllModals();
+        }
+        else{
+            closeAllModals();
+            languageModal.classList.add("shown");
+            
+        }
         updateOverlay();
     })
 })
+
+
 
 // Account button
 const accountButton = document.querySelectorAll("button.account");
@@ -169,8 +185,14 @@ accountSignUpButton.addEventListener("click", ()=>{
 logOutButton.addEventListener("click", accountLogOut)
 accountButton.forEach(button => {
     button.addEventListener("click", () => {
-        closeAllModals();
-        accountModal.classList.toggle("shown");
+        if (accountModal.classList.contains("shown")){
+            closeAllModals();
+        }
+        else{
+            closeAllModals();
+            accountModal.classList.add("shown");
+            
+        }
         updateOverlay();
     });
 });

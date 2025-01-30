@@ -198,6 +198,14 @@
     .statistic-list {
        flex-direction: column;
     }
+    /* Special offers */
+    .special-offers-list .special-offer{
+        flex-direction: column;
+    }
+    .special-offers-list .special-offer.special-offer:nth-child(2n){
+        flex-direction: column;
+    }
+
 }
 @media screen and (max-width: 650px) {
     /* Verified sellers */

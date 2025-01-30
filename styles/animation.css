@@ -17,8 +17,8 @@
 }
 
 .primary-button.outline:hover{
-    border: 1px solid  #151515;
-    background: #151515;
+    border: 1px solid  #151515 !important;
+    background: #151515 !important;
     color: var(--text-color-2);
 }
 .primary-button.outline:active{
@@ -74,7 +74,13 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
 .catalog-list-element{
     transition: 0.3s;
 }
-.catalog-list-element:hover{
+.seller{
+    transition: 0.3s;
+}
+.product{
+    transition: 0.3s;
+}
+.catalog-list-element:hover, .seller:hover, .product:hover{
     box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.17);
 }
 
@@ -163,4 +169,68 @@ footer .footer-block-list a:hover p{
 .hero .get-info:hover {
     border: 1px solid #d2530a;
     background: #d2530a;
+}
+
+
+
+.language-list li{
+    transition: 0.2s;
+}
+.language-list li:hover{
+    background-color: #CFECD5;
+}
+
+.page a{
+    transition: 0.3s;
+}
+.page a:hover{
+    opacity: 1;
+}
+
+
+.auto-desc h5{
+    transition: 0.3s;
+}
+.auto-desc h5:hover{
+    color: var(--theme-color);
+}
+
+.auto-catalog-list .show-all-button{
+    transition: 0.3s;
+}
+.auto-catalog-list .show-all-button:hover{
+    color: var(--theme-color);
+}
+
+
+.product .product-heading{
+    transition: 0.3s;
+}
+.product .product-heading:hover{
+    color: var(--theme-color);
+}
+.manufacturer .small-text{
+    transition: 0.3s;
+}
+.manufacturer:hover .small-text{
+    color: var(--theme-color);
+}
+
+
+
+/* Headings */
+.shop .main-text{
+    transition: 0.3s;
+}
+.shop .main-text:hover{
+    color: var(--theme-color);
+}
+
+
+.catalog-modal .category-list li{
+    transition: 0.3s;
+}
+.catalog-modal .category-list li:hover{
+    border-radius: 0.5rem;
+    background: rgba(50, 203, 79, 0.10);
 }
