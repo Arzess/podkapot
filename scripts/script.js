@@ -19,6 +19,10 @@ logos.forEach(logo => {
 
 const closeAllModals = (keepSidebar = false) => {
     let allOpenedModals = document.querySelectorAll(".header-modal.shown");
+    let allActiveButtons = document.querySelectorAll("button.active");
+    allActiveButtons.forEach(b => {
+        b.classList.remove("active");
+    })
     allOpenedModals.forEach(modal => {
         if (keepSidebar){
             if (!modal.classList.contains("sidebar-menu")){
@@ -82,9 +86,15 @@ closeButton.addEventListener("click", ()=>{
 // For all catalog button
 catalogButton.forEach(button => {
     button.addEventListener("click", () => {
-        closeAllModals();
-        catalogModal.classList.toggle("shown");
-        button.classList.add("active");
+        if (catalogModal.classList.contains("shown")){
+            closeAllModals();   
+            button.classList.remove("active");
+        }
+        else{
+            closeAllModals();
+            catalogModal.classList.add("shown");
+            button.classList.add("active");
+        }
         updateOverlay();
     });
 })
@@ -123,26 +133,34 @@ findPartClose.addEventListener("click", ()=>{
 
 findPartButton.forEach(b => {
     b.addEventListener("click", ()=>{
-        closeAllModals();
-        findPartModal.classList.toggle("shown");
-        findPartModal.scrollIntoView({behavior: "smooth"})
+        if (findPartModal.classList.contains("shown")){
+            closeAllModals();
+            b.classList.remove("active");
+        }
+        else{
+            closeAllModals();
+            findPartModal.classList.toggle("shown");
+            b.classList.add("active");
+        }
+       
+        // findPartModal.scrollIntoView({behavior: "smooth"})
         updateOverlay();
-        b.classList.add("active");
+
     })
 })
 
 // Language button
 const languageButton = document.querySelectorAll(".header .language");
-const languageModal = document.querySelector(".header .language-modal");
+const languageModal = document.querySelectorAll(".header .language-modal");
 
 languageButton.forEach(b => {
     b.addEventListener("click", ()=>{
-        if (languageModal.classList.contains("shown")){
-            closeAllModals();
+        if (b.parentElement.querySelector(".header-modal").classList.contains("shown")){
+            closeAllModals(true);
         }
         else{
-            closeAllModals();
-            languageModal.classList.add("shown");
+            closeAllModals(true);
+            b.parentElement.querySelector(".header-modal").classList.add("shown");
             
         }
         updateOverlay();
@@ -154,14 +172,15 @@ languageButton.forEach(b => {
 // Account button
 const accountButton = document.querySelectorAll("button.account");
 const accountModal = document.querySelector(".header .account-modal");
-const logOutButton = document.querySelector(".header .account-modal .log-out")
-const accountSignInButton = document.querySelector(".account-list.sign-out li:first-child button");
-const accountSignUpButton = document.querySelector(".account-list.sign-out li:last-child button");
-const accountLogOut = () => {
-    accountModal.classList.add("signed-out")
+const logOutButton = document.querySelectorAll(".header .account-modal .log-out")
+const accountSignInButton = document.querySelectorAll(".account-list.sign-out li:first-child button");
+const accountSignUpButton = document.querySelectorAll(".account-list.sign-out li:last-child button");
+const accountLogOut = (e) => {
+    e.closest(".header-modal").classList.add("signed-out")
 }
-const openAuthorisationForm = (type) => {
-    accountModal.classList.remove("shown");
+const openAuthorisationForm = (modal, type) => {
+    closeAllModals();
+    modal.classList.remove("shown");
     authorisationForm.classList.add("shown");
     adjustAuthorisationForm(type)
     updateHelpTextReference();
@@ -174,22 +193,31 @@ const openAuthorisationForm = (type) => {
         authorisationForm.classList.add("sign-up");
         authorisationForm.classList.add("buyer")
     }
+    updateOverlay();
 }
-accountSignInButton.addEventListener("click", ()=>{
-    openAuthorisationForm("sign-in")
+accountSignInButton.forEach(b => {
+    b.addEventListener("click", ()=>{
+        openAuthorisationForm(b.closest(".header-modal"), "sign-in")
+    })
+})
+accountSignUpButton.forEach(b => {
+    b.addEventListener("click", ()=>{
+        openAuthorisationForm(b.closest(".header-modal"), "sign-up")
+    })
 })
 
-accountSignUpButton.addEventListener("click", ()=>{
-    openAuthorisationForm("sign-up")
+logOutButton.forEach(b => {
+    b.addEventListener("click", accountLogOut(b));
 })
-logOutButton.addEventListener("click", accountLogOut)
+
 accountButton.forEach(button => {
+    let accountModal = button.parentElement.querySelector(".account-modal")
     button.addEventListener("click", () => {
         if (accountModal.classList.contains("shown")){
-            closeAllModals();
+            closeAllModals(true);
         }
         else{
-            closeAllModals();
+            closeAllModals(true);
             accountModal.classList.add("shown");
             
         }
@@ -297,6 +325,14 @@ document.addEventListener("click", (e) => {
         closeAllModals();
         document.body.classList.remove("steady");
         resetChangingIcons();
+    }
+    // Dropdown check
+    const openedDropdowns = document.querySelectorAll(".dropdown.opened");
+    const clickedInsideDropdown = Array.from(openedDropdowns).some(drop => drop.contains(e.target));
+    if (!clickedInsideDropdown){
+        openedDropdowns.forEach(drop => {
+            drop.classList.remove("opened");
+        })
     }
     opened = Array.from(openedModals).some(modal => modal.classList.contains("shown"));
 });

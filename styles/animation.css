@@ -234,3 +234,25 @@ footer .footer-block-list a:hover p{
     border-radius: 0.5rem;
     background: rgba(50, 203, 79, 0.10);
 }
+
+.details .button-list li {
+    transition: 0.3s;
+}
+.details .button-list li:hover {
+    background-color: rgba(35, 182, 67, 0.20);
+}
+
+.dropdown .selected-option{
+    transition: 0.3s;
+}
+.dropdown:hover .selected-option{
+    border-color: var(--theme-color);
+}
+
+
+.page-list .page{
+    transition: 0.3s;
+}
+.page-list .page:hover{
+    box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.17);
+}

@@ -298,12 +298,12 @@
         margin-left: 0;
     }
     /* Account list */
-    .account-modal .logged-in{
+    /* .account-modal .logged-in{
         left: -10rem;
-    }
-    .account-modal .sign-out{
+    } */
+    /* .account-modal .sign-out{
         left: -1rem;
-    }
+    } */
     .language-modal{
         z-index: 14;
     }
@@ -458,7 +458,7 @@
     .hero .slider.mobile{
         width: 100%;
     }
-    .hero .gallery .slider{
+    .hero .gallery-container .slider{
         display: none;
     }
     .search-form{
@@ -467,7 +467,7 @@
     .hero .gallery-unit{
         padding: 40px;
     }
-    .hero .gallery .controls{
+    .hero .gallery-container .controls{
         display: none;
     }
     .hero .slider.absolute{

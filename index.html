@@ -968,6 +968,17 @@
                   </defs>
                 </svg>
               </button>
+              <!-- Language -->
+              <div class="header-modal language-modal">
+                <ul class="language-list">
+                  <li class="selected">
+                    <p class="minor-heading">UA</p>
+                  </li>
+                  <li>
+                    <p class="minor-heading">EN</p>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
               <button class="account">
@@ -997,6 +1008,37 @@
                   </defs>
                 </svg>
               </button>
+              <div class="header-modal account-modal">
+                <!-- Signed in -->
+                <ul class="account-list logged-in">
+                  <li class="account-details">
+                    <a href="#">
+                      <img src="./images/avatar.png" alt="avatar" />
+                      <p class="sub-minor-heading">Олександр Потужненко</p>
+                    </a>
+                  </li>
+                  <li>
+                    <button class="log-out">
+                      <img
+                        src="./images/icons/download.svg"
+                        alt="download icon"
+                      />
+                      <p class="big-button">Вихід</p>
+                    </button>
+                  </li>
+                </ul>
+                <!-- Signed out -->
+                <ul class="account-list sign-out">
+                  <li>
+                    <button class="primary-button small-button">Вхід</button>
+                  </li>
+                  <li>
+                    <button class="primary-button outline small-button">
+                      Реєстрація
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
               <button class="cart">
@@ -1540,27 +1582,41 @@
               Пошук
             </button>
           </form>
-          <div class="gallery">
-            <div class="gallery-unit">
-              <h1 class="heading">
-                PODKAPOT – Ваш Партнер у Надійних Автозапчастинах
-              </h1>
-              <p class="main-text">
-                Забезпечте своє авто якісними запчастинами від перевірених
-                постачальників.
-              </p>
-              <a href="#" class="get-info">Дізнатись деталі</a>
-              <!-- Background -->
-              <div class="gallery-unit-background">
-                <img src="./images/hero.png" alt="car" />
-              </div>
-            </div>
+          <div class="gallery-container swiper">
+            <ul class="gallery swiper-wrapper">
+              <li class="gallery-unit swiper-slide">
+                <h1 class="heading">
+                  PODKAPOT – Ваш Партнер у Надійних Автозапчастинах
+                </h1>
+                <p class="main-text">
+                  Забезпечте своє авто якісними запчастинами від перевірених
+                  постачальників.
+                </p>
+                <a href="#" class="get-info">Дізнатись деталі</a>
+                <div class="gallery-unit-background">
+                  <img src="./images/hero.png" alt="car" />
+                </div>
+              </li>
+              <li class="gallery-unit swiper-slide">
+                <h1 class="heading">
+                  PODKAPOT – Ваш Партнер у Надійних Автозапчастинах
+                </h1>
+                <p class="main-text">
+                  Забезпечте своє авто якісними запчастинами від перевірених
+                  постачальників.
+                </p>
+                <a href="#" class="get-info">Дізнатись деталі</a>
+                <div class="gallery-unit-background">
+                  <img src="./images/hero.png" alt="car" />
+                </div>
+              </li>
+            </ul>
 
             <ul class="controls">
-              <li class="control">
-                <img src="./images/icons/chevron-left.svg" alt="chevron down" />
+              <li class="control swiper-button-prev">
+                <img src="./images/icons/chevron-left.svg" alt="chevron left" />
               </li>
-              <li class="control">
+              <li class="control swiper-button-next">
                 <img
                   src="./images/icons/chevron-left.svg"
                   alt="chevron right"
@@ -1568,19 +1624,14 @@
                 />
               </li>
             </ul>
-            <ul class="slider background absolute">
-              <li class="page"><a href="#"></a></li>
-              <li class="page selected"><a href="#"></a></li>
-              <li class="page"><a href="#"></a></li>
-              <li class="page"><a href="#"></a></li>
-            </ul>
+
+            <ul
+              class="slider background absolute"
+              data-pagination="desktop"
+            ></ul>
           </div>
-          <ul class="slider mobile">
-            <li class="page"><a href="#"></a></li>
-            <li class="page selected"><a href="#"></a></li>
-            <li class="page"><a href="#"></a></li>
-            <li class="page"><a href="#"></a></li>
-          </ul>
+
+          <ul class="slider mobile" data-pagination="mobile"></ul>
         </div>
       </section>
       <!-- Catalog section -->
@@ -3709,4 +3760,8 @@
   <script src="scripts/seller.js"></script>
   <!-- Authorisation -->
   <script src="./scripts/authorisation.js"></script>
+  <!-- Swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper -->
+  <script type="module" src="./scripts/swiper.js"></script>
 </html>
