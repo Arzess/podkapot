@@ -28,6 +28,7 @@
 }
 body{
     font-family: Inter, sans-serif;
+    overflow-x: hidden;
 }
 body.steady{
     /* height: 100vh; */
@@ -457,6 +458,12 @@ input.wrong~p{
     justify-content: center;
     gap: 0.5rem;
 }
+form .dropdown{
+    width: 100%;
+}
+form .dropdown .selected-option{
+    justify-content: space-between;
+}
 .dropdown .options-list{
     position: absolute;
     top: 100%;
@@ -465,6 +472,7 @@ input.wrong~p{
     display: flex;
     height: 0;
     padding: 0;
+    z-index: 10;
     overflow: hidden;
     /* gap: 0.75rem; */
     border-radius: 0.5rem;
@@ -478,10 +486,22 @@ input.wrong~p{
     height: auto;
 }
 .dropdown .option{
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding: 0.5rem 1rem;
+    /* padding-right: 0.75rem; */
+    /* padding-left: 0.75rem; */
 }
-
+.dropdown .selected-option img{
+    transition: 0.3s;
+}
+.dropdown.opened .selected-option img{
+    transform: scaleY(-1);
+}
+.dropdown .option:first-child{
+    padding-top: 1rem;
+}
+.dropdown .option:last-child{
+    padding-bottom: 1rem;
+}
 
 /* Slider */
 .slider{
@@ -1966,8 +1986,8 @@ flex-shrink: 0;
     align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+    width: max-content;
+    /* justify-content: center; */
 }
 /* Elements */
 .catalog-list-element{
@@ -3088,9 +3108,9 @@ section.search img{
 .news .f-4-2-1{
     gap: 0;
 }
-.news .f-4-2-1 .f-el{
+/* .news .f-4-2-1 .f-el{
     width: 25%;
-}
+} */
 .news-piece{
     /* width: 300px; */
     cursor: pointer;
@@ -3793,7 +3813,8 @@ border: 0.25rem solid #23B643;
 /* Layout */
 .successful-cases-list{
     display: flex;
-    width: 100%;
+    width: max-content;
+    flex-wrap: wrap;
 }
 .case{
     border-radius: 0.5rem;

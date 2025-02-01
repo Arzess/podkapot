@@ -1,4 +1,9 @@
 /* Additional styles apart from the main pages */
-
-
-/* Shopping cart */
+.swiper-container{
+    width: 100%;
+}
+.gallery-container-4{
+    width: 100%;
+    position: relative;
+    left: -40px;
+}

@@ -10,6 +10,8 @@
     />
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css" />
+    <!-- Additional -->
+    <link rel="stylesheet" href="styles/additional.css" />
     <!-- Adaptive -->
     <link rel="stylesheet" href="styles/adaptive.css" />
     <!-- Animation -->
@@ -512,11 +514,29 @@
               <ul class="application-section-list">
                 <li class="condition">
                   <label for="delivery">Спосіб доставки</label>
-                  <select name="" id="delivery" class="main-text">
-                    <option value="placeholder" class="main-text">
-                      -Спосіб доставки-
-                    </option>
-                  </select>
+                  <div class="dropdown">
+                    <div class="selected-option">
+                      <p class="main-text">Всі марки</p>
+                      <img
+                        src="./images/icons/arrow-drop-down.svg"
+                        alt="arrow down"
+                      />
+                    </div>
+                    <ul class="options-list">
+                      <li class="option">
+                        <p class="main-text">Всі марки</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 1</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 2</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 3</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="condition">
                   <div class="input-container">
@@ -530,9 +550,29 @@
                 </li>
                 <li class="condition">
                   <label for="payment">Спосіб оплати</label>
-                  <select name="" id="payment" class="main-text">
-                    <option value="placeholder">-Спосіб оплати-</option>
-                  </select>
+                  <div class="dropdown">
+                    <div class="selected-option">
+                      <p class="main-text">Всі марки</p>
+                      <img
+                        src="./images/icons/arrow-drop-down.svg"
+                        alt="arrow down"
+                      />
+                    </div>
+                    <ul class="options-list">
+                      <li class="option">
+                        <p class="main-text">Всі марки</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 1</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 2</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 3</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
               </ul>
             </section>
@@ -1314,34 +1354,110 @@
                 <li>
                   <!-- Brand-->
                   <label for="car-brand">Марка</label>
-                  <select name="" aria-placeholder="Всі марки" id="car-brand">
-                    <option value="">-Всі марки-</option>
-                  </select>
+                  <div class="dropdown">
+                    <div class="selected-option">
+                      <p class="main-text">Всі марки</p>
+                      <img
+                        src="./images/icons/arrow-drop-down.svg"
+                        alt="arrow down"
+                      />
+                    </div>
+                    <ul class="options-list">
+                      <li class="option">
+                        <p class="main-text">Всі марки</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 1</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 2</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 3</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   <!-- Model -->
                   <label for="car-model">Модель</label>
-                  <select name="" aria-placeholder="Всі моделі" id="car-model">
-                    <option value="">-Всі моделі-</option>
-                  </select>
+                  <div class="dropdown">
+                    <div class="selected-option">
+                      <p class="main-text">Всі марки</p>
+                      <img
+                        src="./images/icons/arrow-drop-down.svg"
+                        alt="arrow down"
+                      />
+                    </div>
+                    <ul class="options-list">
+                      <li class="option">
+                        <p class="main-text">Всі марки</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 1</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 2</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 3</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   <!-- Year -->
                   <label for="year">Рік</label>
-                  <select name="" aria-placeholder="Виберіть рік" id="year">
-                    <option value="">-Виберіть рік-</option>
-                  </select>
+                  <div class="dropdown">
+                    <div class="selected-option">
+                      <p class="main-text">Всі марки</p>
+                      <img
+                        src="./images/icons/arrow-drop-down.svg"
+                        alt="arrow down"
+                      />
+                    </div>
+                    <ul class="options-list">
+                      <li class="option">
+                        <p class="main-text">Всі марки</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 1</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 2</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 3</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   <!-- Car part name -->
                   <label for="part-name">Назва запчастини</label>
-                  <select
-                    name=""
-                    aria-placeholder="Назва запчастини"
-                    id="part-name"
-                  >
-                    <option value="">-Назва запчастини-</option>
-                  </select>
+                  <div class="dropdown">
+                    <div class="selected-option">
+                      <p class="main-text">Всі марки</p>
+                      <img
+                        src="./images/icons/arrow-drop-down.svg"
+                        alt="arrow down"
+                      />
+                    </div>
+                    <ul class="options-list">
+                      <li class="option">
+                        <p class="main-text">Всі марки</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 1</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 2</p>
+                      </li>
+                      <li class="option">
+                        <p class="main-text">Всі марки 3</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   <!-- Placeholder -->
@@ -1418,62 +1534,100 @@
         </div>
       </nav>
       <!-- Catalog section -->
-      <section class="catalog list-section no-heading">
+      <section class="catalog list-section">
         <div class="container">
           <h3 class="section-heading">Каталог запчастин</h3>
-          <ul class="catalog-list f-4-2-1">
-            <li class="catalog-list-element f-el">
-              <a href="#">
-                <div class="catalog-element-image">
-                  <img src="./images/tires.png" alt="stacked up tires" />
-                </div>
-                <div class="catalog-element-name">
-                  <h5 class="minor-heading">Шини та Диски</h5>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-list-element f-el">
-              <a href="#">
-                <div class="catalog-element-image">
-                  <img src="./images/tires.png" alt="stacked up tires" />
-                </div>
-                <div class="catalog-element-name">
-                  <h5 class="minor-heading">Шини та Диски</h5>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-list-element f-el">
-              <a href="#">
-                <div class="catalog-element-image">
-                  <img src="./images/tires.png" alt="stacked up tires" />
-                </div>
-                <div class="catalog-element-name">
-                  <h5 class="minor-heading">Шини та Диски</h5>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-list-element f-el">
-              <a href="#">
-                <div class="catalog-element-image">
-                  <img src="./images/tires.png" alt="stacked up tires" />
-                </div>
-                <div class="catalog-element-name">
-                  <h5 class="minor-heading">Шини та Диски</h5>
-                </div>
-              </a>
-            </li>
-          </ul>
+          <div class="swiper-container gallery-container-4">
+            <ul class="catalog-list f-4-2-1 swiper-wrapper">
+              <li class="catalog-list-element f-el swiper-slide">
+                <a href="details.html">
+                  <div class="catalog-element-image">
+                    <img src="./images/tires.png" alt="stacked up tires" />
+                  </div>
+                  <div class="catalog-element-name">
+                    <h5 class="minor-heading">Шини та Диски</h5>
+                  </div>
+                </a>
+              </li>
+              <li class="catalog-list-element f-el swiper-slide">
+                <a href="details.html">
+                  <div class="catalog-element-image">
+                    <img src="./images/tires.png" alt="stacked up tires" />
+                  </div>
+                  <div class="catalog-element-name">
+                    <h5 class="minor-heading">Шини та Диски</h5>
+                  </div>
+                </a>
+              </li>
+              <li class="catalog-list-element f-el swiper-slide">
+                <a href="details.html">
+                  <div class="catalog-element-image">
+                    <img src="./images/tires.png" alt="stacked up tires" />
+                  </div>
+                  <div class="catalog-element-name">
+                    <h5 class="minor-heading">Шини та Диски</h5>
+                  </div>
+                </a>
+              </li>
+              <li class="catalog-list-element f-el swiper-slide">
+                <a href="details.html">
+                  <div class="catalog-element-image">
+                    <img src="./images/tires.png" alt="stacked up tires" />
+                  </div>
+                  <div class="catalog-element-name">
+                    <h5 class="minor-heading">Шини та Диски</h5>
+                  </div>
+                </a>
+              </li>
+              <li class="catalog-list-element f-el swiper-slide">
+                <a href="details.html">
+                  <div class="catalog-element-image">
+                    <img src="./images/tires.png" alt="stacked up tires" />
+                  </div>
+                  <div class="catalog-element-name">
+                    <h5 class="minor-heading">Шини та Диски</h5>
+                  </div>
+                </a>
+              </li>
+              <li class="catalog-list-element f-el swiper-slide">
+                <a href="details.html">
+                  <div class="catalog-element-image">
+                    <img src="./images/tires.png" alt="stacked up tires" />
+                  </div>
+                  <div class="catalog-element-name">
+                    <h5 class="minor-heading">Шини та Диски</h5>
+                  </div>
+                </a>
+              </li>
+              <li class="catalog-list-element f-el swiper-slide">
+                <a href="details.html">
+                  <div class="catalog-element-image">
+                    <img src="./images/tires.png" alt="stacked up tires" />
+                  </div>
+                  <div class="catalog-element-name">
+                    <h5 class="minor-heading">Шини та Диски</h5>
+                  </div>
+                </a>
+              </li>
+              <li class="catalog-list-element f-el swiper-slide">
+                <a href="details.html">
+                  <div class="catalog-element-image">
+                    <img src="./images/tires.png" alt="stacked up tires" />
+                  </div>
+                  <div class="catalog-element-name">
+                    <h5 class="minor-heading">Шини та Диски</h5>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
           <div class="list-section-additional-features">
             <div class="slider-show">
-              <!-- Slider -->
-              <ul class="slider">
-                <li class="page"><a href="#"></a></li>
-                <li class="page selected"><a href="#"></a></li>
-                <li class="page"><a href="#"></a></li>
-              </ul>
+              <!-- Custom Pagination -->
+              <ul class="slider" data-pagination="four"></ul>
               <!-- Show all -->
-              <a href="#" class="show-all-button"
-                >Дивитись все
+              <a href="#" class="show-all-button">
+                Дивитись все
                 <svg
                   width="21"
                   height="16"
@@ -1484,8 +1638,9 @@
                   <path
                     d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0V9Z"
                     fill="#151515"
-                  /></svg
-              ></a>
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -2056,38 +2211,110 @@
                   <li>
                     <!-- Brand-->
                     <label for="car-brand">Марка</label>
-                    <select name="" aria-placeholder="Всі марки" id="car-brand">
-                      <option value="">-Всі марки-</option>
-                    </select>
+                    <div class="dropdown">
+                      <div class="selected-option">
+                        <p class="main-text">Всі марки</p>
+                        <img
+                          src="./images/icons/arrow-drop-down.svg"
+                          alt="arrow down"
+                        />
+                      </div>
+                      <ul class="options-list">
+                        <li class="option">
+                          <p class="main-text">Всі марки</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 1</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 2</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 3</p>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                   <li>
                     <!-- Model -->
                     <label for="car-model">Модель</label>
-                    <select
-                      name=""
-                      aria-placeholder="Всі моделі"
-                      id="car-model"
-                    >
-                      <option value="">-Всі моделі-</option>
-                    </select>
+                    <div class="dropdown">
+                      <div class="selected-option">
+                        <p class="main-text">Всі марки</p>
+                        <img
+                          src="./images/icons/arrow-drop-down.svg"
+                          alt="arrow down"
+                        />
+                      </div>
+                      <ul class="options-list">
+                        <li class="option">
+                          <p class="main-text">Всі марки</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 1</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 2</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 3</p>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                   <li>
                     <!-- Year -->
                     <label for="year">Рік</label>
-                    <select name="" aria-placeholder="Виберіть рік" id="year">
-                      <option value="">-Виберіть рік-</option>
-                    </select>
+                    <div class="dropdown">
+                      <div class="selected-option">
+                        <p class="main-text">Всі марки</p>
+                        <img
+                          src="./images/icons/arrow-drop-down.svg"
+                          alt="arrow down"
+                        />
+                      </div>
+                      <ul class="options-list">
+                        <li class="option">
+                          <p class="main-text">Всі марки</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 1</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 2</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 3</p>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                   <li>
                     <!-- Car part name -->
                     <label for="part-name">Назва запчастини</label>
-                    <select
-                      name=""
-                      aria-placeholder="Назва запчастини"
-                      id="part-name"
-                    >
-                      <option value="">-Назва запчастини-</option>
-                    </select>
+                    <div class="dropdown">
+                      <div class="selected-option">
+                        <p class="main-text">Всі марки</p>
+                        <img
+                          src="./images/icons/arrow-drop-down.svg"
+                          alt="arrow down"
+                        />
+                      </div>
+                      <ul class="options-list">
+                        <li class="option">
+                          <p class="main-text">Всі марки</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 1</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 2</p>
+                        </li>
+                        <li class="option">
+                          <p class="main-text">Всі марки 3</p>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                   <li>
                     <!-- Placeholder -->
@@ -3146,4 +3373,8 @@
   <script src="scripts/news.js"></script>
   <!-- Product -->
   <script src="scripts/product.js"></script>
+  <!-- Swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper 4 cards -->
+  <script type="module" src="./scripts/swiper-4-cards.js"></script>
 </html>
