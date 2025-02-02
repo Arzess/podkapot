@@ -176,6 +176,13 @@ button.add:hover, button.go-to:hover{
     opacity: 0.8;
 }
 
+.plans .button-list li:not(.active){
+    transition: 0.3s;
+}
+.plans .button-list li:not(.active):hover{
+    background-color: #32cb4e23;
+}
+
 
 /* Header buttons */
 button.search{
