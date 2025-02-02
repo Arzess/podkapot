@@ -98,6 +98,11 @@ catalogButton.forEach(button => {
         updateOverlay();
     });
 })
+const clearCategories = () => {
+    catalogCategories.forEach(cat => {
+        cat.classList.remove("selected")
+    })
+}
 catalogCategories.forEach(cat => {
     // For mobile
     if (window.innerWidth <= mobileWidth){
@@ -109,7 +114,8 @@ catalogCategories.forEach(cat => {
     }
     else{
         cat.addEventListener("click", ()=>{
-            javascript:void(0);
+            clearCategories();
+            cat.classList.add("selected")
         })
     }
 })
