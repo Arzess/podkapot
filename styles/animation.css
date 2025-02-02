@@ -19,6 +19,12 @@
 .primary-button.outline:hover{
     border: 1px solid  #151515 !important;
     background: #151515 !important;
+
+}
+.primary-button.outline:hover p{
+    transition: 0.3s;
+}
+.primary-button.outline:hover p{
     color: var(--text-color-2);
 }
 .primary-button.outline:active{
@@ -64,6 +70,27 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
     color: var(--text-color-2);
 }
 
+.products-inner-container .product .product-desc p.main-text{
+    transition: 0.3s;
+}
+
+.products-inner-container .product-desc-image:hover .product-desc p.main-text{
+    color: var(--theme-color);
+}
+
+.details .cancel button:hover{
+    color: rgba(255, 0, 0, 0.757);
+}
+
+.breadcrumbs-list a {
+   transition: 0.3s;
+}
+.breadcrumbs-list li:not(.current):hover a {
+   opacity: 0.7;
+}
+
+
+
 
 .catalog-list-element h5{
     transition: 0.3s;
@@ -80,11 +107,11 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
 .product{
     transition: 0.3s;
 }
-.catalog-list-element:hover, .seller:hover, .product:hover{
+.catalog-list-element:hover, .verified-sellers-list .seller:hover, .products-list:not(.rows) .product:hover{
     box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.17);
 }
 
-.link-list a:hover{
+.link-list a:hover, .authorisation-form a:hover{
     color: rgba(0, 122, 255, 1);
     text-decoration: none;
 }
@@ -92,7 +119,72 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
     transition: 0.3s;
 }
 
+button.remove, button.count-more, button.count-less{
+    transition: 0.3s;
+}
+button.remove:hover, button.count-more:not(.inactive):hover, button.count-less:not(.inactive):hover{
+    opacity: 0.6;
+}
+.shopping-cart nav button:hover svg path{
+    transition: 0.3s;
+}
+.shopping-cart nav button:hover svg path{
+    fill: var(--theme-color);
+}
+.authorisation-form .sign-up .switch li:not(.selected){
+    transition: 0.3s;
+}
+.authorisation-form .sign-up .switch li:not(.selected):hover{
+    background-color: #23b64311;
+}
+
+button.add, button.go-to{
+    transition: 0.3s;
+}
+button.add:hover, button.go-to:hover{
+    opacity: 0.8;
+}
+.comment-container{
+    transition: 0.3s;
+}
+.comment-container:hover{
+    border-color: var(--theme-color);
+}
+.comment-container textarea:focus{
+    outline: 0;
+}
+.seller-review .review-details-list a p {
+    transition: 0.3s;
+}
+.seller-review .review-details-list a p:hover {
+    opacity: 0.8;
+}
+/* Stars */
+.stars li.filled svg path{
+    fill: #FEAD38;
+
+}
+.stars li.hovered svg path{
+    fill: #FEAD38;
+    opacity: 0.5;
+}
+
+.question img{
+    transition: 0.3s;
+}
+.question:hover img{
+    opacity: 0.8;
+}
+
+
 /* Header buttons */
+button.search{
+    transition: 0.3s;
+}
+button.search:hover{
+    background-color: #363636;
+}
+
 .header .primary-button:hover{
     border: 1px solid #23B643;
     background: #22A03D;
@@ -126,8 +218,9 @@ form select:active, form select:hover{
 form input{
     transition: 0.3s;
 }
-form input:active, form input:active{
+form input:hover, form input:active, form input:focus{
     border: 1px solid rgba(35, 182, 67, 1);
+    outline: 0;
 }
 
 .searched-item a{
