@@ -1562,11 +1562,20 @@
               <div class="gallery-info">
                 <!-- Product gallery -->
                 <div class="gallery">
-                  <div class="gallery-main-image">
+                  <div class="gallery-main-image swiper-container">
+                    <div class="swiper-wrapper"></div>
                     <div class="controls">
                       <ul class="controls-list">
                         <li>
-                          <button>
+                          <button class="swiper-button-prev">
+                            <img
+                              src="./images/icons/chevron-left.svg"
+                              alt="chevron"
+                            />
+                          </button>
+                        </li>
+                        <li>
+                          <button class="swiper-button-next">
                             <img
                               src="./images/icons/chevron-left.svg"
                               alt="chevron"
@@ -1575,23 +1584,12 @@
                         </li>
                       </ul>
                     </div>
-                    <img src="./images/yellow-car.jpg" alt="yellow car" />
                   </div>
-                  <ul class="gallery-list">
-                    <li class="current">
-                      <img src="./images/yellow-car.jpg" alt="yellow car" />
-                    </li>
-                    <li>
-                      <img src="./images/yellow-car.jpg" alt="yellow car" />
-                    </li>
-                    <li>
-                      <img src="./images/yellow-car.jpg" alt="yellow car" />
-                    </li>
-                    <li>
-                      <img src="./images/yellow-car.jpg" alt="yellow car" />
-                    </li>
-                  </ul>
+                  <div class="swiper-wrapper">
+                    <ul class="gallery-list swiper-container"></ul>
+                  </div>
                 </div>
+
                 <div class="info-options">
                   <!-- Info -->
                   <div class="info">
@@ -3595,6 +3593,8 @@
   <script src="./scripts/authorisation.js"></script>
   <!-- Dropdown -->
   <script src="scripts/dropdown.js"></script>
+  <!-- Gallery -->
+  <script type="module" src="scripts/product-gallery.js"></script>
   <!-- Swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </html>
