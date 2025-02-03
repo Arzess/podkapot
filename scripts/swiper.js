@@ -13,10 +13,8 @@ const heroSwiper = new Swiper(swiperContainer, {
   },
   on: {
     init: function (swiper) {
-      setTimeout(() => {
-        createPagination(swiper, desktopPagination);
-        createPagination(swiper, mobilePagination);
-      }, 100);
+      createPagination(swiper, desktopPagination);
+      createPagination(swiper, mobilePagination);
     },
     slideChange: function (swiper) {
       updatePagination(swiper, desktopPagination);

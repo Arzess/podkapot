@@ -8,8 +8,6 @@ const imageSourcesProductGallery = [
     './images/yellow-car.jpg',
   ];
 document.addEventListener("DOMContentLoaded", () => {
-    // Add images here
-
   const swiperWrapper = document.querySelector('.gallery-main-image .swiper-wrapper');
   const galleryList = document.querySelector('.gallery-list');
 

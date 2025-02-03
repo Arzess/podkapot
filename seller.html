@@ -1534,14 +1534,15 @@
       </div>
     </div>
     <!-- Main -->
-    <main class="main">
+    <main class="main has-breadcrumbs">
       <!-- Breadcrumbs -->
-      <nav class="breadcrumbs has-breadcrumbs">
+      <nav class="breadcrumbs has-breadcrumbs green-breadcrumbs">
         <div class="container">
           <ul class="breadcrumbs-list">
             <li class="breadcrumb home">
               <a href="#"
-                ><img src="./images/icons/house-icon.svg" alt="" /> Home</a
+                ><img src="./images/icons/green-house-icon.svg" alt="" />
+                Home</a
               >
             </li>
             <li class="breadcrumb"><a href="#">Item 1</a></li>
@@ -1556,7 +1557,7 @@
           <!-- Seller actions -->
           <ul class="seller-actions">
             <li>
-              <button class="primary-button">
+              <button class="primary-button" data-scroll-to=".seller-desc">
                 <img
                   src="./images/icons/InfoCircle.svg"
                   alt="info circle icon"
@@ -1565,13 +1566,16 @@
               </button>
             </li>
             <li>
-              <button class="primary-button">
+              <button class="primary-button" data-scroll-to=".seller-reviews">
                 <img src="./images/icons/chat.svg" alt="chat icon" />
                 <p class="main-text">Відгуки</p>
               </button>
             </li>
             <li>
-              <button class="primary-button">
+              <button
+                class="primary-button"
+                data-scroll-to=".companys-products"
+              >
                 <img
                   src="./images/icons/ShopWindow.svg"
                   alt="shop window icon"
@@ -1581,7 +1585,7 @@
             </li>
 
             <li>
-              <button class="primary-button">
+              <button class="primary-button" data-scroll-to=".recent">
                 <img src="./images/icons/FileText.svg" alt="file text icon" />
                 <p class="main-text">Заявка на запчастину</p>
               </button>
@@ -2873,14 +2877,14 @@
     </button>
   </body>
   <script src="scripts/script.js"></script>
-  <!-- Add files -->
-  <script src="scripts/add-files.js"></script>
   <!-- Seller -->
   <script src="scripts/seller.js"></script>
   <!-- Authorisation -->
   <script src="./scripts/authorisation.js"></script>
   <!-- Dropdown -->
   <script src="scripts/dropdown.js"></script>
+  <!-- Seller section -->
+  <script src="scripts/seller-section.js"></script>
   <!-- Swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </html>

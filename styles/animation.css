@@ -272,10 +272,13 @@ form input:hover, form input:active, form input:focus{
 
 /* Specific styles -- */
 
-footer .footer-block-list a p{
+footer .footer-block-list a p, footer .footer-info-list a p{
     transition: 0.3s;
 }
 footer .footer-block-list a:hover p{
+    color: var(--theme-color);
+}
+footer .footer-info-list a:hover p{
     color: var(--theme-color);
 }
 
@@ -305,11 +308,14 @@ footer .footer-block-list a:hover p{
 }
 
 
-.auto-desc h5{
+.auto-desc h5, .auto-desc img{
     transition: 0.3s;
 }
-.auto-desc h5:hover{
+.auto-desc:hover h5{
     color: var(--theme-color);
+}
+.auto-desc:hover img{
+    opacity: 0.6;
 }
 
 .auto-catalog-list .show-all-button{
@@ -318,6 +324,13 @@ footer .footer-block-list a:hover p{
 .auto-catalog-list .show-all-button:hover{
     color: var(--theme-color);
 }
+.products-list.rows .product .img-name p{
+    transition: 0.3s;
+}
+.products-list.rows .product .img-name:hover p {
+    color: var(--theme-color);
+}
+
 
 
 .product .product-heading{
@@ -371,5 +384,10 @@ footer .footer-block-list a:hover p{
     transition: 0.3s;
 }
 .page-list .page:hover{
+    box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.17);
+}
+
+/* To the top */
+.to-the-top:hover{
     box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.17);
 }

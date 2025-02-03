@@ -27,3 +27,16 @@ Array.from(tags).forEach(tag => {
 cancel.addEventListener("click", ()=>{
     deleteTags(true);
 })
+
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    const buttonListDetails = document.querySelector(".details-options-list .button-list");
+    if (buttonListDetails.children[0].classList.contains("active")){
+        const detailsRowProducts = document.querySelectorAll(".details .product .img-name");
+        detailsRowProducts.forEach(p => {
+            p.addEventListener("click", ()=>{
+                location.href="product.html";
+            });
+        })
+    }
+})

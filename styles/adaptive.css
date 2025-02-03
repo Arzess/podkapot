@@ -52,6 +52,11 @@
     .f-2-1.successful-cases-list .f-el{
         width: 100%; 
      }
+
+     /* Verified sellers */
+     .verified-sellers-list .seller-container {
+        flex-wrap: wrap;
+    }
 }
 @media screen and (max-width: 1150px) {
     .video-section{
@@ -76,9 +81,8 @@
     }
     /* Find part */ 
     .find-part{
-        height: max-content;
-        padding-top: 12rem;
-        padding-bottom: 12rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
     }
     section.find-part{
         padding-top: 1.5rem;
@@ -113,6 +117,14 @@
     .company-desc form{
         width: 100%;
         height: auto;
+    }
+    /* Product gallery */
+    .product-section .gallery-info{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .product-section .gallery{
+        max-width: unset;
     }
     /* Flex grid */
     .f-3-2-1 .f-el{
@@ -319,7 +331,7 @@
         display: none;
     }
     .catalog-modal .catalog-inner{
-        padding: 1rem;
+        /* padding: 1rem; */
     }
     .catalog-modal .catalog-inner{
         gap: 0;
@@ -561,12 +573,15 @@
     }
     /* Find part */
     .find-part{
-        max-height: 100%;
+        /* max-height: 100%; */
         max-width: 100%;
+        max-height: unset;
     }
     .find-part .container{
         width: 100%;
-        height: 100vh;
+        max-height: unset;
+        height: auto;
+        flex-grow: 1;
         justify-content: start;
     }
     .find-part .form-container .heading{
@@ -604,7 +619,7 @@
         width: 100%;
         border-radius: 0;
         padding: 0;
-        height: 100%;
+        height: 100vh;
         background: none;
         background-color: #fff;
     }
@@ -766,7 +781,7 @@
     }
 }
 
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 420px) {
     /* General */
     .small-button{
         font-size: 14px;

@@ -377,11 +377,54 @@ window.onload = () => {
     window.addEventListener("resize", adjustSliders);
 };
 
-window.addEventListener("scroll", ()=>{
+
+// "To-the-top" button logic
+document.addEventListener("DOMContentLoaded", ()=>{
+    document.body.insertAdjacentHTML('beforeend', `<button class="to-the-top hidden">
+      <img
+        src="./images/icons/arrow-right.svg"
+        alt="arrow"
+        style="transform: rotate(-90deg)"
+      />
+    </button>`);
+    const toTheTop = document.querySelector(".to-the-top");
+    toTheTop.addEventListener("click", ()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        })
+    })
+
+// Header scroll
+const scrollHeader = () => {
     if (window.scrollY > document.querySelector(".header").clientHeight){
         document.querySelector(".header").classList.add("floating")
     }
     else{
         document.querySelector(".header").classList.remove("floating")
     }
+}
+// To the top button scroll
+const scrollToTheTop = (top) => {
+    if (window.scrollY > 100){
+        top.classList.remove("hidden");
+    }
+    else{
+        top.classList.add("hidden");
+    }
+}
+
+
+    scrollHeader();
+    scrollToTheTop(toTheTop);
+    
+    window.addEventListener("scroll", ()=>{
+        scrollHeader();
+        scrollToTheTop(toTheTop);
+    })
+    
+    
 })
+
+
+

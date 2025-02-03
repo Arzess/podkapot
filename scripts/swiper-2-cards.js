@@ -45,9 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     on: {
       init: function (swiperTwo) {
-        setTimeout(() => {
-          createPagination(swiperTwo, customPagination2);
-        }, 100);
+        createPagination(swiperTwo, customPagination2);
       },
       slideChange: function (swiperTwo) {
         updatePagination(swiperTwo, customPagination2);
