@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 2,
         grid: {
           rows: 2,
-          fill: 'row',
         },
       },
       0: {
@@ -55,9 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!paginationContainer) return;
 
     paginationContainer.innerHTML = '';
-    let totalSlides = swiper.slides.length - swiper.loopedSlides * 2 || swiper.slides.length;
-    if (window.innerWidth < 1300){
-      totalSlides =  swiper.slides.length/2 - swiper.loopedSlides * 2 || swiper.slides.length/2;
+
+    let totalSlides = swiper.slides.length;
+    if (window.innerWidth < 1300 && window.innerWidth > 500){
+      totalSlides =  Math.round(swiper.slides.length/2);
+      
     }
     for (let i = 0; i < totalSlides; i++) {
       const li = document.createElement('li');

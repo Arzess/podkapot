@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // To fix the "grid: 2" problem with SwiperJS
   const casesElement = document.querySelector(".successful-cases-list")
   
-  if (window.innerWidth < 1300 && window.innerWidth > 500) {
+  if (window.innerWidth < 1300) {
     const totalWidth = Array.from(casesElement.children).reduce((init, child) => {
         const style = window.getComputedStyle(child);
         const width = parseFloat(style.width);
@@ -57,9 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!paginationContainer) return;
 
     paginationContainer.innerHTML = '';
-    let totalSlides = swiper.slides.length - swiper.loopedSlides * 2 || swiper.slides.length;
-    if (window.innerWidth < 1300){
-      totalSlides =  swiper.slides.length - swiper.loopedSlides * 2 || swiper.slides.length;
+    let totalSlides = swiper.slides.length;
+    if (window.innerWidth < 1300 && window.innerWidth > 500){
+      totalSlides =  Math.round(swiper.slides.length/2);
+      
     }
     for (let i = 0; i < totalSlides; i++) {
       const li = document.createElement('li');
