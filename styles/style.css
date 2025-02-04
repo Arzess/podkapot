@@ -26,12 +26,8 @@
     margin: 0;
     font-family: Inter, sans-serif;
 }
-html{
-    overflow-x: hidden;
-}
 body{
     font-family: Inter, sans-serif;
-    overflow-x: hidden;
 }
 body.steady{
     /* height: 100vh; */
@@ -1402,14 +1398,16 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
 
 /* Main section */
 .main section{
-    margin-bottom: 80px;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
-.main section:last-child{
-    margin-bottom: 0;
+.main section .container{
+    padding-bottom: 80px;
 }
-.main section.leave-margin{
-    margin-bottom: 80px;
+.main section:last-child .container{
+    padding-bottom: 0;
+}
+.main section.leave-margin .container{
+    padding-bottom: 80px;
 }
 .main{
     padding-top: 40px;
@@ -1627,14 +1625,20 @@ padding: 1rem;
     display: flex;
     width: 100%;
     gap: 1.5rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: flex-start;
     justify-content: space-between;
 }
 .seller-card .advantages-list .advantage{
-    max-width: 101px;
+    /* max-width: 101px; */
 }
 .seller-card .advantages-list .advantage p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     text-align: center;
 }
 .seller-card .primary-button:first-of-type{
@@ -1672,6 +1676,7 @@ padding: 1rem;
     justify-content: center;
     flex-direction: column;
     gap: 0.5rem;
+    width: 100%;
 }
 .seller-name-image{
     display: flex;
