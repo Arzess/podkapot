@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
     },
-    loop: true,
+    loop: false,
     on: {
       init: function (swiperFour) {
         createPagination(swiperFour, customPagination);

@@ -1400,7 +1400,7 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
 /* Main section */
 .main section{
     margin-bottom: 80px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .main section:last-child{
     margin-bottom: 0;
@@ -1443,7 +1443,7 @@ main::after{
     height: calc(100vh);
     overflow-y: scroll;
     z-index: 10;
-    background-color: #fff;
+    background: #F5FBF6;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -1455,6 +1455,10 @@ main::after{
     max-height: 739px;
     background-image: url(../images/form-bg.png);
     background-size: cover;
+}
+.find-part .container{
+    height: 100%;
+    width: 100%;
 }
 .find-part .background img{
     object-fit: cover;

@@ -1422,10 +1422,10 @@
       </div>
     </aside>
     <!-- Find part form overlay -->
-    <div class="find-part header-modal">
+    <div class="find-part header-modal shown">
       <div class="container">
         <div class="find-part-top mobile">
-          <h4 class="sub-section-heading">Заявка на запчастину</h4>
+          <!-- <h4 class="sub-section-heading">Заявка на запчастину</h4> -->
           <button class="close">
             <svg
               width="24"
@@ -1470,7 +1470,7 @@
             </ul>
           </aside>
           <div class="form-container">
-            <p class="heading">Заявка на запчастину</p>
+            <!-- <p class="heading">Заявка на запчастину</p> -->
             <form action="" class="search-form">
               <ul class="select-list">
                 <li>
@@ -1582,10 +1582,12 @@
                   </div>
                 </li>
                 <li>
-                  <!-- Placeholder -->
-                  <label for="phone">Телефон</label>
                   <div class="input-container">
-                    <input type="text" id="phone" value="+38(" />
+                    <input
+                      type="text"
+                      placeholder="Запчастина"
+                      class="small-button"
+                    />
                     <p class="small-text">Invalid input</p>
                   </div>
                 </li>
@@ -1596,7 +1598,7 @@
                   <ul class="radio-list">
                     <li>
                       <input type="radio" id="all" name="condition" checked />
-                      <label for="all">Всі</label>
+                      <label for="all">Будь-який</label>
                     </li>
                     <li>
                       <input type="radio" id="used" name="condition" />
@@ -1607,6 +1609,14 @@
                       <label for="new">Нові</label>
                     </li>
                   </ul>
+                </div>
+                <div class="input-wrap">
+                  <!-- Placeholder -->
+                  <label for="phone">Телефон</label>
+                  <div class="input-container">
+                    <input type="text" id="phone" value="+38(" />
+                    <p class="small-text">Invalid input</p>
+                  </div>
                 </div>
                 <div class="input-container">
                   <input
