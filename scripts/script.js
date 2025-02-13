@@ -192,10 +192,11 @@ const openAuthorisationForm = (modal, type) => {
     updateHelpTextReference();
     attachHelpTextEventListener();
     if (type == "sign-in"){
+        authorisationForm.classList.remove("sign-up");
         authorisationForm.classList.add("sign-in");
     }
     else{
-        
+        authorisationForm.classList.remove("sign-in");
         authorisationForm.classList.add("sign-up");
         authorisationForm.classList.add("buyer")
     }
@@ -425,6 +426,5 @@ const scrollToTheTop = (top) => {
     
     
 })
-
 
 

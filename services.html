@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="styles/additional.css" />
     <!-- Animation -->
     <link rel="stylesheet" href="styles/animation.css" />
+    <!-- Material Textfield -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@material/textfield/dist/mdc.textfield.min.css"
+    />
     <title>Main page</title>
   </head>
   <body>
@@ -42,10 +47,46 @@
       <main class="sign-in">
         <ul class="inputs-list">
           <li>
-            <input type="email" placeholder="E-mail" />
+            <!-- Text field -->
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="text"
+                id="sign-in-email"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid email"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="sign-in-email" class="mdc-floating-label"
+                    >E-mail</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="sign-in-email-error" class="error-message"></div>
+            </div>
           </li>
           <li>
-            <input type="password" placeholder="Пароль" />
+            <!-- Text field -->
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="text"
+                id="sign-in-password"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid password"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="sign-in-password" class="mdc-floating-label"
+                    >Пароль</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="sign-in-password-error" class="error-message"></div>
+            </div>
           </li>
           <li class="sign-in-help">
             <a href="#" class="small-text">Забули пароль?</a>
@@ -1907,11 +1948,26 @@
               </div>
               <ul class="form-list">
                 <li>
-                  <input
-                    type="email"
-                    placeholder="E-mail"
-                    class="small-button"
-                  />
+                  <div class="mdc-text-field mdc-text-field--outlined">
+                    <input
+                      type="text"
+                      id="firstname"
+                      class="mdc-text-field__input"
+                      required
+                      pattern="[A-Za-z]+"
+                      data-error-message="Please enter a valid name"
+                    />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label for="firstname" class="mdc-floating-label"
+                          >First name</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="firstname-error" class="error-message"></div>
+                  </div>
                 </li>
                 <li>
                   <input
@@ -2271,6 +2327,15 @@
       </svg>
       <img src="./images/icons/lightning.svg" alt="lightning bolt icon" />
     </button>
+    <script src="https://unpkg.com/@material/textfield/dist/mdc.textfield.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize MDCTextField after DOM content is loaded
+        const textField = new mdc.textField.MDCTextField(
+          document.querySelector(".mdc-text-field")
+        );
+      });
+    </script>
   </body>
   <script src="scripts/script.js"></script>
   <!-- Dividers -->
@@ -2283,4 +2348,6 @@
   <script src="./scripts/authorisation.js"></script>
   <!-- Dropdown -->
   <script src="scripts/dropdown.js"></script>
+  <!-- Textfields -->
+  <script src="scripts/textfield.js"></script>
 </html>

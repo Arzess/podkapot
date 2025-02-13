@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material Outlined TextField Example</title>
+
+    <!-- Include Material Design Components Web CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.css"
+    />
+
+    <!-- Include Material Design Components Web JS -->
+    <script src="https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.js"></script>
+
+    <!-- Add Material Components Base CSS for Global Styles -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@material/base@latest/dist/mdc.base.css"
+    />
+
+    <style>
+      /* Custom error message styling */
+      .mdc-text-field--invalid .mdc-floating-label {
+        color: #d32f2f; /* Red color for error */
+      }
+
+      .mdc-text-field--invalid .mdc-notched-outline {
+        border-color: #d32f2f; /* Red color for error outline */
+      }
+
+      .error-message {
+        color: #d32f2f; /* Red color for error messages */
+        font-size: 0.875rem;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Material Design Outlined Text Field -->
+    <form id="myForm">
+      <div class="mdc-text-field mdc-text-field--outlined">
+        <input
+          type="text"
+          id="firstname"
+          class="mdc-text-field__input"
+          required
+          pattern="[A-Za-z]+"
+          data-error-message="Please enter a valid name"
+        />
+        <div class="mdc-notched-outline">
+          <div class="mdc-notched-outline__leading"></div>
+          <div class="mdc-notched-outline__notch">
+            <label for="firstname" class="mdc-floating-label">First name</label>
+          </div>
+          <div class="mdc-notched-outline__trailing"></div>
+        </div>
+        <div id="firstname-error" class="error-message"></div>
+      </div>
+
+      <div class="mdc-text-field mdc-text-field--outlined">
+        <input
+          type="text"
+          id="lastname"
+          class="mdc-text-field__input"
+          required
+          pattern="[A-Za-z]+"
+          data-error-message="Please enter a valid last name"
+        />
+        <div class="mdc-notched-outline">
+          <div class="mdc-notched-outline__leading"></div>
+          <div class="mdc-notched-outline__notch">
+            <label for="lastname" class="mdc-floating-label">Last name</label>
+          </div>
+          <div class="mdc-notched-outline__trailing"></div>
+        </div>
+        <div id="lastname-error" class="error-message"></div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const textFields = document.querySelectorAll(".mdc-text-field");
+      textFields.forEach((textFieldElement) => {
+        new mdc.textfield.MDCTextField(textFieldElement);
+      });
+
+      const form = document.getElementById("myForm");
+      form.addEventListener("submit", (event) => {
+        let isValid = true;
+        const inputs = form.querySelectorAll("input");
+        inputs.forEach((input) => {
+          const errorElement = document.getElementById(input.id + "-error");
+          const errorMessage = input.getAttribute("data-error-message");
+
+          if (input.required && !input.value.trim()) {
+            input.classList.add("mdc-text-field--invalid");
+            errorElement.textContent = "Це поле потрібно";
+            isValid = false;
+          } else if (
+            input.pattern &&
+            !new RegExp(input.pattern).test(input.value)
+          ) {
+            input.classList.add("mdc-text-field--invalid");
+            errorElement.textContent = errorMessage || "Invalid";
+            isValid = false;
+          } else {
+            input.classList.remove("mdc-text-field--invalid");
+            errorElement.textContent = "";
+          }
+        });
+        if (!isValid) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>

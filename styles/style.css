@@ -2,6 +2,7 @@
 @import url(./font.css);
 /* Colors */
 @import url(./colors.css);
+/* Material */
 
 
 
@@ -377,6 +378,7 @@ form select{
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    width: 100%;
 }
 .input-container p{
     display: none;
@@ -952,9 +954,9 @@ form .dropdown .selected-option{
 /* Shopping cart */
 .shopping-cart .inner-products-container{
     width: 100%;
-}
-.shopping-cart .products .apply-button{
-    display: none;  
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 .shopping-cart.application .products .primary-button{
     display: none;
@@ -983,6 +985,10 @@ form .dropdown .selected-option{
     align-items: flex-start;
     gap: 1.5rem;
     border-radius: 1rem;
+}
+.shopping-cart.application .shopping-cart-nav, .shopping-cart.success .shopping-cart-nav, .shopping-cart.empty .shopping-cart-nav{
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--input-color);
 }
 .shopping-cart a{
     color: black;
@@ -1176,6 +1182,7 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 .shopping-cart .product .small-text{
     font-size: 0.75rem;
+    cursor: text;
 }
 .shopping-cart .price-per-piece p, .shopping-cart .total-price p{
     font-weight: 700;
@@ -1266,6 +1273,9 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     width: 100%;
     gap: 0.5rem;
     align-items: center;
+}
+.shopping-cart .shop img{
+    width: 50px;
 }
 .shopping-cart .shop .fill-tag{
     margin-left: 1rem;

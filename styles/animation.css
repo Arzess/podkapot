@@ -75,7 +75,7 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
     transition: 0.3s;
 }
 
-.products-inner-container .product-desc-image:hover .product-desc p.main-text{
+.products-inner-container .product-desc-image .product-desc p.main-text:hover{
     color: var(--theme-color);
 }
 

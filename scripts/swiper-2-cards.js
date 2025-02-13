@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
     loop: true,
+    spaceBetween: 24,
     on: {
       init: function (swiperTwo) {
         createPagination(swiperTwo, customPagination2);
