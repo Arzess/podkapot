@@ -3,17 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Minimalize -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css" />
-    <!-- Adaptive -->
-    <link rel="stylesheet" href="styles/adaptive.css" />
-    <!-- Animation -->
-    <link rel="stylesheet" href="styles/animation.css" />
+    <!-- Text field -->
+    <script src="https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.js"></script>
     <title>Product</title>
   </head>
   <body>
@@ -2313,11 +2306,32 @@
                     </div>
                   </li>
                   <li>
-                    <!-- Placeholder -->
-                    <label for="phone">Телефон</label>
-                    <div class="input-container">
-                      <p class="small-text">Invalid input</p>
-                      <input type="text" id="phone" value="+38(" />
+                    <!-- Text field -->
+                    <div class="mdc-text-field mdc-text-field--outlined">
+                      <input
+                        type="tel"
+                        id="find-part-section-phone"
+                        class="mdc-text-field__input"
+                        required
+                        pattern="[+][0-9]+"
+                        value="+38"
+                        data-error-message="Please enter a valid phone"
+                      />
+                      <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                          <label
+                            for="find-part-section-phone"
+                            class="mdc-floating-label"
+                            >Телефон</label
+                          >
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                      <div
+                        id="find-part-section-phone-error"
+                        class="error-message"
+                      ></div>
                     </div>
                   </li>
                 </ul>
@@ -2339,21 +2353,47 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="input-container">
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      placeholder="Ваше ім’я"
-                      class="small-button"
+                      id="find-part-section-name"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid name"
                     />
-                    <p class="small-text">Invalid input</p>
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="find-part-section-name"
+                          class="mdc-floating-label"
+                          >Ваше ім’я</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="find-part-name-error" class="error-message"></div>
                   </div>
-                  <div class="input-container">
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
-                      type="text"
-                      placeholder="E-mail"
-                      class="small-button"
+                      type="email"
+                      id="find-part-section-email"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid email"
                     />
-                    <p class="small-text">Invalid input</p>
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="find-part-section-email"
+                          class="mdc-floating-label"
+                          >E-mail</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="find-part-email-error" class="error-message"></div>
                   </div>
                 </div>
                 <button type="submit" class="primary-button">
@@ -2894,15 +2934,5 @@
       <img src="./images/icons/lightning.svg" alt="lightning bolt icon" />
     </button>
   </body>
-  <script src="scripts/script.js"></script>
-  <!-- Seller -->
-  <script src="scripts/seller.js"></script>
-  <!-- Authorisation -->
-  <script src="./scripts/authorisation.js"></script>
-  <!-- Dropdown -->
-  <script src="scripts/dropdown.js"></script>
-  <!-- Seller section -->
-  <script src="scripts/seller-section.js"></script>
-  <!-- Swiper js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="scripts/script.js" type="module"></script>
 </html>

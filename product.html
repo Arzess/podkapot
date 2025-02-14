@@ -3,17 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Minimalize -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css" />
-    <!-- Adaptive -->
-    <link rel="stylesheet" href="styles/adaptive.css" />
-    <!-- Animation -->
-    <link rel="stylesheet" href="styles/animation.css" />
+    <!-- Text field -->
+    <script src="https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.js"></script>
     <title>Product</title>
   </head>
   <body>
@@ -2066,20 +2059,47 @@
               </button>
               <div class="contacts-submit">
                 <div class="contacts">
-                  <input
-                    type="email"
-                    placeholder="E-mail"
-                    class="small-button"
-                  />
-                  <div class="name">
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
+                    <input
+                      type="email"
+                      id="review-email"
+                      class="mdc-text-field__input"
+                      required
+                      pattern="[A-Za-z]+"
+                      data-error-message="Please enter a valid email"
+                    />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label for="review-email" class="mdc-floating-label"
+                          >E-mail</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="review-email-error" class="error-message"></div>
+                  </div>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      class="small-button"
-                      oninput="checkInputName(this)"
+                      id="review-name"
+                      class="mdc-text-field__input"
+                      required
+                      pattern="[A-Za-z]+"
+                      data-error-message="Please enter a valid name"
                     />
-                    <p class="placeholder small-button">
-                      Ваше ім’я<span class="asterisk small-button">*</span>
-                    </p>
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label for="review-name" class="mdc-floating-label"
+                          >Ваше ім’я</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="review-name-error" class="error-message"></div>
                   </div>
                 </div>
                 <button type="submit" class="primary-button">
@@ -3595,23 +3615,5 @@
       <img src="./images/icons/lightning.svg" alt="lightning bolt icon" />
     </button>
   </body>
-  <script src="scripts/script.js"></script>
-  <!-- Add files -->
-  <script src="scripts/add-files.js"></script>
-  <!-- Seller -->
-  <script src="scripts/seller.js"></script>
-  <!-- Stars -->
-  <script src="scripts/stars.js"></script>
-  <!-- News -->
-  <script src="scripts/news.js"></script>
-  <!-- Product -->
-  <script src="scripts/product.js"></script>
-  <!-- Authorisation -->
-  <script src="./scripts/authorisation.js"></script>
-  <!-- Dropdown -->
-  <script src="scripts/dropdown.js"></script>
-  <!-- Gallery -->
-  <script type="module" src="scripts/product-gallery.js"></script>
-  <!-- Swiper js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="scripts/script.js" type="module"></script>
 </html>

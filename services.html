@@ -3,24 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Minimalize -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css" />
-    <!-- Adaptive -->
-    <link rel="stylesheet" href="styles/adaptive.css" />
-    <!-- Additional -->
-    <link rel="stylesheet" href="styles/additional.css" />
-    <!-- Animation -->
-    <link rel="stylesheet" href="styles/animation.css" />
-    <!-- Material Textfield -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@material/textfield/dist/mdc.textfield.min.css"
-    />
+    <!-- Text field -->
+    <script src="https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.js"></script>
     <title>Main page</title>
   </head>
   <body>
@@ -71,7 +57,7 @@
             <!-- Text field -->
             <div class="mdc-text-field mdc-text-field--outlined">
               <input
-                type="text"
+                type="password"
                 id="sign-in-password"
                 class="mdc-text-field__input"
                 data-error-message="Please enter a valid password"
@@ -108,35 +94,217 @@
           </li>
         </ul>
         <section class="seller">
-          <input
-            type="text"
-            placeholder="Назва підприємства "
-            class="small-button"
-          />
-          <input
-            type="text"
-            placeholder="Вид діяльності"
-            class="small-button"
-          />
-          <input type="text" placeholder="Ваше ім’я" class="small-button" />
-          <input
-            type="tel"
-            placeholder="Контактний телефон"
-            class="small-button"
-          />
-          <input type="email" placeholder="E-mail" class="small-button" />
-          <input type="password" placeholder="Пароль" class="small-button" />
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-company-name"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid company name"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-company-name" class="mdc-floating-label"
+                  >Назва підприємства</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-company-name-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-business-type"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid business type"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-business-type" class="mdc-floating-label"
+                  >Вид діяльності</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-business-type-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-seller-name"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid business type"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-business-type" class="mdc-floating-label"
+                  >Вид діяльності</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-business-type-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="tel"
+              id="sign-up-phone-seller"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid phone"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-phone-seller" class="mdc-floating-label"
+                  >Контактний телефон</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-phone-seller-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="email"
+              id="sign-up-seller-email"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid email"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-seller-email" class="mdc-floating-label"
+                  >E-mail</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-seller-email-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="password"
+              id="sign-up-seller-password"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid password"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-seller-password" class="mdc-floating-label"
+                  >Пароль</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-seller-password-error" class="error-message"></div>
+          </div>
         </section>
         <section class="buyer">
-          <input type="text" placeholder="Ваше ім’я" class="small-button" />
-          <input
-            type="tel"
-            placeholder="Контактний телефон"
-            class="small-button"
-          />
-          <input type="text" placeholder="Місто" class="small-button" />
-          <input type="email" placeholder="E-mail" class="small-button" />
-          <input type="password" placeholder="Пароль" class="small-button" />
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-buyer-name"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid name"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-name" class="mdc-floating-label"
+                  >Ваше ім’я</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-name-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="tel"
+              id="sign-up-buyer-phone"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid phone"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-phone" class="mdc-floating-label"
+                  >Контактний телефон</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-phone-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-buyer-city"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid city"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-city" class="mdc-floating-label"
+                  >Місто</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-city-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="email"
+              id="sign-up-buyer-city"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid city"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-email" class="mdc-floating-label"
+                  >E-mail</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-email-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="password"
+              id="sign-up-buyer-password"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid password"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-password" class="mdc-floating-label"
+                  >Пароль</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-password-error" class="error-message"></div>
+          </div>
         </section>
       </main>
       <!-- Options -->
@@ -527,33 +695,81 @@
               </div>
               <ul class="application-section-list">
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      placeholder="Ваше ім’я та Прізвище"
-                      class="main-text"
+                      id="shopping-cart-full-name"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid name"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-full-name"
+                          class="mdc-floating-label"
+                          >Ваше ім’я та Прізвище</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-full-name-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
-                      type="text"
-                      class="main-text"
-                      placeholder="Ваш e-mail"
+                      type="email"
+                      id="shopping-cart-email"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid email"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-email"
+                          class="mdc-floating-label"
+                          >Ваш e-mail</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-email-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
-                      type="text"
-                      class="main-text"
-                      placeholder="Ваш телефон"
+                      type="tel"
+                      id="shopping-cart-phone"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid phone"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-phone"
+                          class="mdc-floating-label"
+                          >Ваш телефон</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-phone-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
               </ul>
@@ -591,13 +807,29 @@
                   </div>
                 </li>
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      class="main-text"
-                      placeholder="Ваш e-mail"
+                      id="shopping-cart-delivery-address"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid delivery address"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-delivery-address"
+                          class="mdc-floating-label"
+                          >Адреса доставки</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-delivery-address-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li class="condition">
@@ -1523,13 +1755,24 @@
                   </div>
                 </li>
                 <li>
-                  <div class="input-container">
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      placeholder="Запчастина"
-                      class="small-button"
+                      id="part-name-modal"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid part name"
                     />
-                    <p class="small-text">Invalid input</p>
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label for="part-name-modal" class="mdc-floating-label"
+                          >Запчастина</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="part-name-modal-error" class="error-message"></div>
                   </div>
                 </li>
               </ul>
@@ -1551,29 +1794,76 @@
                     </li>
                   </ul>
                 </div>
-                <div class="input-wrap">
-                  <!-- Placeholder -->
-                  <label for="phone">Телефон</label>
-                  <div class="input-container">
-                    <input type="text" id="phone" value="+38(" />
-                    <p class="small-text">Invalid input</p>
+                <!-- Text field -->
+                <div class="mdc-text-field mdc-text-field--outlined">
+                  <input
+                    type="tel"
+                    id="find-part-modal-phone"
+                    class="mdc-text-field__input"
+                    data-error-message="Please enter a valid phone number"
+                    value="+38"
+                  />
+                  <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                      <label for="part-name-modal" class="mdc-floating-label"
+                        >Телефон</label
+                      >
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
                   </div>
+                  <div
+                    id="part-name-modal-phone-error"
+                    class="error-message"
+                  ></div>
                 </div>
-                <div class="input-container">
+                <!-- Text field -->
+                <div class="mdc-text-field mdc-text-field--outlined">
                   <input
                     type="text"
-                    placeholder="Ваше ім’я"
-                    class="small-button"
+                    id="find-part-modal-name"
+                    class="mdc-text-field__input"
+                    data-error-message="Please enter a valid name"
                   />
-                  <p class="small-text">Invalid input</p>
+                  <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                      <label
+                        for="find-part-modal-name"
+                        class="mdc-floating-label"
+                        >Ваше ім’я</label
+                      >
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
+                  </div>
+                  <div
+                    id="find-part-modal-name-error"
+                    class="error-message"
+                  ></div>
                 </div>
-                <div class="input-container">
+                <!-- Text field -->
+                <div class="mdc-text-field mdc-text-field--outlined">
                   <input
-                    type="text"
-                    placeholder="E-mail"
-                    class="small-button"
+                    type="email"
+                    id="find-part-modal-email"
+                    class="mdc-text-field__input"
+                    data-error-message="Please enter a valid email"
                   />
-                  <p class="small-text">Invalid input</p>
+                  <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                      <label
+                        for="find-part-modal-email"
+                        class="mdc-floating-label"
+                        >E-mail</label
+                      >
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
+                  </div>
+                  <div
+                    id="find-part-modal-email-error"
+                    class="error-message"
+                  ></div>
                 </div>
               </div>
               <button type="submit" class="primary-button">
@@ -1948,10 +2238,39 @@
               </div>
               <ul class="form-list">
                 <li>
+                  <!-- Text field -->
                   <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      id="firstname"
+                      id="company-desc-email"
+                      class="mdc-text-field__input"
+                      required
+                      pattern="[A-Za-z]+"
+                      data-error-message="Please enter a valid email"
+                    />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="company-desc-email"
+                          class="mdc-floating-label"
+                          >E-mail</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="company-desc-email-error"
+                      class="error-message"
+                    ></div>
+                  </div>
+                </li>
+                <li>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
+                    <input
+                      type="text"
+                      id="name-company-desc"
                       class="mdc-text-field__input"
                       required
                       pattern="[A-Za-z]+"
@@ -1960,28 +2279,47 @@
                     <div class="mdc-notched-outline">
                       <div class="mdc-notched-outline__leading"></div>
                       <div class="mdc-notched-outline__notch">
-                        <label for="firstname" class="mdc-floating-label"
-                          >First name</label
+                        <label
+                          for="name-company-desc"
+                          class="mdc-floating-label"
+                          >Ваше ім’я</label
                         >
                       </div>
                       <div class="mdc-notched-outline__trailing"></div>
                     </div>
-                    <div id="firstname-error" class="error-message"></div>
+                    <div
+                      id="name-company-desc-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li>
-                  <input
-                    type="text"
-                    placeholder="Ваше ім’я"
-                    class="small-button"
-                  />
-                </li>
-                <li>
-                  <input
-                    type="tel"
-                    placeholder="Номер телефону"
-                    class="small-button"
-                  />
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
+                    <input
+                      type="text"
+                      id="phone-company-desc"
+                      class="mdc-text-field__input"
+                      required
+                      pattern="[0-9]+"
+                      data-error-message="Please enter a valid number"
+                    />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="phone-company-desc"
+                          class="mdc-floating-label"
+                          >Номер телефону</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="phone-company-desc-error"
+                      class="error-message"
+                    ></div>
+                  </div>
                 </li>
                 <li>
                   <button type="submit" class="small-button primary-button">
@@ -2327,27 +2665,6 @@
       </svg>
       <img src="./images/icons/lightning.svg" alt="lightning bolt icon" />
     </button>
-    <script src="https://unpkg.com/@material/textfield/dist/mdc.textfield.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Initialize MDCTextField after DOM content is loaded
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-text-field")
-        );
-      });
-    </script>
   </body>
-  <script src="scripts/script.js"></script>
-  <!-- Dividers -->
-  <script src="scripts/dividers.js"></script>
-  <!-- Swiper js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Swiper 4 cards -->
-  <script type="module" src="./scripts/swiper-2-cards.js"></script>
-  <!-- Authorisation -->
-  <script src="./scripts/authorisation.js"></script>
-  <!-- Dropdown -->
-  <script src="scripts/dropdown.js"></script>
-  <!-- Textfields -->
-  <script src="scripts/textfield.js"></script>
+  <script type="module" src="./scripts/script.js"></script>
 </html>
