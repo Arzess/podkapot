@@ -10,6 +10,7 @@
     <title>Main page</title>
   </head>
   <body>
+    <!-- ** Modals start ** -->
     <!-- Authorisation form -->
     <form class="header-modal authorisation-form">
       <div class="top">
@@ -33,10 +34,46 @@
       <main class="sign-in">
         <ul class="inputs-list">
           <li>
-            <input type="email" placeholder="E-mail" />
+            <!-- Text field -->
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="text"
+                id="sign-in-email"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid email"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="sign-in-email" class="mdc-floating-label"
+                    >E-mail</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="sign-in-email-error" class="error-message"></div>
+            </div>
           </li>
           <li>
-            <input type="password" placeholder="Пароль" />
+            <!-- Text field -->
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="password"
+                id="sign-in-password"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid password"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="sign-in-password" class="mdc-floating-label"
+                    >Пароль</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="sign-in-password-error" class="error-message"></div>
+            </div>
           </li>
           <li class="sign-in-help">
             <a href="#" class="small-text">Забули пароль?</a>
@@ -58,35 +95,217 @@
           </li>
         </ul>
         <section class="seller">
-          <input
-            type="text"
-            placeholder="Назва підприємства "
-            class="small-button"
-          />
-          <input
-            type="text"
-            placeholder="Вид діяльності"
-            class="small-button"
-          />
-          <input type="text" placeholder="Ваше ім’я" class="small-button" />
-          <input
-            type="tel"
-            placeholder="Контактний телефон"
-            class="small-button"
-          />
-          <input type="email" placeholder="E-mail" class="small-button" />
-          <input type="password" placeholder="Пароль" class="small-button" />
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-company-name"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid company name"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-company-name" class="mdc-floating-label"
+                  >Назва підприємства</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-company-name-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-business-type"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid business type"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-business-type" class="mdc-floating-label"
+                  >Вид діяльності</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-business-type-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-seller-name"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid business type"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-business-type" class="mdc-floating-label"
+                  >Вид діяльності</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-business-type-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="tel"
+              id="sign-up-phone-seller"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid phone"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-phone-seller" class="mdc-floating-label"
+                  >Контактний телефон</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-phone-seller-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="email"
+              id="sign-up-seller-email"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid email"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-seller-email" class="mdc-floating-label"
+                  >E-mail</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-seller-email-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="password"
+              id="sign-up-seller-password"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid password"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-seller-password" class="mdc-floating-label"
+                  >Пароль</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-seller-password-error" class="error-message"></div>
+          </div>
         </section>
         <section class="buyer">
-          <input type="text" placeholder="Ваше ім’я" class="small-button" />
-          <input
-            type="tel"
-            placeholder="Контактний телефон"
-            class="small-button"
-          />
-          <input type="text" placeholder="Місто" class="small-button" />
-          <input type="email" placeholder="E-mail" class="small-button" />
-          <input type="password" placeholder="Пароль" class="small-button" />
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-buyer-name"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid name"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-name" class="mdc-floating-label"
+                  >Ваше ім’я</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-name-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="tel"
+              id="sign-up-buyer-phone"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid phone"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-phone" class="mdc-floating-label"
+                  >Контактний телефон</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-phone-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-buyer-city"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid city"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-city" class="mdc-floating-label"
+                  >Місто</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-city-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="email"
+              id="sign-up-buyer-city"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid city"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-email" class="mdc-floating-label"
+                  >E-mail</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-email-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="password"
+              id="sign-up-buyer-password"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid password"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-password" class="mdc-floating-label"
+                  >Пароль</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-password-error" class="error-message"></div>
+          </div>
         </section>
       </main>
       <!-- Options -->
@@ -453,11 +672,11 @@
                   </div>
                 </div>
                 <!-- <button class="remove">
-                  <img
-                    src="./images/icons/cart-remove.svg"
-                    alt="remove from the cart icon"
-                  />
-                </button> -->
+                      <img
+                        src="./images/icons/cart-remove.svg"
+                        alt="remove from the cart icon"
+                      />
+                    </button> -->
               </div>
               <div class="checkout">
                 <div class="price">
@@ -477,33 +696,81 @@
               </div>
               <ul class="application-section-list">
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      placeholder="Ваше ім’я та Прізвище"
-                      class="main-text"
+                      id="shopping-cart-full-name"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid name"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-full-name"
+                          class="mdc-floating-label"
+                          >Ваше ім’я та Прізвище</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-full-name-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
-                      type="text"
-                      class="main-text"
-                      placeholder="Ваш e-mail"
+                      type="email"
+                      id="shopping-cart-email"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid email"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-email"
+                          class="mdc-floating-label"
+                          >Ваш e-mail</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-email-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
-                      type="text"
-                      class="main-text"
-                      placeholder="Ваш телефон"
+                      type="tel"
+                      id="shopping-cart-phone"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid phone"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-phone"
+                          class="mdc-floating-label"
+                          >Ваш телефон</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-phone-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
               </ul>
@@ -541,13 +808,29 @@
                   </div>
                 </li>
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      class="main-text"
-                      placeholder="Ваш e-mail"
+                      id="shopping-cart-delivery-address"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid delivery address"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-delivery-address"
+                          class="mdc-floating-label"
+                          >Адреса доставки</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-delivery-address-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li class="condition">
@@ -818,21 +1101,7 @@
             <img src="./images/icons/podkapot-logo.svg" alt="Pod Kapot logo" />
           </div>
         </div>
-        <button class="catalog primary-button changing-icon">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            class="close-cross"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3.21995 4.28097C3.15022 4.21124 3.0949 4.12846 3.05716 4.03735C3.01942 3.94624 3 3.84859 3 3.74997C3 3.65135 3.01942 3.5537 3.05716 3.4626C3.0949 3.37149 3.15022 3.2887 3.21995 3.21897C3.28968 3.14924 3.37246 3.09392 3.46357 3.05619C3.55468 3.01845 3.65233 2.99902 3.75095 2.99902C3.84956 2.99902 3.94721 3.01845 4.03832 3.05619C4.12943 3.09392 4.21222 3.14924 4.28195 3.21897L12.0009 10.9395L19.7199 3.21897C19.7897 3.14924 19.8725 3.09392 19.9636 3.05619C20.0547 3.01845 20.1523 2.99902 20.2509 2.99902C20.3496 2.99902 20.4472 3.01845 20.5383 3.05619C20.6294 3.09392 20.7122 3.14924 20.7819 3.21897C20.8517 3.2887 20.907 3.37149 20.9447 3.4626C20.9825 3.5537 21.0019 3.65135 21.0019 3.74997C21.0019 3.84859 20.9825 3.94624 20.9447 4.03735C20.907 4.12846 20.8517 4.21124 20.7819 4.28097L13.0614 12L20.7819 19.719C20.8517 19.7887 20.907 19.8715 20.9447 19.9626C20.9825 20.0537 21.0019 20.1514 21.0019 20.25C21.0019 20.3486 20.9825 20.4462 20.9447 20.5373C20.907 20.6285 20.8517 20.7112 20.7819 20.781C20.7122 20.8507 20.6294 20.906 20.5383 20.9438C20.4472 20.9815 20.3496 21.0009 20.2509 21.0009C20.1523 21.0009 20.0547 20.9815 19.9636 20.9438C19.8725 20.906 19.7897 20.8507 19.7199 20.781L12.0009 13.0605L4.28195 20.781C4.21222 20.8507 4.12943 20.906 4.03832 20.9438C3.94721 20.9815 3.84956 21.0009 3.75095 21.0009C3.65233 21.0009 3.55468 20.9815 3.46357 20.9438C3.37246 20.906 3.28968 20.8507 3.21995 20.781C3.15022 20.7112 3.0949 20.6285 3.05716 20.5373C3.01942 20.4462 3 20.3486 3 20.25C3 20.1514 3.01942 20.0537 3.05716 19.9626C3.0949 19.8715 3.15022 19.7887 3.21995 19.719L10.9404 12L3.21995 4.28097Z"
-              fill="white"
-            />
-          </svg>
-
+        <button class="catalog primary-button">
           <img src="./images/icons/grid.svg" alt="grid icon" />
           Каталог
         </button>
@@ -846,27 +1115,14 @@
             <img src="./images/icons/search.svg" alt="magnifying glass icon" />
           </button>
         </div>
-        <button class="find-part-button primary-button changing-icon">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            class="close-cross"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3.21995 4.28097C3.15022 4.21124 3.0949 4.12846 3.05716 4.03735C3.01942 3.94624 3 3.84859 3 3.74997C3 3.65135 3.01942 3.5537 3.05716 3.4626C3.0949 3.37149 3.15022 3.2887 3.21995 3.21897C3.28968 3.14924 3.37246 3.09392 3.46357 3.05619C3.55468 3.01845 3.65233 2.99902 3.75095 2.99902C3.84956 2.99902 3.94721 3.01845 4.03832 3.05619C4.12943 3.09392 4.21222 3.14924 4.28195 3.21897L12.0009 10.9395L19.7199 3.21897C19.7897 3.14924 19.8725 3.09392 19.9636 3.05619C20.0547 3.01845 20.1523 2.99902 20.2509 2.99902C20.3496 2.99902 20.4472 3.01845 20.5383 3.05619C20.6294 3.09392 20.7122 3.14924 20.7819 3.21897C20.8517 3.2887 20.907 3.37149 20.9447 3.4626C20.9825 3.5537 21.0019 3.65135 21.0019 3.74997C21.0019 3.84859 20.9825 3.94624 20.9447 4.03735C20.907 4.12846 20.8517 4.21124 20.7819 4.28097L13.0614 12L20.7819 19.719C20.8517 19.7887 20.907 19.8715 20.9447 19.9626C20.9825 20.0537 21.0019 20.1514 21.0019 20.25C21.0019 20.3486 20.9825 20.4462 20.9447 20.5373C20.907 20.6285 20.8517 20.7112 20.7819 20.781C20.7122 20.8507 20.6294 20.906 20.5383 20.9438C20.4472 20.9815 20.3496 21.0009 20.2509 21.0009C20.1523 21.0009 20.0547 20.9815 19.9636 20.9438C19.8725 20.906 19.7897 20.8507 19.7199 20.781L12.0009 13.0605L4.28195 20.781C4.21222 20.8507 4.12943 20.906 4.03832 20.9438C3.94721 20.9815 3.84956 21.0009 3.75095 21.0009C3.65233 21.0009 3.55468 20.9815 3.46357 20.9438C3.37246 20.906 3.28968 20.8507 3.21995 20.781C3.15022 20.7112 3.0949 20.6285 3.05716 20.5373C3.01942 20.4462 3 20.3486 3 20.25C3 20.1514 3.01942 20.0537 3.05716 19.9626C3.0949 19.8715 3.15022 19.7887 3.21995 19.719L10.9404 12L3.21995 4.28097Z"
-              fill="white"
-            />
-          </svg>
+        <button class="find-part-button primary-button">
           <img
             src="./images/icons/lightning.svg"
             alt="lightning bolt icon"
           />Знайти запчастину
         </button>
         <ul class="header-list">
-          <li class="language-container">
+          <li>
             <button class="language">
               <svg
                 width="32"
@@ -900,7 +1156,7 @@
               </ul>
             </div>
           </li>
-          <li class="account-container">
+          <li>
             <button class="account">
               <svg
                 width="32"
@@ -932,10 +1188,8 @@
               <!-- Signed in -->
               <ul class="account-list logged-in">
                 <li class="account-details">
-                  <a href="#">
-                    <img src="./images/avatar.png" alt="avatar" />
-                    <p class="sub-minor-heading">Олександр Потужненко</p>
-                  </a>
+                  <img src="./images/avatar.png" alt="avatar" />
+                  <p class="sub-minor-heading">Олександр Потужненко</p>
                 </li>
                 <li>
                   <button class="log-out">
@@ -981,7 +1235,7 @@
       </div>
     </header>
     <!-- Sidebar menu -->
-    <aside class="sidebar-menu header-modal">
+    <aside class="sidebar-menu no-scroll header-modal">
       <header class="header">
         <div class="container">
           <div class="logo">
@@ -1010,17 +1264,6 @@
                   </defs>
                 </svg>
               </button>
-              <!-- Language -->
-              <div class="header-modal language-modal">
-                <ul class="language-list">
-                  <li class="selected">
-                    <p class="minor-heading">UA</p>
-                  </li>
-                  <li>
-                    <p class="minor-heading">EN</p>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li>
               <button class="account">
@@ -1050,37 +1293,6 @@
                   </defs>
                 </svg>
               </button>
-              <div class="header-modal account-modal">
-                <!-- Signed in -->
-                <ul class="account-list logged-in">
-                  <li class="account-details">
-                    <a href="#">
-                      <img src="./images/avatar.png" alt="avatar" />
-                      <p class="sub-minor-heading">Олександр Потужненко</p>
-                    </a>
-                  </li>
-                  <li>
-                    <button class="log-out">
-                      <img
-                        src="./images/icons/download.svg"
-                        alt="download icon"
-                      />
-                      <p class="big-button">Вихід</p>
-                    </button>
-                  </li>
-                </ul>
-                <!-- Signed out -->
-                <ul class="account-list sign-out">
-                  <li>
-                    <button class="primary-button small-button">Вхід</button>
-                  </li>
-                  <li>
-                    <button class="primary-button outline small-button">
-                      Реєстрація
-                    </button>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li>
               <button class="cart">
@@ -1134,39 +1346,13 @@
               </div>
             </li>
             <li>
-              <button class="catalog primary-button changing-icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  class="close-cross"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.21995 4.28097C3.15022 4.21124 3.0949 4.12846 3.05716 4.03735C3.01942 3.94624 3 3.84859 3 3.74997C3 3.65135 3.01942 3.5537 3.05716 3.4626C3.0949 3.37149 3.15022 3.2887 3.21995 3.21897C3.28968 3.14924 3.37246 3.09392 3.46357 3.05619C3.55468 3.01845 3.65233 2.99902 3.75095 2.99902C3.84956 2.99902 3.94721 3.01845 4.03832 3.05619C4.12943 3.09392 4.21222 3.14924 4.28195 3.21897L12.0009 10.9395L19.7199 3.21897C19.7897 3.14924 19.8725 3.09392 19.9636 3.05619C20.0547 3.01845 20.1523 2.99902 20.2509 2.99902C20.3496 2.99902 20.4472 3.01845 20.5383 3.05619C20.6294 3.09392 20.7122 3.14924 20.7819 3.21897C20.8517 3.2887 20.907 3.37149 20.9447 3.4626C20.9825 3.5537 21.0019 3.65135 21.0019 3.74997C21.0019 3.84859 20.9825 3.94624 20.9447 4.03735C20.907 4.12846 20.8517 4.21124 20.7819 4.28097L13.0614 12L20.7819 19.719C20.8517 19.7887 20.907 19.8715 20.9447 19.9626C20.9825 20.0537 21.0019 20.1514 21.0019 20.25C21.0019 20.3486 20.9825 20.4462 20.9447 20.5373C20.907 20.6285 20.8517 20.7112 20.7819 20.781C20.7122 20.8507 20.6294 20.906 20.5383 20.9438C20.4472 20.9815 20.3496 21.0009 20.2509 21.0009C20.1523 21.0009 20.0547 20.9815 19.9636 20.9438C19.8725 20.906 19.7897 20.8507 19.7199 20.781L12.0009 13.0605L4.28195 20.781C4.21222 20.8507 4.12943 20.906 4.03832 20.9438C3.94721 20.9815 3.84956 21.0009 3.75095 21.0009C3.65233 21.0009 3.55468 20.9815 3.46357 20.9438C3.37246 20.906 3.28968 20.8507 3.21995 20.781C3.15022 20.7112 3.0949 20.6285 3.05716 20.5373C3.01942 20.4462 3 20.3486 3 20.25C3 20.1514 3.01942 20.0537 3.05716 19.9626C3.0949 19.8715 3.15022 19.7887 3.21995 19.719L10.9404 12L3.21995 4.28097Z"
-                    fill="white"
-                  />
-                </svg>
+              <button class="catalog primary-button">
                 <img src="./images/icons/grid.svg" alt="grid icon" />
                 Каталог
               </button>
             </li>
             <li>
-              <button class="find-part-button primary-button changing-icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  class="close-cross"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.21995 4.28097C3.15022 4.21124 3.0949 4.12846 3.05716 4.03735C3.01942 3.94624 3 3.84859 3 3.74997C3 3.65135 3.01942 3.5537 3.05716 3.4626C3.0949 3.37149 3.15022 3.2887 3.21995 3.21897C3.28968 3.14924 3.37246 3.09392 3.46357 3.05619C3.55468 3.01845 3.65233 2.99902 3.75095 2.99902C3.84956 2.99902 3.94721 3.01845 4.03832 3.05619C4.12943 3.09392 4.21222 3.14924 4.28195 3.21897L12.0009 10.9395L19.7199 3.21897C19.7897 3.14924 19.8725 3.09392 19.9636 3.05619C20.0547 3.01845 20.1523 2.99902 20.2509 2.99902C20.3496 2.99902 20.4472 3.01845 20.5383 3.05619C20.6294 3.09392 20.7122 3.14924 20.7819 3.21897C20.8517 3.2887 20.907 3.37149 20.9447 3.4626C20.9825 3.5537 21.0019 3.65135 21.0019 3.74997C21.0019 3.84859 20.9825 3.94624 20.9447 4.03735C20.907 4.12846 20.8517 4.21124 20.7819 4.28097L13.0614 12L20.7819 19.719C20.8517 19.7887 20.907 19.8715 20.9447 19.9626C20.9825 20.0537 21.0019 20.1514 21.0019 20.25C21.0019 20.3486 20.9825 20.4462 20.9447 20.5373C20.907 20.6285 20.8517 20.7112 20.7819 20.781C20.7122 20.8507 20.6294 20.906 20.5383 20.9438C20.4472 20.9815 20.3496 21.0009 20.2509 21.0009C20.1523 21.0009 20.0547 20.9815 19.9636 20.9438C19.8725 20.906 19.7897 20.8507 19.7199 20.781L12.0009 13.0605L4.28195 20.781C4.21222 20.8507 4.12943 20.906 4.03832 20.9438C3.94721 20.9815 3.84956 21.0009 3.75095 21.0009C3.65233 21.0009 3.55468 20.9815 3.46357 20.9438C3.37246 20.906 3.28968 20.8507 3.21995 20.781C3.15022 20.7112 3.0949 20.6285 3.05716 20.5373C3.01942 20.4462 3 20.3486 3 20.25C3 20.1514 3.01942 20.0537 3.05716 19.9626C3.0949 19.8715 3.15022 19.7887 3.21995 19.719L10.9404 12L3.21995 4.28097Z"
-                    fill="white"
-                  />
-                </svg>
+              <button class="find-part-button primary-button">
                 <img
                   src="./images/icons/lightning.svg"
                   alt="lightning bolt icon"
@@ -1179,92 +1365,6 @@
       <!-- Footer -->
       <footer class="footer">
         <div class="container">
-          <div class="blocks">
-            <div class="footer-block">
-              <p class="footer-category">Покупцям</p>
-              <ul class="footer-block-list">
-                <li>
-                  <a href="#"><p class="main-text">Довідка покупцям</p></a>
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Нові запчастини</p></a>
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Авторозбірки України</p></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><p class="main-text">Політика конфіденційності</p></a
-                  >
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Користувацька угода</p></a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-block">
-              <p class="footer-category">Продавцям</p>
-              <ul class="footer-block-list">
-                <li>
-                  <a href="#"><p class="main-text">Довідка продавцям</p></a>
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Реєстрація продавця</p></a>
-                </li>
-                <li>
-                  <a href="services.html"
-                    ><p class="main-text">Створити сайт</p></a
-                  >
-                </li>
-                <li>
-                  <a href="plans.html"><p class="main-text">Тарифи</p></a>
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Рейтинг заявок</p></a>
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Звязок для продавців</p></a>
-                </li>
-              </ul>
-            </div>
-            <!-- <div class="footer-block">
-              <p class="footer-category">Партнери</p>
-              <ul class="footer-block-list">
-                <li>
-                  <a href="#"><p class="main-text">Agrobiz.net</p></a>
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Bigopt.com</p></a>
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Lvivmarket.net</p></a>
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Navolyni.com</p></a>
-                </li>
-                <li>
-                  <a href="#"><p class="main-text">Paulownia.energy</p></a>
-                </li>
-              </ul>
-            </div> -->
-          </div>
-
-          <a href="#" class="afu-donation">
-            <svg
-              width="24"
-              height="23"
-              viewBox="0 0 24 23"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11.9998 4.12207L10.9243 3.01657C8.39984 0.421573 3.77084 1.31707 2.09984 4.57957C1.31534 6.11407 1.13834 8.32957 2.57084 11.1571C3.95084 13.8796 6.82184 17.1406 11.9998 20.6926C17.1778 17.1406 20.0473 13.8796 21.4288 11.1571C22.8613 8.32807 22.6858 6.11407 21.8998 4.57957C20.2288 1.31707 15.5998 0.420073 13.0753 3.01507L11.9998 4.12207ZM11.9998 22.5001C-10.9997 7.30207 4.91834 -4.55993 11.7358 1.71457C11.8258 1.79757 11.9138 1.88307 11.9998 1.97107C12.0843 1.88252 12.1724 1.79745 12.2638 1.71607C19.0798 -4.56293 34.9993 7.30057 11.9998 22.5001Z"
-                fill="black"
-              />
-            </svg>
-
-            Допомога ЗСУ
-          </a>
           <div class="pod-kapot footer-block">
             <!-- Logo and description -->
             <div class="logo-desc">
@@ -1402,6 +1502,89 @@
                     <a href="#"><p class="main-text">Користувацька угода</p></a>
                   </li>
                 </ul>
+              </li>
+            </ul>
+            <a href="#" class="afu-donation">
+              <svg
+                width="24"
+                height="23"
+                viewBox="0 0 24 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.9998 4.12207L10.9243 3.01657C8.39984 0.421573 3.77084 1.31707 2.09984 4.57957C1.31534 6.11407 1.13834 8.32957 2.57084 11.1571C3.95084 13.8796 6.82184 17.1406 11.9998 20.6926C17.1778 17.1406 20.0473 13.8796 21.4288 11.1571C22.8613 8.32807 22.6858 6.11407 21.8998 4.57957C20.2288 1.31707 15.5998 0.420073 13.0753 3.01507L11.9998 4.12207ZM11.9998 22.5001C-10.9997 7.30207 4.91834 -4.55993 11.7358 1.71457C11.8258 1.79757 11.9138 1.88307 11.9998 1.97107C12.0843 1.88252 12.1724 1.79745 12.2638 1.71607C19.0798 -4.56293 34.9993 7.30057 11.9998 22.5001Z"
+                  fill="black"
+                />
+              </svg>
+
+              Допомога ЗСУ
+            </a>
+          </div>
+          <div class="footer-block">
+            <p class="footer-category">Покупцям</p>
+            <ul class="footer-block-list">
+              <li>
+                <a href="#"><p class="main-text">Довідка покупцям</p></a>
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Нові запчастини</p></a>
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Авторозбірки України</p></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><p class="main-text">Політика конфіденційності</p></a
+                >
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Користувацька угода</p></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <p class="footer-category">Продавцям</p>
+            <ul class="footer-block-list">
+              <li>
+                <a href="#"><p class="main-text">Довідка продавцям</p></a>
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Реєстрація продавця</p></a>
+              </li>
+              <li>
+                <a href="services.html"
+                  ><p class="main-text">Створити сайт</p></a
+                >
+              </li>
+              <li>
+                <a href="plans.html"><p class="main-text">Тарифи</p></a>
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Рейтинг заявок</p></a>
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Звязок для продавців</p></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <p class="footer-category">Партнери</p>
+            <ul class="footer-block-list">
+              <li>
+                <a href="#"><p class="main-text">Agrobiz.net</p></a>
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Bigopt.com</p></a>
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Lvivmarket.net</p></a>
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Navolyni.com</p></a>
+              </li>
+              <li>
+                <a href="#"><p class="main-text">Paulownia.energy</p></a>
               </li>
             </ul>
           </div>
@@ -1573,13 +1756,24 @@
                   </div>
                 </li>
                 <li>
-                  <div class="input-container">
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      placeholder="Запчастина"
-                      class="small-button"
+                      id="part-name-modal"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid part name"
                     />
-                    <p class="small-text">Invalid input</p>
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label for="part-name-modal" class="mdc-floating-label"
+                          >Запчастина</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="part-name-modal-error" class="error-message"></div>
                   </div>
                 </li>
               </ul>
@@ -1601,29 +1795,76 @@
                     </li>
                   </ul>
                 </div>
-                <div class="input-wrap">
-                  <!-- Placeholder -->
-                  <label for="phone">Телефон</label>
-                  <div class="input-container">
-                    <input type="text" id="phone" value="+38(" />
-                    <p class="small-text">Invalid input</p>
+                <!-- Text field -->
+                <div class="mdc-text-field mdc-text-field--outlined">
+                  <input
+                    type="tel"
+                    id="find-part-modal-phone"
+                    class="mdc-text-field__input"
+                    data-error-message="Please enter a valid phone number"
+                    value="+38"
+                  />
+                  <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                      <label for="part-name-modal" class="mdc-floating-label"
+                        >Телефон</label
+                      >
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
                   </div>
+                  <div
+                    id="part-name-modal-phone-error"
+                    class="error-message"
+                  ></div>
                 </div>
-                <div class="input-container">
+                <!-- Text field -->
+                <div class="mdc-text-field mdc-text-field--outlined">
                   <input
                     type="text"
-                    placeholder="Ваше ім’я"
-                    class="small-button"
+                    id="find-part-modal-name"
+                    class="mdc-text-field__input"
+                    data-error-message="Please enter a valid name"
                   />
-                  <p class="small-text">Invalid input</p>
+                  <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                      <label
+                        for="find-part-modal-name"
+                        class="mdc-floating-label"
+                        >Ваше ім’я</label
+                      >
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
+                  </div>
+                  <div
+                    id="find-part-modal-name-error"
+                    class="error-message"
+                  ></div>
                 </div>
-                <div class="input-container">
+                <!-- Text field -->
+                <div class="mdc-text-field mdc-text-field--outlined">
                   <input
-                    type="text"
-                    placeholder="E-mail"
-                    class="small-button"
+                    type="email"
+                    id="find-part-modal-email"
+                    class="mdc-text-field__input"
+                    data-error-message="Please enter a valid email"
                   />
-                  <p class="small-text">Invalid input</p>
+                  <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                      <label
+                        for="find-part-modal-email"
+                        class="mdc-floating-label"
+                        >E-mail</label
+                      >
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
+                  </div>
+                  <div
+                    id="find-part-modal-email-error"
+                    class="error-message"
+                  ></div>
                 </div>
               </div>
               <button type="submit" class="primary-button">
@@ -1635,6 +1876,7 @@
         </div>
       </div>
     </div>
+    <!-- ** Modals end ** -->
     <!-- Main -->
     <main class="main">
       <!-- Hero section -->
@@ -1881,7 +2123,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1891,7 +2133,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1901,7 +2143,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1911,7 +2153,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1921,7 +2163,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1931,7 +2173,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1941,7 +2183,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1951,7 +2193,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -2447,31 +2689,36 @@
           <h3 class="section-heading">Популярні товари та послуги</h3>
           <ul class="products-list f-4-2">
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -2485,31 +2732,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -2523,31 +2775,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -2561,31 +2818,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -2599,31 +2861,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -2637,31 +2904,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -2675,31 +2947,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -2713,31 +2990,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -2760,29 +3042,33 @@
           <ul class="verified-sellers-list f-2-1">
             <li class="seller f-el">
               <div class="company-location">
-                <div class="company-image">
+                <a class="company-image" href="seller.html">
                   <img
                     src="./images/tesla-company.png"
                     alt="Tesla company logo"
                   />
-                </div>
+                </a>
                 <p class="main-text">Новоград-Волинський</p>
               </div>
               <div class="seller-container">
-                <ul class="seller-desc-list">
-                  <li>
-                    <p class="main-text">Разборка бусов AVO VANS</p>
-                  </li>
-                  <li>
-                    <div class="fill-tag maximum">Maximum</div>
-                  </li>
-                  <li class="location">
-                    <p class="main-text">Новоград-Волинський</p>
-                  </li>
-                </ul>
+                <a href="seller.html">
+                  <ul class="seller-desc-list">
+                    <li>
+                      <p class="main-text">Разборка бусов AVO VANS</p>
+                    </li>
+                    <li>
+                      <div class="fill-tag maximum">Maximum</div>
+                    </li>
+                    <li class="location">
+                      <p class="main-text">Новоград-Волинський</p>
+                    </li>
+                  </ul>
+                </a>
                 <ul class="seller-contact-list">
                   <li>
-                    <p class="phone-number">+38095********</p>
+                    <p class="phone-number" data-full-phone="+3809512345678">
+                      +38095********
+                    </p>
                   </li>
                   <li>
                     <button class="maximum tag-link open-contacts">
@@ -2794,29 +3080,33 @@
             </li>
             <li class="seller f-el">
               <div class="company-location">
-                <div class="company-image">
+                <a class="company-image" href="seller.html">
                   <img
                     src="./images/tesla-company.png"
                     alt="Tesla company logo"
                   />
-                </div>
+                </a>
                 <p class="main-text">Новоград-Волинський</p>
               </div>
               <div class="seller-container">
-                <ul class="seller-desc-list">
-                  <li>
-                    <p class="main-text">Разборка бусов AVO VANS</p>
-                  </li>
-                  <li>
-                    <div class="fill-tag maximum">Maximum</div>
-                  </li>
-                  <li class="location">
-                    <p class="main-text">Новоград-Волинський</p>
-                  </li>
-                </ul>
+                <a href="seller.html">
+                  <ul class="seller-desc-list">
+                    <li>
+                      <p class="main-text">Разборка бусов AVO VANS</p>
+                    </li>
+                    <li>
+                      <div class="fill-tag maximum">Maximum</div>
+                    </li>
+                    <li class="location">
+                      <p class="main-text">Новоград-Волинський</p>
+                    </li>
+                  </ul>
+                </a>
                 <ul class="seller-contact-list">
                   <li>
-                    <p class="phone-number">+38095********</p>
+                    <p class="phone-number" data-full-phone="+3809512345678">
+                      +38095********
+                    </p>
                   </li>
                   <li>
                     <button class="maximum tag-link open-contacts">
@@ -2828,29 +3118,33 @@
             </li>
             <li class="seller f-el">
               <div class="company-location">
-                <div class="company-image">
+                <a class="company-image" href="seller.html">
                   <img
                     src="./images/tesla-company.png"
                     alt="Tesla company logo"
                   />
-                </div>
+                </a>
                 <p class="main-text">Новоград-Волинський</p>
               </div>
               <div class="seller-container">
-                <ul class="seller-desc-list">
-                  <li>
-                    <p class="main-text">Разборка бусов AVO VANS</p>
-                  </li>
-                  <li>
-                    <div class="fill-tag maximum">Maximum</div>
-                  </li>
-                  <li class="location">
-                    <p class="main-text">Новоград-Волинський</p>
-                  </li>
-                </ul>
+                <a href="seller.html">
+                  <ul class="seller-desc-list">
+                    <li>
+                      <p class="main-text">Разборка бусов AVO VANS</p>
+                    </li>
+                    <li>
+                      <div class="fill-tag maximum">Maximum</div>
+                    </li>
+                    <li class="location">
+                      <p class="main-text">Новоград-Волинський</p>
+                    </li>
+                  </ul>
+                </a>
                 <ul class="seller-contact-list">
                   <li>
-                    <p class="phone-number">+38095********</p>
+                    <p class="phone-number" data-full-phone="+3809512345678">
+                      +38095********
+                    </p>
                   </li>
                   <li>
                     <button class="maximum tag-link open-contacts">
@@ -2862,29 +3156,33 @@
             </li>
             <li class="seller f-el">
               <div class="company-location">
-                <div class="company-image">
+                <a class="company-image" href="seller.html">
                   <img
                     src="./images/tesla-company.png"
                     alt="Tesla company logo"
                   />
-                </div>
+                </a>
                 <p class="main-text">Новоград-Волинський</p>
               </div>
               <div class="seller-container">
-                <ul class="seller-desc-list">
-                  <li>
-                    <p class="main-text">Разборка бусов AVO VANS</p>
-                  </li>
-                  <li>
-                    <div class="fill-tag maximum">Maximum</div>
-                  </li>
-                  <li class="location">
-                    <p class="main-text">Новоград-Волинський</p>
-                  </li>
-                </ul>
+                <a href="seller.html">
+                  <ul class="seller-desc-list">
+                    <li>
+                      <p class="main-text">Разборка бусов AVO VANS</p>
+                    </li>
+                    <li>
+                      <div class="fill-tag maximum">Maximum</div>
+                    </li>
+                    <li class="location">
+                      <p class="main-text">Новоград-Волинський</p>
+                    </li>
+                  </ul>
+                </a>
                 <ul class="seller-contact-list">
                   <li>
-                    <p class="phone-number">+38095********</p>
+                    <p class="phone-number" data-full-phone="+3809512345678">
+                      +38095********
+                    </p>
                   </li>
                   <li>
                     <button class="maximum tag-link open-contacts">
@@ -3596,31 +3894,36 @@
           <h3 class="section-heading">Переглянуті товари</h3>
           <ul class="products-list flex-start f-4-2-1">
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв...
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -3634,31 +3937,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв...
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -3672,31 +3980,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв...
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />

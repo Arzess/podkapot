@@ -3,22 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Minimalize -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css" />
-    <!-- Additional -->
-    <link rel="stylesheet" href="styles/additional.css" />
-    <!-- Adaptive -->
-    <link rel="stylesheet" href="styles/adaptive.css" />
-    <!-- Animation -->
-    <link rel="stylesheet" href="styles/animation.css" />
+    <!-- Text field -->
+    <script src="https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.js"></script>
     <title>Details</title>
   </head>
   <body>
+    <!-- ** Modals start ** -->
     <!-- Authorisation form -->
     <form class="header-modal authorisation-form">
       <div class="top">
@@ -42,10 +34,46 @@
       <main class="sign-in">
         <ul class="inputs-list">
           <li>
-            <input type="email" placeholder="E-mail" />
+            <!-- Text field -->
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="text"
+                id="sign-in-email"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid email"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="sign-in-email" class="mdc-floating-label"
+                    >E-mail</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="sign-in-email-error" class="error-message"></div>
+            </div>
           </li>
           <li>
-            <input type="password" placeholder="Пароль" />
+            <!-- Text field -->
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="password"
+                id="sign-in-password"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid password"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="sign-in-password" class="mdc-floating-label"
+                    >Пароль</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="sign-in-password-error" class="error-message"></div>
+            </div>
           </li>
           <li class="sign-in-help">
             <a href="#" class="small-text">Забули пароль?</a>
@@ -67,35 +95,217 @@
           </li>
         </ul>
         <section class="seller">
-          <input
-            type="text"
-            placeholder="Назва підприємства "
-            class="small-button"
-          />
-          <input
-            type="text"
-            placeholder="Вид діяльності"
-            class="small-button"
-          />
-          <input type="text" placeholder="Ваше ім’я" class="small-button" />
-          <input
-            type="tel"
-            placeholder="Контактний телефон"
-            class="small-button"
-          />
-          <input type="email" placeholder="E-mail" class="small-button" />
-          <input type="password" placeholder="Пароль" class="small-button" />
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-company-name"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid company name"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-company-name" class="mdc-floating-label"
+                  >Назва підприємства</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-company-name-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-business-type"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid business type"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-business-type" class="mdc-floating-label"
+                  >Вид діяльності</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-business-type-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-seller-name"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid business type"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-business-type" class="mdc-floating-label"
+                  >Вид діяльності</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-business-type-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="tel"
+              id="sign-up-phone-seller"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid phone"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-phone-seller" class="mdc-floating-label"
+                  >Контактний телефон</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-phone-seller-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="email"
+              id="sign-up-seller-email"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid email"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-seller-email" class="mdc-floating-label"
+                  >E-mail</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-seller-email-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="password"
+              id="sign-up-seller-password"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid password"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-seller-password" class="mdc-floating-label"
+                  >Пароль</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-seller-password-error" class="error-message"></div>
+          </div>
         </section>
         <section class="buyer">
-          <input type="text" placeholder="Ваше ім’я" class="small-button" />
-          <input
-            type="tel"
-            placeholder="Контактний телефон"
-            class="small-button"
-          />
-          <input type="text" placeholder="Місто" class="small-button" />
-          <input type="email" placeholder="E-mail" class="small-button" />
-          <input type="password" placeholder="Пароль" class="small-button" />
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-buyer-name"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid name"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-name" class="mdc-floating-label"
+                  >Ваше ім’я</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-name-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="tel"
+              id="sign-up-buyer-phone"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid phone"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-phone" class="mdc-floating-label"
+                  >Контактний телефон</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-phone-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="text"
+              id="sign-up-buyer-city"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid city"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-city" class="mdc-floating-label"
+                  >Місто</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-city-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="email"
+              id="sign-up-buyer-city"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid city"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-email" class="mdc-floating-label"
+                  >E-mail</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-email-error" class="error-message"></div>
+          </div>
+          <!-- Text field -->
+          <div class="mdc-text-field mdc-text-field--outlined">
+            <input
+              type="password"
+              id="sign-up-buyer-password"
+              class="mdc-text-field__input"
+              data-error-message="Please enter a valid password"
+            />
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="sign-up-buyer-password" class="mdc-floating-label"
+                  >Пароль</label
+                >
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+            <div id="sign-up-buyer-password-error" class="error-message"></div>
+          </div>
         </section>
       </main>
       <!-- Options -->
@@ -486,33 +696,81 @@
               </div>
               <ul class="application-section-list">
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      placeholder="Ваше ім’я та Прізвище"
-                      class="main-text"
+                      id="shopping-cart-full-name"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid name"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-full-name"
+                          class="mdc-floating-label"
+                          >Ваше ім’я та Прізвище</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-full-name-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
-                      type="text"
-                      class="main-text"
-                      placeholder="Ваш e-mail"
+                      type="email"
+                      id="shopping-cart-email"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid email"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-email"
+                          class="mdc-floating-label"
+                          >Ваш e-mail</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-email-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
-                      type="text"
-                      class="main-text"
-                      placeholder="Ваш телефон"
+                      type="tel"
+                      id="shopping-cart-phone"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid phone"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-phone"
+                          class="mdc-floating-label"
+                          >Ваш телефон</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-phone-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
               </ul>
@@ -550,13 +808,29 @@
                   </div>
                 </li>
                 <li class="condition">
-                  <div class="input-container">
-                    <p class="small-text">Invalid input</p>
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      class="main-text"
-                      placeholder="Ваш e-mail"
+                      id="shopping-cart-delivery-address"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid delivery address"
                     />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="shopping-cart-delivery-address"
+                          class="mdc-floating-label"
+                          >Адреса доставки</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div
+                      id="shopping-cart-delivery-address-error"
+                      class="error-message"
+                    ></div>
                   </div>
                 </li>
                 <li class="condition">
@@ -1482,13 +1756,24 @@
                   </div>
                 </li>
                 <li>
-                  <div class="input-container">
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      placeholder="Запчастина"
-                      class="small-button"
+                      id="part-name-modal"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid part name"
                     />
-                    <p class="small-text">Invalid input</p>
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label for="part-name-modal" class="mdc-floating-label"
+                          >Запчастина</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="part-name-modal-error" class="error-message"></div>
                   </div>
                 </li>
               </ul>
@@ -1510,29 +1795,76 @@
                     </li>
                   </ul>
                 </div>
-                <div class="input-wrap">
-                  <!-- Placeholder -->
-                  <label for="phone">Телефон</label>
-                  <div class="input-container">
-                    <input type="text" id="phone" value="+38(" />
-                    <p class="small-text">Invalid input</p>
+                <!-- Text field -->
+                <div class="mdc-text-field mdc-text-field--outlined">
+                  <input
+                    type="tel"
+                    id="find-part-modal-phone"
+                    class="mdc-text-field__input"
+                    data-error-message="Please enter a valid phone number"
+                    value="+38"
+                  />
+                  <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                      <label for="part-name-modal" class="mdc-floating-label"
+                        >Телефон</label
+                      >
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
                   </div>
+                  <div
+                    id="part-name-modal-phone-error"
+                    class="error-message"
+                  ></div>
                 </div>
-                <div class="input-container">
+                <!-- Text field -->
+                <div class="mdc-text-field mdc-text-field--outlined">
                   <input
                     type="text"
-                    placeholder="Ваше ім’я"
-                    class="small-button"
+                    id="find-part-modal-name"
+                    class="mdc-text-field__input"
+                    data-error-message="Please enter a valid name"
                   />
-                  <p class="small-text">Invalid input</p>
+                  <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                      <label
+                        for="find-part-modal-name"
+                        class="mdc-floating-label"
+                        >Ваше ім’я</label
+                      >
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
+                  </div>
+                  <div
+                    id="find-part-modal-name-error"
+                    class="error-message"
+                  ></div>
                 </div>
-                <div class="input-container">
+                <!-- Text field -->
+                <div class="mdc-text-field mdc-text-field--outlined">
                   <input
-                    type="text"
-                    placeholder="E-mail"
-                    class="small-button"
+                    type="email"
+                    id="find-part-modal-email"
+                    class="mdc-text-field__input"
+                    data-error-message="Please enter a valid email"
                   />
-                  <p class="small-text">Invalid input</p>
+                  <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                      <label
+                        for="find-part-modal-email"
+                        class="mdc-floating-label"
+                        >E-mail</label
+                      >
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
+                  </div>
+                  <div
+                    id="find-part-modal-email-error"
+                    class="error-message"
+                  ></div>
                 </div>
               </div>
               <button type="submit" class="primary-button">
@@ -1544,6 +1876,7 @@
         </div>
       </div>
     </div>
+    <!-- ** Modals end ** -->
     <!-- Main -->
     <main class="main has-breadcrumbs">
       <!-- Breadcrumbs -->
@@ -1573,7 +1906,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1583,7 +1916,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1593,7 +1926,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1603,7 +1936,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1613,7 +1946,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1623,7 +1956,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1633,7 +1966,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -1643,7 +1976,7 @@
                     <img src="./images/tires.png" alt="stacked up tires" />
                   </div>
                   <div class="catalog-element-name">
-                    <h5 class="minor-heading">Шини та Диски</h5>
+                    <p class="minor-heading">Шини та Диски</p>
                   </div>
                 </a>
               </li>
@@ -2030,7 +2363,6 @@
           </ul>
         </div>
       </section>
-
       <!-- Verified sellers -->
       <section class="verified-sellers list-section">
         <div class="container">
@@ -2038,29 +2370,33 @@
           <ul class="verified-sellers-list f-2-1">
             <li class="seller f-el">
               <div class="company-location">
-                <div class="company-image">
+                <a class="company-image" href="seller.html">
                   <img
                     src="./images/tesla-company.png"
                     alt="Tesla company logo"
                   />
-                </div>
+                </a>
                 <p class="main-text">Новоград-Волинський</p>
               </div>
               <div class="seller-container">
-                <ul class="seller-desc-list">
-                  <li>
-                    <p class="main-text">Разборка бусов AVO VANS</p>
-                  </li>
-                  <li>
-                    <div class="fill-tag maximum">Maximum</div>
-                  </li>
-                  <li class="location">
-                    <p class="main-text">Новоград-Волинський</p>
-                  </li>
-                </ul>
+                <a href="seller.html">
+                  <ul class="seller-desc-list">
+                    <li>
+                      <p class="main-text">Разборка бусов AVO VANS</p>
+                    </li>
+                    <li>
+                      <div class="fill-tag maximum">Maximum</div>
+                    </li>
+                    <li class="location">
+                      <p class="main-text">Новоград-Волинський</p>
+                    </li>
+                  </ul>
+                </a>
                 <ul class="seller-contact-list">
                   <li>
-                    <p class="phone-number">+38095********</p>
+                    <p class="phone-number" data-full-phone="+3809512345678">
+                      +38095********
+                    </p>
                   </li>
                   <li>
                     <button class="maximum tag-link open-contacts">
@@ -2072,29 +2408,33 @@
             </li>
             <li class="seller f-el">
               <div class="company-location">
-                <div class="company-image">
+                <a class="company-image" href="seller.html">
                   <img
                     src="./images/tesla-company.png"
                     alt="Tesla company logo"
                   />
-                </div>
+                </a>
                 <p class="main-text">Новоград-Волинський</p>
               </div>
               <div class="seller-container">
-                <ul class="seller-desc-list">
-                  <li>
-                    <p class="main-text">Разборка бусов AVO VANS</p>
-                  </li>
-                  <li>
-                    <div class="fill-tag maximum">Maximum</div>
-                  </li>
-                  <li class="location">
-                    <p class="main-text">Новоград-Волинський</p>
-                  </li>
-                </ul>
+                <a href="seller.html">
+                  <ul class="seller-desc-list">
+                    <li>
+                      <p class="main-text">Разборка бусов AVO VANS</p>
+                    </li>
+                    <li>
+                      <div class="fill-tag maximum">Maximum</div>
+                    </li>
+                    <li class="location">
+                      <p class="main-text">Новоград-Волинський</p>
+                    </li>
+                  </ul>
+                </a>
                 <ul class="seller-contact-list">
                   <li>
-                    <p class="phone-number">+38095********</p>
+                    <p class="phone-number" data-full-phone="+3809512345678">
+                      +38095********
+                    </p>
                   </li>
                   <li>
                     <button class="maximum tag-link open-contacts">
@@ -2106,29 +2446,33 @@
             </li>
             <li class="seller f-el">
               <div class="company-location">
-                <div class="company-image">
+                <a class="company-image" href="seller.html">
                   <img
                     src="./images/tesla-company.png"
                     alt="Tesla company logo"
                   />
-                </div>
+                </a>
                 <p class="main-text">Новоград-Волинський</p>
               </div>
               <div class="seller-container">
-                <ul class="seller-desc-list">
-                  <li>
-                    <p class="main-text">Разборка бусов AVO VANS</p>
-                  </li>
-                  <li>
-                    <div class="fill-tag maximum">Maximum</div>
-                  </li>
-                  <li class="location">
-                    <p class="main-text">Новоград-Волинський</p>
-                  </li>
-                </ul>
+                <a href="seller.html">
+                  <ul class="seller-desc-list">
+                    <li>
+                      <p class="main-text">Разборка бусов AVO VANS</p>
+                    </li>
+                    <li>
+                      <div class="fill-tag maximum">Maximum</div>
+                    </li>
+                    <li class="location">
+                      <p class="main-text">Новоград-Волинський</p>
+                    </li>
+                  </ul>
+                </a>
                 <ul class="seller-contact-list">
                   <li>
-                    <p class="phone-number">+38095********</p>
+                    <p class="phone-number" data-full-phone="+3809512345678">
+                      +38095********
+                    </p>
                   </li>
                   <li>
                     <button class="maximum tag-link open-contacts">
@@ -2140,29 +2484,33 @@
             </li>
             <li class="seller f-el">
               <div class="company-location">
-                <div class="company-image">
+                <a class="company-image" href="seller.html">
                   <img
                     src="./images/tesla-company.png"
                     alt="Tesla company logo"
                   />
-                </div>
+                </a>
                 <p class="main-text">Новоград-Волинський</p>
               </div>
               <div class="seller-container">
-                <ul class="seller-desc-list">
-                  <li>
-                    <p class="main-text">Разборка бусов AVO VANS</p>
-                  </li>
-                  <li>
-                    <div class="fill-tag maximum">Maximum</div>
-                  </li>
-                  <li class="location">
-                    <p class="main-text">Новоград-Волинський</p>
-                  </li>
-                </ul>
+                <a href="seller.html">
+                  <ul class="seller-desc-list">
+                    <li>
+                      <p class="main-text">Разборка бусов AVO VANS</p>
+                    </li>
+                    <li>
+                      <div class="fill-tag maximum">Maximum</div>
+                    </li>
+                    <li class="location">
+                      <p class="main-text">Новоград-Волинський</p>
+                    </li>
+                  </ul>
+                </a>
                 <ul class="seller-contact-list">
                   <li>
-                    <p class="phone-number">+38095********</p>
+                    <p class="phone-number" data-full-phone="+3809512345678">
+                      +38095********
+                    </p>
                   </li>
                   <li>
                     <button class="maximum tag-link open-contacts">
@@ -2345,11 +2693,32 @@
                     </div>
                   </li>
                   <li>
-                    <!-- Placeholder -->
-                    <label for="phone">Телефон</label>
-                    <div class="input-container">
-                      <p class="small-text">Invalid input</p>
-                      <input type="text" id="phone" value="+38(" />
+                    <!-- Text field -->
+                    <div class="mdc-text-field mdc-text-field--outlined">
+                      <input
+                        type="tel"
+                        id="find-part-section-phone"
+                        class="mdc-text-field__input"
+                        required
+                        pattern="[+][0-9]+"
+                        value="+38"
+                        data-error-message="Please enter a valid phone"
+                      />
+                      <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                          <label
+                            for="find-part-section-phone"
+                            class="mdc-floating-label"
+                            >Телефон</label
+                          >
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                      <div
+                        id="find-part-section-phone-error"
+                        class="error-message"
+                      ></div>
                     </div>
                   </li>
                 </ul>
@@ -2371,21 +2740,47 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="input-container">
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
                       type="text"
-                      placeholder="Ваше ім’я"
-                      class="small-button"
+                      id="find-part-section-name"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid name"
                     />
-                    <p class="small-text">Invalid input</p>
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="find-part-section-name"
+                          class="mdc-floating-label"
+                          >Ваше ім’я</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="find-part-name-error" class="error-message"></div>
                   </div>
-                  <div class="input-container">
+                  <!-- Text field -->
+                  <div class="mdc-text-field mdc-text-field--outlined">
                     <input
-                      type="text"
-                      placeholder="E-mail"
-                      class="small-button"
+                      type="email"
+                      id="find-part-section-email"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid email"
                     />
-                    <p class="small-text">Invalid input</p>
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label
+                          for="find-part-section-email"
+                          class="mdc-floating-label"
+                          >E-mail</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="find-part-email-error" class="error-message"></div>
                   </div>
                 </div>
                 <button type="submit" class="primary-button">
@@ -2961,31 +3356,36 @@
           <h3 class="section-heading">Переглянуті товари</h3>
           <ul class="products-list flex-start f-4-2-1">
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв...
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -2999,31 +3399,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв...
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -3037,31 +3442,36 @@
               </a>
             </li>
             <li class="product f-el">
-              <img src="./images/product-card-photo.png" alt="tires" />
-              <p class="small-text availability">Нема в наявності</p>
-              <p class="product-heading main-text">
-                Переднатягувач ременя безпекивмвммв...
-              </p>
-              <div class="time-model">
-                <div class="time">
-                  <img
-                    src="./images/icons/stopwatch.svg"
-                    alt="stopwatch icon"
-                  />
-                  <p class="small-text">09.06.2019</p>
+              <div class="product-container">
+                <a href="product.html" class="product-img-desc">
+                  <img src="./images/product-card-photo.png" alt="tires" />
+                  <p class="small-text availability">Нема в наявності</p>
+                  <p class="product-heading main-text">
+                    Переднатягувач ременя безпекивмвммв безпекивмвммв
+                    безпекивмвммв sdsdsddfdfdkfl
+                  </p>
+                </a>
+                <div class="time-model">
+                  <div class="time">
+                    <img
+                      src="./images/icons/stopwatch.svg"
+                      alt="stopwatch icon"
+                    />
+                    <p class="small-text">09.06.2019</p>
+                  </div>
+                  <p class="small-text">CT-8-8090A</p>
                 </div>
-                <p class="small-text">CT-8-8090A</p>
+                <div class="product-price">
+                  <p class="price">10 000</p>
+                  <p class="main-text">Грн/компл.</p>
+                </div>
+                <button class="buy primary-button">
+                  <img
+                    src="./images/icons/shopping-cart-small.svg"
+                    alt="shopping cart icon"
+                  />Купити
+                </button>
               </div>
-              <div class="product-price">
-                <p class="price">10 000</p>
-                <p class="main-text">Грн/компл.</p>
-              </div>
-              <button class="buy primary-button">
-                <img
-                  src="./images/icons/shopping-cart-small.svg"
-                  alt="shopping cart icon"
-                />Купити
-              </button>
               <a href="#" class="manufacturer">
                 <div class="manufacturer-details">
                   <img src="./images/avtrans.png" alt="av vans company logo" />
@@ -3388,21 +3798,5 @@
       <img src="./images/icons/lightning.svg" alt="lightning bolt icon" />
     </button>
   </body>
-  <script src="scripts/script.js"></script>
-  <!-- Dropdown -->
-  <script src="scripts/dropdown.js"></script>
-  <!-- Button list logic -->
-  <script src="scripts/button-list.js"></script>
-  <!-- Detail's scripts -->
-  <script src="scripts/details.js"></script>
-  <!-- Seller -->
-  <script src="scripts/seller.js"></script>
-  <!-- News -->
-  <script src="scripts/news.js"></script>
-  <!-- Product -->
-  <script src="scripts/product.js"></script>
-  <!-- Swiper js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Swiper 4 cards -->
-  <script type="module" src="./scripts/swiper-4-cards.js"></script>
+  <script type="module" src="./scripts/script.js"></script>
 </html>

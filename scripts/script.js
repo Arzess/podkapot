@@ -1,5 +1,17 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 const mobileWidth = 500;
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  // Set the scrollbar width
+  const documentWidth = document.documentElement.clientWidth;
+  const scrollbarWidth = Math.abs(window.innerWidth - documentWidth);
+  document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+
+  // Set the header height
+  const headerElement = document.querySelector(".header:has(.search-bar-input)");
+  document.documentElement.style.setProperty('--header-height', `${headerElement.clientHeight}px`);
+})
+
 // --- Header ---
 const resetChangingIcons = () => {
     const changing = document.querySelectorAll(".changing-icon");
@@ -128,11 +140,12 @@ const checkModals = () => {
 };
 
 const updateOverlay = () => {
-    const main = document.querySelector(".main");
     if (checkModals()) {
-        main.classList.add("overlay");
+        document.body.classList.add("overlay");
+        document.body.classList.add("steady");
     } else {
-        main.classList.remove("overlay");
+        document.body.classList.remove("overlay");
+        document.body.classList.remove("steady");
     }
 };
 
@@ -142,6 +155,9 @@ const burgerMenu = document.querySelector(".header .menu");
 const sideBar = document.querySelector(".sidebar-menu");
 const sideBarClose = sideBar.querySelector(".close")
 burgerMenu.addEventListener("click", ()=>{
+    if (document.querySelector(".shopping-cart.shown") != null || document.querySelector(".find-part.shown") != null){
+      closeAllModals();
+    }
     sideBar.classList.add("shown");
     updateOverlay();
 })
@@ -378,14 +394,12 @@ shoppingCartButton.forEach(b => {
     b.addEventListener("click", () => {
         closeAllModals();
         shoppingCart.classList.add("shown");
-        document.body.classList.add("steady");
         updateOverlay();
     });
 })
 
 closeCart.addEventListener("click", () => {
     shoppingCart.classList.remove("shown");
-    document.body.classList.remove("steady");
     updateOverlay(); 
 });
 
@@ -843,28 +857,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Products
-
-const products = document.querySelectorAll("li.product.f-el");
-
-products.forEach(product => {
-    product.addEventListener("click", (e)=>{
-        if ((e.target.nodeName == "P" && e.target.className.includes('product-heading'))|| e.target.nodeName == "IMG" && e.target.getAttribute("alt") == "tires"){
-            location.href = "product.html";
-        }
-    })
-})
-
-// Seller
-
-const newSellerProducts = document.querySelectorAll(".companys-products .product");
-
-newSellerProducts.forEach(p => {
-    p.querySelector(".img-name").addEventListener("click", ()=>{
-        location.href = "product.html";
-    });
-});
-
 // Anchor buttons seller
 
 const anchorButtons = document.querySelector(".seller-actions");
@@ -879,19 +871,6 @@ if (anchorButtons != null){
             })
         })
     })    
-}
-
-
-// Sellers
-
-const sellers = document.querySelectorAll("li.seller.f-el");
-if (sellers.length != 0){
-    
-sellers.forEach(seller => {
-    seller.addEventListener("click", ()=>{
-        location.href = "seller.html";
-    })
-})
 }
 
 
@@ -1102,8 +1081,8 @@ document.addEventListener("DOMContentLoaded", () => {
     paginationContainer.innerHTML = '';
 
     let totalSlides = swiper.slides.length;
-    if (window.innerWidth < 1300 && window.innerWidth > 500){
-      totalSlides =  Math.round(swiper.slides.length/2);
+    if (window.innerWidth > 500){
+      totalSlides =  Math.round(swiper.slides.length/2) + 1;
       
     }
     for (let i = 0; i < totalSlides; i++) {
@@ -1241,3 +1220,15 @@ forms.forEach(form => {
     }
   });
 })
+
+// Open contacts
+
+const openContacts = document.querySelectorAll("button.open-contacts");
+if (openContacts.length != 0){
+  openContacts.forEach(b => {
+    b.addEventListener("click", ()=>{
+      const phoneNumberContact = b.closest("ul").querySelector("p.phone-number");
+      phoneNumberContact.innerHTML = phoneNumberContact.getAttribute("data-full-phone");
+    })
+  })
+}
