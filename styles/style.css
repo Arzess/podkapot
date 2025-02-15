@@ -8,6 +8,10 @@
 /* Normalize */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css');
 
+/* Selectize */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css');
+
 /* Colors */
 :root{
     --theme-color: #32cb4f;
@@ -159,14 +163,14 @@ button{
     line-height: 150%;
     /* color: var(--text-color); */
 }
-.main-text, .small-text{
+.main-text, .small-text, .selectize-input .item, .selectize-dropdown .option, .selectize-input>input[placeholder]{
     color: var(--text-color);
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
 }
-.main-text{
+.main-text, .selectize-input .item, .selectize-dropdown .option, .selectize-input>input[placeholder]{
     font-size: 1rem;
 }
 .small-text{
@@ -260,6 +264,7 @@ button{
 }
 .text-image-section .container{
     justify-content: space-between;
+    padding-bottom: 0 !important;
 }
 .text-image-section aside{
     display: flex;
@@ -315,9 +320,6 @@ form .condition .radio-list label{
     padding: 0;
     font-size: 1rem;
 }
-form select{
-    appearance: none;
-}
 form .select-list{
     width: 100%;
     gap: 1.5rem;
@@ -360,18 +362,10 @@ form label{
     line-height: 1.5;
 }
 form input[type="text"], form input[type="email"], form input[type="tel"], form input[type="password"]{
-    padding: 0.5rem 0.75rem;
+    /* padding: 0.5rem 0.75rem; */
     border-radius: 0.25rem;
     border: 1px solid rgba(0, 0, 0, 0.23);
     flex: 1 0 0;
-}
-form select{
-    width: 100%;
-    display: flex;
-    padding: 0.5rem 0.75rem;
-    background: url(../images/icons/arrow-drop-down.svg) no-repeat calc(100% - 0.75rem) 50% / 1rem 1rem;
-    border-radius: 0.25rem;
-    border: 1px solid rgba(0, 0, 0, 0.23);
 }
 .list-section-additional-features{
     display: flex;
@@ -514,7 +508,7 @@ form .dropdown .selected-option{
 .dropdown .options-list .option:hover{
     background: #CFECD5;
 }
-.dropdown.opened .options-list{
+.dropdown.opened .options-list, .selectize-dropdown{
     height: auto;
     max-height: 200px;
     overflow-y: scroll;
@@ -1465,7 +1459,7 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 /* Main section */
-main > section{
+body > main > section {
     overflow-x: hidden;
 }
 .main > section .container{
@@ -1996,6 +1990,7 @@ flex-shrink: 0;
     /* max-width: 792px; */
     position: relative;
     display: flex;
+    height: 100%;
     border-radius: 1rem;
     overflow: hidden;
     width: max-content;
@@ -3134,12 +3129,8 @@ section.find-part .form-container{
     width: max-content;
 }
 section.find-part .find-part-inner{
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
-
-
-
-
 
 /* Search */
 /* Layout */
@@ -3239,12 +3230,18 @@ section.search img{
 .recent-list .recent-application:last-child{
     padding-bottom: 1.5rem;
 }
-.recent-application-inner-list .car-details{
+.recent-application-inner-list .car-details a{
     display: flex;
     gap: 0.75rem;
     align-items: center;
     /* padding-left: 0.5rem;
     padding-right: 0.5rem; */
+}
+.recent-application-inner-list .car-details a p{
+    transition: 0.3s;
+}
+.recent-application-inner-list .car-details a:hover p{
+    color: var(--theme-color);
 }
 .recent-application-inner-list .car-details img{
     width: 43px;
@@ -4149,10 +4146,13 @@ align-self: stretch;
     width: 100%;
     padding: 1.5rem;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start;
     gap: 2rem;    
     left: 50%;
+    overflow-y: scroll;
+    max-height: calc(100vh - 5.4rem);
+    height: max-content;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     position: fixed;
@@ -4700,7 +4700,7 @@ gap: 4px;
     .container{
         width: calc(100% - 1rem);
     }
-    main > section{
+    main > section:not(form > section) {
         margin-bottom: 40px;
     }
     .products-list{
@@ -5465,9 +5465,9 @@ button.search:hover{
 form select{
     transition: 0.3s;
 }
-form select:active, form select:hover{
+/* form select:active, form select:hover{
     border: 1px solid rgba(35, 182, 67, 1);
-}
+} */
 
 form input{
     transition: 0.3s;
@@ -5676,4 +5676,35 @@ footer .footer-info-list a:hover p{
 .mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: #b00020 !important;
     color: var(--mdc-theme-error, #b00020) !important;
+}
+
+/* Selectize */
+
+.selectize-control.single .selectize-input {
+    background-color: #fff;
+    background-image: none;
+    box-shadow: none;
+    border-radius: 0.25rem;
+    min-height: 40px;
+    display: flex;
+}
+
+.selectize-control.single .selectize-input, .selectize-dropdown [data-selectable].option {
+padding-left: 0.75rem;
+padding-right: 0.75rem;
+}
+.selectize-control.single .selectize-input, .selectize-dropdown.single {
+    border-color: var(--additional-color);
+}
+.selectize-dropdown .active:not(.selected) {
+    background: #CFECD5;
+    color: black;
+}
+.selectize-dropdown .selected {
+    background-color: var(--theme-color-darker);
+    color: #fff;
+}
+
+.selectize-input>input[placeholder]::placeholder{
+    color: var(--text-color);
 }

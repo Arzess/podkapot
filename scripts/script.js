@@ -722,17 +722,6 @@ dropdownMenu.forEach(dropdown => {
 
 })
 
-
-// News
-
-const news = document.querySelectorAll("li.news-piece.f-el");
-
-news.forEach(piece => {
-    piece.addEventListener("click", ()=>{
-        location.href = "details.html";
-    })
-})
-
 // Plans
 
 const plans = document.querySelectorAll(".plan");
@@ -1227,8 +1216,16 @@ const openContacts = document.querySelectorAll("button.open-contacts");
 if (openContacts.length != 0){
   openContacts.forEach(b => {
     b.addEventListener("click", ()=>{
-      const phoneNumberContact = b.closest("ul").querySelector("p.phone-number");
+      const phoneNumberContact = b.closest("ul").querySelector("p.phone-number") || b.parentElement.querySelector(".contact-name p:last-child");
       phoneNumberContact.innerHTML = phoneNumberContact.getAttribute("data-full-phone");
     })
   })
 }
+
+// Selectize
+
+$('.selectize-select').selectize({
+  sortField: 'text', 
+  create: false,
+  placeholder: $(this).attr("data-placeholder"),
+});
