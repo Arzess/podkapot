@@ -2609,6 +2609,9 @@ flex-shrink: 0;
 .details .button-list{
     width: max-content;
 }
+.details .tag{
+    min-height: unset;
+}
 .button-list{
     display: flex;
     background-color: #fff;
