@@ -2,7 +2,10 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css" />
     <!-- Text field -->
@@ -1998,55 +2001,86 @@
           <!-- Filter and offers -->
           <div class="filter-and-offers">
             <aside class="filter">
-              <section class="filter-section">
-                <h5 class="minor-heading">Марка</h5>
-                <ul class="checkbox-list">
-                  <li>
-                    <input
-                      type="checkbox"
-                      id="all-brands"
-                      name="brand-condition"
-                    />
-                    <label for="all-brands" class="small-text">Всі марки</label>
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="brand-condition"
-                      id="alfa-romeo"
-                    />
-                    <label for="alfa-romeo" class="small-text"
-                      >Alfa romeo (734)</label
-                    >
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="brand-condition"
-                      id="alfa-romeo-1"
-                    />
-                    <label for="alfa-romeo-1" class="small-text"
-                      >Alfa romeo (734)</label
-                    >
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="brand-condition"
-                      id="alfa-romeo-2"
-                    />
-                    <label for="alfa-romeo-2" class="small-text"
-                      >Alfa romeo (734)</label
-                    >
-                  </li>
-                </ul>
-                <button class="show-all-button no-outline">
-                  <p class="main-text">Відкрити все</p>
-                  <img
-                    src="./images/icons/chevron-down-blue.svg"
-                    alt="chevron down bluse"
-                  />
+              <header class="filter-top mobile">
+                <button class="cancel">
+                  <p class="main-text">Скасувати</p>
                 </button>
+                <p class="sub-section-heading">Фільтр</p>
+                <button class="primary-button outline">Готово</button>
+              </header>
+              <section class="filter-section-list">
+                <section class="filter-section">
+                  <h5 class="minor-heading">Марка</h5>
+                  <ul class="checkbox-list">
+                    <li>
+                      <input
+                        type="checkbox"
+                        id="all-brands"
+                        name="brand-condition"
+                      />
+                      <label for="all-brands" class="small-text"
+                        >Всі марки</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo"
+                      />
+                      <label for="alfa-romeo" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo-1"
+                      />
+                      <label for="alfa-romeo-1" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo-2"
+                      />
+                      <label for="alfa-romeo-2" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo-3"
+                      />
+                      <label for="alfa-romeo-3" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo-4"
+                      />
+                      <label for="alfa-romeo-4" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                  </ul>
+                  <button class="show-all-button no-outline">
+                    <p class="main-text">Відкрити все</p>
+                    <img
+                      src="./images/icons/chevron-down-blue.svg"
+                      alt="chevron down bluse"
+                    />
+                  </button>
+                </section>
               </section>
             </aside>
             <div class="offers">
@@ -2055,25 +2089,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2101,25 +2129,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2147,25 +2169,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2193,25 +2209,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2239,25 +2249,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2286,25 +2290,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2332,25 +2330,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2378,25 +2370,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2424,25 +2410,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2470,25 +2450,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2517,25 +2491,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2563,25 +2531,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2609,25 +2571,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2655,25 +2611,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2701,25 +2651,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2748,25 +2692,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2794,25 +2732,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2840,25 +2772,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2886,25 +2812,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img
@@ -2932,25 +2852,19 @@
                   <div class="product-container">
                     <a href="product.html" class="product-img-desc">
                       <img src="./images/product-card-photo.png" alt="tires" />
-                      <p class="small-text availability">Нема в наявності</p>
-                      <p class="product-heading main-text">
-                        Переднатягувач ременя безпекивмвммв безпекивмвммв
-                        безпекивмвммв sdsdsddfdfdkfl
-                      </p>
-                    </a>
-                    <div class="time-model">
-                      <div class="time">
-                        <img
-                          src="./images/icons/stopwatch.svg"
-                          alt="stopwatch icon"
-                        />
-                        <p class="small-text">09.06.2019</p>
+                      <div class="name">
+                        <p class="product-heading main-text">
+                          Переднатягувач ременя безпекивмвммв безпекивмвммв
+                          безпекивмвммв sdsdsddfdfdkfl
+                        </p>
                       </div>
+                    </a>
+                    <p class="small-text availability">Нема в наявності</p>
+                    <div class="model">
                       <p class="small-text">CT-8-8090A</p>
                     </div>
                     <div class="product-price">
-                      <p class="price">10 000</p>
-                      <p class="main-text">Грн/компл.</p>
+                      <p class="price">10 000 ₴</p>
                     </div>
                     <button class="buy primary-button">
                       <img

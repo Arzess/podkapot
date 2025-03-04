@@ -852,9 +852,7 @@ const anchorButtons = document.querySelector(".seller-actions");
 if (anchorButtons != null){
     Array.from(anchorButtons.children).forEach(anchor => {
         anchor.addEventListener("click", ()=>{
-            const scrollObject = document.querySelector(anchor.children[0].getAttribute("data-scroll-to"));
-            console.log(scrollObject);
-            
+            const scrollObject = document.querySelector(`section${anchor.children[0].getAttribute("data-scroll-to")}`);   
             scrollObject.scrollIntoView({
                 behavior: "smooth",
             })
@@ -1229,3 +1227,17 @@ $('.selectize-select').selectize({
   create: false,
   placeholder: $(this).attr("data-placeholder"),
 });
+
+// Show all button details
+
+
+const showAllDetails = document.querySelectorAll(".details .show-all-button");
+
+if (Array.from(showAllDetails).length != 0){
+  showAllDetails.forEach(show => {
+    show.addEventListener("click", ()=>{
+      show.classList.toggle("clicked")
+      show.parentElement.querySelector("ul").classList.toggle("opened")
+    })
+  })
+}
