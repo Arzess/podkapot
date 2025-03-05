@@ -199,13 +199,15 @@ closeButton.addEventListener("click", ()=>{
 catalogButton.forEach(button => {
     button.addEventListener("click", () => {
         if (catalogModal.classList.contains("shown")){
-            closeAllModals();   
-            button.classList.remove("active");
+            closeAllModals();  
+            resetChangingIcons();
         }
         else{
             closeAllModals();
             catalogModal.classList.add("shown");
-            button.classList.add("active");
+            document.querySelectorAll(".catalog.primary-button.changing-icon").forEach(b => {
+              b.classList.add("active");
+            }) 
         }
         updateOverlay();
     });
@@ -253,12 +255,14 @@ findPartButton.forEach(b => {
     b.addEventListener("click", ()=>{
         if (findPartModal.classList.contains("shown")){
             closeAllModals();
-            b.classList.remove("active");
+            resetChangingIcons();
         }
         else{
             closeAllModals();
             findPartModal.classList.toggle("shown");
-            b.classList.add("active");
+            document.querySelectorAll(".find-part-button.primary-button.changing-icon").forEach(button => {
+              button.classList.add("active");
+            })
         }
        
         // findPartModal.scrollIntoView({behavior: "smooth"})
