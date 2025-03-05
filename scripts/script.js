@@ -509,7 +509,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
 // Header scroll
 const scrollHeader = () => {
     if (window.scrollY > document.querySelector(".header").clientHeight){
-        document.querySelector(".header").classList.add("floating")
+        document.querySelector(".header").classList.add("floating");
+        
     }
     else{
         document.querySelector(".header").classList.remove("floating")
@@ -519,9 +520,11 @@ const scrollHeader = () => {
 const scrollToTheTop = (top) => {
     if (window.scrollY > 100){
         top.classList.remove("hidden");
+        setHeaderHeight();
     }
     else{
         top.classList.add("hidden");
+        setHeaderHeight();
     }
 }
 

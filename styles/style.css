@@ -29,7 +29,9 @@
     --scrollbar-width: 0;
     --header-height: 0;
 }
-
+svg{
+    overflow: visible;
+}
 
 /* Scroll */
 ::-webkit-scrollbar{
@@ -358,6 +360,9 @@ input[type="radio"]:checked{
 form li, form section{
     position: relative;
 }
+form li label{
+    font-size: 0.75rem;
+}
 form:not(.filter) label{
     position: absolute;
     top: -0.75rem;
@@ -366,7 +371,7 @@ form:not(.filter) label{
     left: 0.75rem;
     z-index: 3;
     color: rgba(0, 0, 0, 0.6);
-    font-size: 0.75rem;
+
     line-height: 1.5;
 }
 form input[type="text"], form input[type="email"], form input[type="tel"], form input[type="password"]{
@@ -598,6 +603,13 @@ form .dropdown .selected-option{
     justify-content: space-between;
     background: #FFF;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+.details .products-list .product .product-container{
+    padding: 0;
+    gap: 0;
+}
+.details .product .availability{
+    padding: 0.5rem 0.75rem;
 }
 .products-list .product .product-container{
     justify-content: space-between;
@@ -4844,7 +4856,7 @@ gap: 4px;
         justify-content: space-between;
     }
     .header-modal{
-        margin-top: 5rem;
+        /* margin-top: 5rem; */
         border-radius: 0;
     }
     .catalog-modal{
