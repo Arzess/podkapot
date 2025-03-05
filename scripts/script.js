@@ -1,15 +1,23 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 const mobileWidth = 500;
 
+const setHeaderHeight = () => {
+    // Set the header height
+    const headerElement = document.querySelector(".header:has(.search-bar-input)");
+    document.documentElement.style.setProperty('--header-height', `${headerElement.clientHeight}px`);
+}
+
 document.addEventListener("DOMContentLoaded", ()=>{
   // Set the scrollbar width
   const documentWidth = document.documentElement.clientWidth;
   const scrollbarWidth = Math.abs(window.innerWidth - documentWidth);
   document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+  setHeaderHeight();
 
-  // Set the header height
-  const headerElement = document.querySelector(".header:has(.search-bar-input)");
-  document.documentElement.style.setProperty('--header-height', `${headerElement.clientHeight}px`);
+})
+
+window.addEventListener("resize", ()=>{
+  setHeaderHeight();
 })
 
 // --- Header ---
@@ -52,15 +60,17 @@ const attachHelpTextEventListener = () => {
   
       if (authorisationForm.classList.contains("sign-in")) {
         authorisationForm.classList.remove("sign-in");
+        authorisationForm.classList.remove("seller");
+        authorisationForm.classList.remove("buyer");
         adjustAuthorisationForm("sign-up");
         authorisationForm.classList.add("sign-up");
         authorisationForm.classList.add("buyer");
       } else {
+        authorisationForm.classList.remove("seller");
+        authorisationForm.classList.remove("buyer");
         authorisationForm.classList.remove("sign-up");
         adjustAuthorisationForm("sign-in");
         authorisationForm.classList.add("sign-in");
-        authorisationForm.classList.remove("buyer");
-        authorisationForm.classList.remove("seller");
       }
     }
   });
@@ -123,6 +133,8 @@ const closeAllModals = (keepSidebar = false) => {
         if (keepSidebar){
             if (!modal.classList.contains("sidebar-menu")){
                 modal.classList.remove("shown");
+                modal.classList.remove("seller");
+                modal.classList.remove("buyer");
             }
         }
         else{
@@ -1240,9 +1252,11 @@ const adjustFilter = () => {
   const offersHeight = detailsOffers.scrollHeight;
   filterModal.style.maxHeight = `${offersHeight}px`;
 }
-window.onresize(()=>{
-  adjustFilter();
-});
-window.onload(()=>{
-  adjustFilter();
-})
+if (detailsOffers){
+  window.addEventListener("resize", ()=>{
+    adjustFilter();
+  })
+  window.onload(()=>{
+    adjustFilter();
+  })
+}
