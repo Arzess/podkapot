@@ -598,21 +598,24 @@ form .dropdown .selected-option{
 }
 .products-list .product .product-container{
     justify-content: space-between;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    /* padding-right: 0.75rem; */
+    /* padding-left: 0.75rem; */
     display: flex;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
     width: 100%;
     height: 100%;
     flex-direction: column;
     align-items: flex-start;
+}
+.products-list .product .product-container > div{
+    padding: 0.5rem 0.75rem;
 }
 .product .product-img-desc{
     display: flex;
     height: 100%;
     width: 100%;
     flex-direction: column;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
     justify-content: space-between;
 }
 .product .time{
@@ -650,6 +653,9 @@ form .dropdown .selected-option{
     width: 1rem;
     height: 1rem;
 }
+.buy-container{
+    width: 100%;
+}
 .product .manufacturer{
     display: flex;
     width: 100%;
@@ -666,6 +672,7 @@ form .dropdown .selected-option{
 
 .product .availability{
     color: #DC3545;
+    padding: 0.5rem 0.75rem;
 }
 .product .product-price .price{
     font-size: 28px;
@@ -1720,6 +1727,7 @@ padding: 1rem;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-align: center;
+    margin: 0;
 }
 .seller-card .primary-button:first-of-type{
     width: 100%;
@@ -2844,8 +2852,22 @@ input[type="checkbox"] {
 }
 .product .name{
     max-height: 70px;
+    height: 70px;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.product .name-inner{
+    padding: 0.5rem 0.75rem;
+    background-color: #fff;
+}
+.product:hover .name-inner p{
+    max-height: unset;
+    height: max-content;
+    -webkit-line-clamp: unset;
 }
 .details .product .product-price{
     flex-wrap: wrap;
@@ -4831,9 +4853,12 @@ gap: 4px;
     .products-list{
         flex-wrap: wrap;
     }
-    .details .products-list .product{
+    .details .products-list:not(.rows) .product{
         width: calc(100%/2 - 1.5rem);
 
+    }
+    .page-list .page button{
+        padding: 0;
     }
     .list-section .container{
         align-items: center;

@@ -1993,10 +1993,14 @@
             <h5 class="minor-heading">Знайдено 23 058 товарів</h5>
             <ul class="details-options-list">
               <li class="option">
+                <button class="primary-button filter-button">
+                  <img src="./images/icons/filter.svg" alt="filter icon" />
+                </button>
                 <p class="small-button">Сортування:</p>
                 <div class="dropdown">
                   <div class="selected-option">
                     <p class="main-text">За популярністю</p>
+                    <p class="mobile placeholder main-text">Сортувати по</p>
                     <img
                       src="./images/icons/dropdown-icon.svg"
                       alt="arrow down"
@@ -2026,7 +2030,7 @@
                       <img src="./images/icons/rows.svg" alt="rows icon" />
                     </button>
                   </li>
-                  <li>
+                  <li class="">
                     <button value="grid">
                       <img
                         src="./images/icons/grid3x3.svg"
@@ -2060,58 +2064,91 @@
           </ul>
           <!-- Filter and offers -->
           <div class="filter-and-offers rows">
-            <aside class="filter">
-              <section class="filter-section">
-                <h5 class="minor-heading">Марка</h5>
-                <ul class="checkbox-list">
-                  <li>
-                    <input
-                      type="checkbox"
-                      id="all-brands"
-                      name="brand-condition"
-                    />
-                    <label for="all-brands" class="small-text">Всі марки</label>
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="brand-condition"
-                      id="alfa-romeo"
-                    />
-                    <label for="alfa-romeo" class="small-text"
-                      >Alfa romeo (734)</label
-                    >
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="brand-condition"
-                      id="alfa-romeo"
-                    />
-                    <label for="alfa-romeo" class="small-text"
-                      >Alfa romeo (734)</label
-                    >
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="brand-condition"
-                      id="alfa-romeo"
-                    />
-                    <label for="alfa-romeo" class="small-text"
-                      >Alfa romeo (734)</label
-                    >
-                  </li>
-                </ul>
-                <button class="show-all-button no-outline">
-                  <p class="main-text">Відкрити все</p>
-                  <img
-                    src="./images/icons/chevron-down-blue.svg"
-                    alt="chevron down bluse"
-                  />
+            <form class="filter" action="">
+              <header class="filter-top mobile">
+                <button class="cancel" type="reset">
+                  <p class="main-text">Скасувати</p>
                 </button>
+                <p class="sub-section-heading">Фільтр</p>
+                <button class="primary-button outline" class="submit">
+                  Готово
+                </button>
+              </header>
+              <section class="filter-section-list">
+                <section class="filter-section">
+                  <h5 class="minor-heading">Марка</h5>
+                  <ul class="checkbox-list">
+                    <li>
+                      <input
+                        type="checkbox"
+                        id="all-brands"
+                        name="brand-condition"
+                      />
+                      <label for="all-brands" class="small-text"
+                        >Всі марки</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo"
+                      />
+                      <label for="alfa-romeo" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo-1"
+                      />
+                      <label for="alfa-romeo-1" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo-2"
+                      />
+                      <label for="alfa-romeo-2" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo-3"
+                      />
+                      <label for="alfa-romeo-3" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand-condition"
+                        id="alfa-romeo-4"
+                      />
+                      <label for="alfa-romeo-4" class="small-text"
+                        >Alfa romeo (734)</label
+                      >
+                    </li>
+                  </ul>
+                  <button class="show-all-button no-outline" type="button">
+                    <p class="main-text">Відкрити все</p>
+                    <img
+                      src="./images/icons/chevron-down-blue.svg"
+                      alt="chevron down bluse"
+                    />
+                  </button>
+                </section>
               </section>
-            </aside>
+            </form>
             <div class="offers">
               <div class="table-container no-scroll">
                 <div class="table-and-list">
