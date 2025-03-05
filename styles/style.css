@@ -355,7 +355,7 @@ input[type="radio"]:checked{
 form li, form section{
     position: relative;
 }
-form label{
+form:not(.filter) label{
     position: absolute;
     top: -0.75rem;
     background: var(--text-color-2);
@@ -2660,6 +2660,9 @@ flex-shrink: 0;
     cursor: pointer;
     align-items: center;
 }
+.details .result .details-options-list .option p{
+    display: flex;
+}
 .details .result .details-options-list .option:first-child{
     padding-top: 1rem;
 }
@@ -2716,21 +2719,24 @@ flex-shrink: 0;
     width: 100%;
     max-width: 180px;
     min-width: 180px;
-    max-height: inherit;
-    height: 100%;
+    /* max-height: inherit; */
+    height: max-content;
     flex-grow: 1;
-    padding: 0.75rem 1rem;
     overflow-y: scroll;
     border-radius: 0.5rem;
     background: #FFF;
     overflow: hidden;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
+.details .filter .filter-section{
+    padding: 0.75rem 1rem;
+}
 .details .filter .filter-section-list{
     display: flex;
     flex-direction: column;
     /* 100vh - filter header height */
-    height: calc(100vh - 61px);
+    height: 100%;
+    max-height: 100%;
     overflow-y: scroll;
 }
 .details .filter .filter-section{
@@ -2760,6 +2766,10 @@ flex-shrink: 0;
     width: 100%;
 }
 
+.details .filter .filter-section:last-child::after{
+    display: none;
+}
+
 /* .details .filter .radio-list li{
     display: flex;
     gap: 0.5rem;
@@ -2785,7 +2795,9 @@ flex-shrink: 0;
     height: 1rem;
     width: 1rem;
 }
-
+.details .filter-button{
+    display: none;
+}
 
 input[type="checkbox"] {
     appearance: none;
@@ -4875,6 +4887,7 @@ gap: 4px;
     /* Sidebar */
     .sidebar-menu{
         width: 100vw;
+        margin-top: 0;
     }
     .sidebar-menu .footer .blocks{
         display: none;
@@ -5320,8 +5333,28 @@ gap: 4px;
         left: 0;
         border-radius: 0;
     }
+    .details .filter-button img{
+        width: 1.5rem;
+        height: 14px;
+    }
+    .details .filter-button{
+        padding: 0.75rem 6px !important;
+        width: max-content;
+        height: max-content;
+    }
     .details .filter.shown{
         display: flex;
+        flex-direction: column;
+    }
+    .details .filter button{
+        width: max-content;
+    }
+    .details .filter-button{
+        display: flex;
+    }
+    .details .filter-section-list{
+        height: calc(100vh - 61px) !important;
+        padding: 0.5rem 0 !important;
     }
     .details .filter section{
         padding: 1rem;
@@ -5331,6 +5364,51 @@ gap: 4px;
     }
     .details .filter section:last-child{
         padding-bottom: 1.5rem;
+    }
+    .details .result .details-options-list{
+        gap: 0;
+    }
+    .details .result .details-options-list .option:last-child{
+        display: none;
+    }
+    .details .result .details-options-list .option:first-child p.small-button{
+        display: none;
+    }
+    .details .details-options-list{
+        width: 100%;
+    }
+    .details .result .details-options-list .option:first-child{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .details .dropdown{
+        width: 155px;
+    }
+    
+    .details .dropdown .selected-option p{
+        display: none !important;
+    }
+    .details .dropdown p.placeholder{
+        color: rgba(108, 117, 125, 1);
+        display: flex !important;
+
+    }
+    .details .dropdown.no-placeholder{
+        width: 200px;
+    }
+    .details .dropdown.no-placeholder p{
+        display: flex !important;
+    }
+    .details .dropdown.no-placeholder .placeholder{
+        display: none !important;
+    }
+    .main > section .container {
+        align-items: center;
+    }
+    .details .result {
+        flex-direction: column;
+        align-items: center;
     }
 }
 

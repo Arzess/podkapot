@@ -1933,10 +1933,14 @@
             <h5 class="minor-heading">Знайдено 23 058 товарів</h5>
             <ul class="details-options-list">
               <li class="option">
+                <button class="primary-button filter-button">
+                  <img src="./images/icons/filter.svg" alt="filter icon" />
+                </button>
                 <p class="small-button">Сортування:</p>
                 <div class="dropdown">
                   <div class="selected-option">
                     <p class="main-text">За популярністю</p>
+                    <p class="mobile placeholder main-text">Сортувати по</p>
                     <img
                       src="./images/icons/dropdown-icon.svg"
                       alt="arrow down"
@@ -2000,13 +2004,15 @@
           </ul>
           <!-- Filter and offers -->
           <div class="filter-and-offers">
-            <aside class="filter">
+            <form class="filter" action="">
               <header class="filter-top mobile">
-                <button class="cancel">
+                <button class="cancel" type="reset">
                   <p class="main-text">Скасувати</p>
                 </button>
                 <p class="sub-section-heading">Фільтр</p>
-                <button class="primary-button outline">Готово</button>
+                <button class="primary-button outline" class="submit">
+                  Готово
+                </button>
               </header>
               <section class="filter-section-list">
                 <section class="filter-section">
@@ -2073,7 +2079,7 @@
                       >
                     </li>
                   </ul>
-                  <button class="show-all-button no-outline">
+                  <button class="show-all-button no-outline" type="button">
                     <p class="main-text">Відкрити все</p>
                     <img
                       src="./images/icons/chevron-down-blue.svg"
@@ -2082,7 +2088,7 @@
                   </button>
                 </section>
               </section>
-            </aside>
+            </form>
             <div class="offers">
               <ul class="products-list">
                 <li class="product f-el">

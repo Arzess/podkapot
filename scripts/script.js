@@ -716,6 +716,7 @@ dropdownMenu.forEach(dropdown => {
         })
         menu.childNodes.forEach(option => {
                 option.addEventListener("click", ()=>{
+                        dropdown.classList.add("no-placeholder")
                         selectedOption.innerHTML = option.children[0].innerHTML;
                 })
         })
@@ -923,15 +924,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // To fix the "grid: 2" problem with SwiperJS
   const casesElement = document.querySelector(".successful-cases-list")
   if (casesElement != null){
-    if (window.innerWidth < 1300) {
-      const totalWidth = Array.from(casesElement.children).reduce((init, child) => {
-          const style = window.getComputedStyle(child);
-          const width = parseFloat(style.width);
-          return init + width;
-        }, 0);
-    
-    casesElement.style.minWidth = `${totalWidth / 4}px`;
-  }
     const swiperContainer2 = document.querySelector('.gallery-container-2');
     const customPagination2 = document.querySelector('[data-pagination="two"]');
   
@@ -943,12 +935,6 @@ document.addEventListener("DOMContentLoaded", () => {
             rows: 1,
           },
         },
-        700: {
-          slidesPerView: 1,
-          grid: {
-            rows: 2,
-          },
-        },
         0: {
           slidesPerView: 1,
           grid: {
@@ -956,7 +942,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       },
-      loop: true,
+      loop: false,
       spaceBetween: 24,
       on: {
         init: function (swiperTwo) {
@@ -973,8 +959,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!paginationContainer) return;
 
     paginationContainer.innerHTML = '';
-    let totalSlides = swiper.slides.length;
-    if (window.innerWidth < 1300 && window.innerWidth > 500){
+    let totalSlides = swiper.slides.length - 1;
+    if (window.innerWidth < 1300){
       totalSlides =  Math.round(swiper.slides.length/2);
       
     }
@@ -1015,13 +1001,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // To fix the "grid: 2" problem with SwiperJS
   const catalogElement = document.querySelector(".catalog-list")
   if (catalogElement != null){
-    if (window.innerWidth < 1300 && window.innerWidth > 500) {
-      const totalWidth = Array.from(catalogElement.children).reduce((init, child) => {
-        return init + child.offsetWidth;
-      }, 0);
-    
-      catalogElement.style.minWidth = `${totalWidth / 4}px`;
-    }
       const swiperContainer = document.querySelector('.gallery-container-4');
       const customPagination = document.querySelector('[data-pagination="four"]');
     
@@ -1036,16 +1015,10 @@ document.addEventListener("DOMContentLoaded", () => {
               rows: 1,
             },
           },
-          700: {
+          0: {
             slidesPerView: 2,
             grid: {
               rows: 2,
-            },
-          },
-          0: {
-            slidesPerView: 1,
-            grid: {
-              rows: 1,
             },
           },
         },
@@ -1066,12 +1039,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!paginationContainer) return;
 
     paginationContainer.innerHTML = '';
-
-    let totalSlides = swiper.slides.length;
-    if (window.innerWidth > 500){
-      totalSlides =  Math.round(swiper.slides.length/2) + 1;
-      
+    let totalSlides = Math.round(swiper.slides.length/2) + 1;
+    if (window.innerWidth < 1300){
+      totalSlides = Math.round(swiper.slides.length/4) + 1;
     }
+
     for (let i = 0; i < totalSlides; i++) {
       const li = document.createElement('li');
       li.classList.add('page');
@@ -1241,3 +1213,36 @@ if (Array.from(showAllDetails).length != 0){
     })
   })
 }
+
+
+// Details filter
+
+const filterButtonDetails = document.querySelector(".filter-button");
+const filterModal = document.querySelector(".filter");
+const filterApply = document.querySelector(".filter .filter-top .primary-button.outline");
+if (filterButtonDetails != null){
+  filterButtonDetails.addEventListener("click", ()=>{
+    filterModal.classList.add("shown");
+    document.body.classList.add("steady");
+  })
+  // Apply all
+  filterApply.addEventListener("click", (e)=>{
+    e.preventDefault();
+    filterModal.classList.remove("shown");
+    document.body.classList.remove("steady");
+  })
+
+}
+
+// Filter details same max height
+const detailsOffers = document.querySelector(".details .offers")
+const adjustFilter = () => {
+  const offersHeight = detailsOffers.scrollHeight;
+  filterModal.style.maxHeight = `${offersHeight}px`;
+}
+window.onresize(()=>{
+  adjustFilter();
+});
+window.onload(()=>{
+  adjustFilter();
+})
