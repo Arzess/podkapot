@@ -1551,22 +1551,25 @@ body::after{
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    padding: 1.5rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
     border-radius: 1rem;
     max-height: 661px;
     justify-content: flex-start;
-    background-image: url(../images/form-bg.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+}
+.find-part .container .find-part-bg-img{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
 }
 .find-part .container{
     height: max-content;
     flex-grow: 1;
     width: 100%;
-    padding-bottom: 0 !important; 
+    position: relative;
+    padding: 1.5rem;
 }
 .find-part .background img{
     object-fit: cover;
@@ -4631,9 +4634,12 @@ gap: 4px;
         min-width: unset;
     }
     /* Find part */ 
-    .find-part{
-        padding-top: 10rem;
-        padding-bottom: 10rem;
+    .find-part .container {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .find-part .find-part-bg-img{
+        object-fit: cover;
     }
     section.find-part{
         padding-top: 1.5rem;
