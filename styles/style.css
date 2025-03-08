@@ -604,19 +604,19 @@ form .dropdown .selected-option{
     background: #FFF;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
-.details .products-list .product .product-container{
+.products-list .product .product-container{
     padding: 0;
     gap: 0;
 }
-.details .product .availability{
+.product .availability{
     padding: 0.5rem 0.75rem;
 }
 .products-list .product .product-container{
     justify-content: space-between;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    /* padding-right: 0.75rem; */
+    /* padding-left: 0.75rem; */
     display: flex;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -625,8 +625,8 @@ form .dropdown .selected-option{
 .details .product-list .product{
     gap: 0;
 }
-.details .products-list .product .product-container > div{
-    padding: 0.5rem 0.75rem;
+.products-list .product .product-container > div{
+    padding: 0.25rem 0.75rem;
 }
 .product .product-img-desc{
     display: flex;
@@ -636,7 +636,7 @@ form .dropdown .selected-option{
     gap: 0.5rem;
     justify-content: space-between;
 }
-.details .product .product-img-desc{
+.product .product-img-desc{
     gap: 0;
 }
 .product .time{
@@ -2892,7 +2892,7 @@ input[type="checkbox"] {
     justify-content: flex-end;
 }
 .product .name-inner{
-    padding: 0.5rem 0.75rem;
+    padding: 0.25rem 0.75rem;
     background-color: #fff;
 }
 .product:hover .name-inner p{
@@ -2903,7 +2903,7 @@ input[type="checkbox"] {
 .details .product .product-price{
     flex-wrap: wrap;
 }
-.details .product .manufacturer .chevron-down{
+.product .manufacturer .chevron-down{
     display: none;
 }
 .details .filter-and-offers.rows .offers{
