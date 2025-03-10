@@ -850,12 +850,20 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             }
           });
+
           document.querySelectorAll('.gallery-main-image .swiper-slide').forEach(slide => {
             slide.addEventListener('dblclick', () => {
               if (productGallery.zoom.scale !== 1) {
                 productGallery.zoom.out();
+                if (window.innerWidth <= 500){
+                  document.body.classList.remove('steady');
+                }
               } else {
                 productGallery.zoom.in();
+                
+                if (window.innerWidth <= 500){
+                  document.body.classList.add('steady');
+                }
               }
             });
           });
@@ -1279,5 +1287,20 @@ if (detailsOffers){
   })
   window.onload(()=>{
     adjustFilter();
+  })
+}
+
+
+// Expand the text
+
+const expandText = document.querySelectorAll(".open-text");
+
+if (expandText.length != 0){
+  expandText.forEach(b => {
+    b.addEventListener("click", ()=>{
+      console.log("fdfd");
+      
+      b.parentElement.classList.add("expanded");
+    })
   })
 }

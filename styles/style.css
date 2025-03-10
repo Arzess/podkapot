@@ -1642,14 +1642,35 @@ body::after{
 /* Product desc */
 .product-section .product-desc{
     display: flex;
-width: 100%;
-padding: 1rem;
-flex-direction: column;
-align-items: flex-start;
-gap: 1rem;
-border-radius: 9px;
-background: #FFF;
-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    border-radius: 9px;
+    background: #FFF;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+.product-section .desc-container{
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+}
+.desc-outer-container.expanded .open-text{
+    display: none;
+}
+
+.desc-outer-container.expanded .desc-container{
+    -webkit-line-clamp: unset;
+}
+
+
+.open-text p{
+    color: rgba(51, 122, 183, 1);
 }
 /* Payment and delivery */
 .properties-payment-and-delivery{
