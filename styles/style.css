@@ -1923,6 +1923,7 @@ padding: 1rem;
 .gallery-main-image .controls{
     position: absolute;
     width: 100%;
+    pointer-events: none;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -1947,9 +1948,10 @@ justify-content: center;
 align-items: center;
 flex-shrink: 0;
 }
-.gallery-main-image .swiper-slide{
+.gallery-main-image .swiper-slide, .gallery-main-image .swiper-zoom-container{
     height: 100%;
 }
+
 .product-section .gallery-main-image{
     width: 100%;
     height: 100%;
@@ -1966,6 +1968,7 @@ flex-shrink: 0;
     object-fit: cover;
     width: 100%;
     height: 100%;
+    pointer-events: auto;
 }
 .product-section .gallery-list li{
     height: 40px;

@@ -809,25 +809,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const swiperWrapperProductList = document.querySelector('.product-section .gallery-main-image .swiper-wrapper');
   const galleryListProduct = document.querySelector('.product-section .gallery-list');
     if (swiperWrapperProductList != null){
-        imageSourcesProductGallery.forEach((src, index) => {
-            const slide = document.createElement('div');
-            slide.classList.add('swiper-slide');
-            const img = document.createElement('img');
-            img.src = src;
-            slide.appendChild(img);
-            swiperWrapperProductList.appendChild(slide);
-        
-            const thumbnail = document.createElement('li');
-            if (index === 0) thumbnail.classList.add('current');
-            const thumbImg = document.createElement('img');
-            thumbImg.src = src;
-            thumbnail.appendChild(thumbImg);
-            galleryListProduct.appendChild(thumbnail);
-        
-            thumbnail.addEventListener('click', () => {
-              productGallery.slideToLoop(index);
-            });
-          });
+      imageSourcesProductGallery.forEach((src, index) => {
+        const slide = document.createElement('div');
+        slide.classList.add('swiper-slide');
+        const zoomContainer = document.createElement('div');
+        zoomContainer.classList.add('swiper-zoom-container');
+        const img = document.createElement('img');
+        img.src = src;
+        zoomContainer.appendChild(img);
+        slide.appendChild(zoomContainer);
+        swiperWrapperProductList.appendChild(slide);
+        const thumbnail = document.createElement('li');
+        if (index === 0) thumbnail.classList.add('current');
+        const thumbImg = document.createElement('img');
+        thumbImg.src = src;
+        thumbnail.appendChild(thumbImg);
+        galleryListProduct.appendChild(thumbnail);
+        thumbnail.addEventListener('click', () => {
+            productGallery.slideToLoop(index);
+        });
+    });
+    
         
           const productGallery = new Swiper('.gallery-main-image', {
             slidesPerView: 1,
@@ -835,6 +837,9 @@ document.addEventListener("DOMContentLoaded", () => {
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
+            },
+            zoom: {
+              maxRatio: 5,
             },
             on: {
               slideChange: function (swiper) {
@@ -845,7 +850,15 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             }
           });
-        
+          document.querySelectorAll('.gallery-main-image .swiper-slide').forEach(slide => {
+            slide.addEventListener('dblclick', () => {
+              if (productGallery.zoom.scale !== 1) {
+                productGallery.zoom.out();
+              } else {
+                productGallery.zoom.in();
+              }
+            });
+          });
           function checkControlsProducts() {
             const productGalleryControls = document.querySelector(".controls-list");
             if (imageSourcesProductGallery.length === 1) {
@@ -865,6 +878,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
     }
 });
+
 
 // Anchor buttons seller
 
