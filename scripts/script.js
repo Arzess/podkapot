@@ -27,13 +27,6 @@ const resetChangingIcons = () => {
         c.classList.remove("active");
     })
 }
-const logos = document.querySelectorAll(".logo");
-
-logos.forEach(logo => {
-    logo.addEventListener("click", ()=>{
-        location.href = "index.html";
-    })
-})
 
 // Authorisation form
 const authorisationForm = document.querySelector(".authorisation-form");
@@ -805,7 +798,7 @@ const imageSourcesProductGallery = [
     './images/yellow-car.jpg',
     './images/yellow-car.jpg',
   ];
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const swiperWrapperProductList = document.querySelector('.product-section .gallery-main-image .swiper-wrapper');
   const galleryListProduct = document.querySelector('.product-section .gallery-list');
     if (swiperWrapperProductList != null){
@@ -834,6 +827,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const productGallery = new Swiper('.gallery-main-image', {
             slidesPerView: 1,
             loop: true,
+            centeredSlides: 'false',
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
