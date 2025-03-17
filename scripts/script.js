@@ -70,13 +70,18 @@ const attachHelpTextEventListener = () => {
 };
 
 const adjustAuthorisationForm = (type) => {
+  authorisationForm.classList.remove("seller", "buyer");
+
   if (type === "sign-up") {
     topText.innerHTML = "Реєстрація";
     bottomText.innerHTML = `Уже маєте акаунт? <span><a href="#" class="small-text">Увійти</a></span>`;
+    authorisationForm.classList.add("sign-up", "buyer");
   } else {
     topText.innerHTML = "Вхід";
     bottomText.innerHTML = `Ще не зареєстровані? <span><a href="#" class="small-text">Створити аккаунт</a></span>`;
+    authorisationForm.classList.add("sign-in");
   }
+
   updateHelpTextReference();
   attachHelpTextEventListener();
 };

@@ -5517,6 +5517,22 @@ gap: 4px;
         flex-direction: column;
         align-items: center;
     }
+    /* Price list */
+    .price-category{
+        min-width: unset;
+    }
+    .price-list .name, .price-list .measure-unit, .price-list .price {
+        height: max-content;
+    }
+    .price-category-list li {
+        align-items: center;
+    }
+    .price-list .measure-unit, .price-list .price {
+        justify-content: center;
+    }
+    .measure-unit p{
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 420px) {
