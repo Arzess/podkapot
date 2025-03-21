@@ -1217,9 +1217,9 @@
     <aside class="sidebar-menu no-scroll header-modal">
       <header class="header">
         <div class="container">
-          <a class="logo" href="index.html">
+          <div class="logo">
             <img src="./images/icons/podkapot-logo.svg" alt="Pod Kapot logo" />
-          </a>
+          </div>
           <ul class="header-list">
             <li>
               <button class="language">
@@ -1243,6 +1243,17 @@
                   </defs>
                 </svg>
               </button>
+              <!-- Language -->
+              <div class="header-modal language-modal">
+                <ul class="language-list">
+                  <li class="selected">
+                    <p class="minor-heading">UA</p>
+                  </li>
+                  <li>
+                    <p class="minor-heading">EN</p>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
               <button class="account">
@@ -1272,6 +1283,35 @@
                   </defs>
                 </svg>
               </button>
+              <div class="header-modal account-modal">
+                <!-- Signed in -->
+                <ul class="account-list logged-in">
+                  <li class="account-details">
+                    <img src="./images/avatar.png" alt="avatar" />
+                    <p class="sub-minor-heading">Олександр Потужненко</p>
+                  </li>
+                  <li>
+                    <button class="log-out">
+                      <img
+                        src="./images/icons/download.svg"
+                        alt="download icon"
+                      />
+                      <p class="big-button">Вихід</p>
+                    </button>
+                  </li>
+                </ul>
+                <!-- Signed out -->
+                <ul class="account-list sign-out">
+                  <li>
+                    <button class="primary-button small-button">Вхід</button>
+                  </li>
+                  <li>
+                    <button class="primary-button outline small-button">
+                      Реєстрація
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
               <button class="cart">
@@ -1898,18 +1938,17 @@
     <!-- Main -->
     <main class="main has-breadcrumbs">
       <!-- Breadcrumbs -->
-      <nav class="breadcrumbs has-breadcrumbs green-breadcrumbs">
+      <nav class="breadcrumbs green-breadcrumbs">
         <div class="container">
           <ul class="breadcrumbs-list">
             <li class="breadcrumb home">
               <a href="#"
-                ><img src="./images/icons/green-house-icon.svg" alt="" />
-                Home</a
+                ><img src="./images/icons/house-icon.svg" alt="" /> Home</a
               >
             </li>
             <li class="breadcrumb"><a href="#">Item 1</a></li>
             <li class="breadcrumb"><a href="#">Item 2</a></li>
-            <li class="breadcrumb current"><a href="#">Page now</a></li>
+            <li class="breadcrumb current">Page now</li>
           </ul>
         </div>
       </nav>

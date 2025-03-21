@@ -458,6 +458,7 @@ input.wrong~p{
 .breadcrumbs-list{
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     justify-self: start;
 }
 .breadcrumbs-list .breadcrumb{
@@ -608,6 +609,7 @@ form .dropdown .selected-option{
     width: 282px;
     flex-direction: column;
     align-items: flex-start;
+    z-index: 3;
     border-radius: 0.5rem;
     gap: 0.5rem;
     justify-content: space-between;
@@ -991,7 +993,7 @@ form .dropdown .selected-option{
 .catalog-modal .category-list{
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     min-width: 22rem;
 }
@@ -2798,7 +2800,7 @@ flex-shrink: 0;
 .details .filter{
     width: 100%;
     max-width: 384px;
-    width: 384px;
+    min-width: 384px;
     /* max-height: inherit; */
     height: max-content;
     flex-grow: 1;
@@ -4684,6 +4686,12 @@ gap: 4px;
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
+    .find-part .find-part-top{
+        display: flex !important;
+    }
+    .find-part .find-part-top h4{
+        visibility: hidden;
+    }
     .find-part .find-part-bg-img{
         object-fit: cover;
     }
@@ -4879,6 +4887,12 @@ gap: 4px;
         width: 100%;
     }
     /* Catalog */
+    .catalog-modal .catalog-header{
+        display: flex !important;
+    }
+    .catalog-modal .catalog-header h6{
+        visibility: hidden;
+    }
     .catalog-modal .catalog-inner{
         flex-direction: column;
     }
@@ -4915,6 +4929,9 @@ gap: 4px;
     .catalog-modal{
         height: calc(100vh - 5rem);
         padding: 0;
+    }
+    .catalog-modal .catalog-header h6{
+        visibility: visible;
     }
     .catalog-modal .catalog-inner{
         padding: 1rem;
@@ -5102,6 +5119,9 @@ gap: 4px;
     }
     .find-part.header-modal .find-part-top{
         padding-top: 1.5rem;
+    }
+    .find-part .find-part-top h4{
+        visibility: visible;
     }
     /* Header */
     .header .container{
@@ -5326,7 +5346,7 @@ gap: 4px;
         width: 100%;
     }
     .parts-from-ukraine .parts-list .parts-list-block {
-        width: 163px;
+        /* width: 163px; */
     }
     /* Verified sellers */
     .verified-sellers .seller .company-location{
@@ -5652,6 +5672,11 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
 
 .breadcrumbs-list a {
    transition: 0.3s;
+   display: flex;
+   gap: 0.25rem;
+}
+.breadcrumbs-list a img{
+    height: 14px;
 }
 .breadcrumbs-list li:not(.current):hover a {
    opacity: 0.7;
