@@ -1277,8 +1277,13 @@ if (filterButtonDetails != null){
 // Filter details same max height
 const detailsOffers = document.querySelector(".details .offers")
 const adjustFilter = () => {
-  const offersHeight = detailsOffers.scrollHeight;
-  filterModal.style.maxHeight = `${offersHeight}px`;
+  if (window.innerWidth > 500){
+    const offersHeight = detailsOffers.scrollHeight;
+    filterModal.style.maxHeight = `${offersHeight}px`;
+  }
+  else{
+    filterModal.style.maxHeight = 'unset';
+  }
 }
 if (detailsOffers){
   window.addEventListener("resize", ()=>{
