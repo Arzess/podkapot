@@ -149,11 +149,17 @@ const checkModals = () => {
     return Array.from(openedModals).some(modal => modal.classList.contains("shown"));
 };
 
-const updateOverlay = () => {
+const updateOverlay = (header = false) => {
     if (checkModals()) {
+      if (header){
+        document.body.classList.add("overlay-header");
+      }  
         document.body.classList.add("overlay");
         document.body.classList.add("steady");
     } else {
+      if (header){
+        document.body.classList.remove("overlay-header");
+      }  
         document.body.classList.remove("overlay");
         document.body.classList.remove("steady");
     }
@@ -283,7 +289,7 @@ languageButton.forEach(b => {
             b.parentElement.querySelector(".header-modal").classList.add("shown");
             
         }
-        updateOverlay();
+        updateOverlay(true);
     })
 })
 
@@ -314,7 +320,7 @@ const openAuthorisationForm = (modal, type) => {
         authorisationForm.classList.add("sign-up");
         authorisationForm.classList.add("buyer")
     }
-    updateOverlay();
+    updateOverlay(true);
 }
 accountSignInButton.forEach(b => {
     b.addEventListener("click", ()=>{
@@ -342,7 +348,7 @@ accountButton.forEach(button => {
             accountModal.classList.add("shown");
             
         }
-        updateOverlay();
+        updateOverlay(true);
     });
 });
 
