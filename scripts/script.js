@@ -157,9 +157,7 @@ const updateOverlay = (header = false) => {
         document.body.classList.add("overlay");
         document.body.classList.add("steady");
     } else {
-      if (header){
         document.body.classList.remove("overlay-header");
-      }  
         document.body.classList.remove("overlay");
         document.body.classList.remove("steady");
     }
