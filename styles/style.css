@@ -1033,7 +1033,7 @@ form .dropdown .selected-option{
 .catalog-modal .category-inside-list li a {
     transition: 0.3s;
 }
-.catalog-modal .category-inside-list li:hover a{
+.catalog-modal .category-inside-list li a:hover{
     color: var(--theme-color);
 }
 .catalog-modal .get-back-heading{
@@ -1423,7 +1423,7 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.08);
     width: 100%;
     background-color: #fff;
-    z-index: 99;
+    z-index: 99999;
     position: sticky;
     top: 0;
     transition: 0.3s padding-top, padding-bottom;
@@ -1457,10 +1457,16 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     display: flex;
     gap: 1.5rem;
 }
+.header .header-list button.active{
+    z-index: 999999;
+}
 .header li{
     position: relative;
     display: flex;
     justify-content: center;
+}
+.changing-icon.active{
+    z-index: 999999;
 }
 .changing-icon.active img{
     display: none !important;
@@ -1540,9 +1546,11 @@ body{
 }
 body.overlay::after{
     opacity: 0.3;
+    pointer-events: all;
 }
 body.overlay-header .header:has(.search-bar-input){
-    z-index: 9999999999999;
+    z-index: 99999;
+    pointer-events: all;
 }
 
 
@@ -1556,7 +1564,7 @@ body.overlay-header .header:has(.search-bar-input)::after{
     height: 100%;
     top: 0;
     pointer-events: none;
-    z-index: 97;
+    z-index: 99999;
     display: flex;
     background-color: black;
     position: absolute;
@@ -1568,7 +1576,7 @@ body::after{
     height: 100%;
     top: 0;
     pointer-events: none;
-    z-index: 999999999;
+    z-index: 999;
     display: flex;
     background-color: black;
     position: absolute;

@@ -32,7 +32,6 @@ const resetChangingIcons = () => {
 const authorisationForm = document.querySelector(".authorisation-form");
 let topText = authorisationForm.querySelector(".top p");
 const authorisationCloseButton = authorisationForm.querySelector(".top button");
-let helpText = authorisationForm.querySelector(".help p span a");
 let bottomText = authorisationForm.querySelector(".help p");
 
 authorisationCloseButton.addEventListener("click", () => {
@@ -40,34 +39,6 @@ authorisationCloseButton.addEventListener("click", () => {
   authorisationForm.classList.remove("shown");
   updateOverlay();
 });
-
-const updateHelpTextReference = () => {
-  helpText = authorisationForm.querySelector(".help p span a");
-};
-
-const attachHelpTextEventListener = () => {
-  helpText.addEventListener("click", (e) => {
-    if (e.target.matches(".help p span a")) {
-      e.preventDefault();
-      e.stopPropagation();
-  
-      if (authorisationForm.classList.contains("sign-in")) {
-        authorisationForm.classList.remove("sign-in");
-        authorisationForm.classList.remove("seller");
-        authorisationForm.classList.remove("buyer");
-        adjustAuthorisationForm("sign-up");
-        authorisationForm.classList.add("sign-up");
-        authorisationForm.classList.add("buyer");
-      } else {
-        authorisationForm.classList.remove("seller");
-        authorisationForm.classList.remove("buyer");
-        authorisationForm.classList.remove("sign-up");
-        adjustAuthorisationForm("sign-in");
-        authorisationForm.classList.add("sign-in");
-      }
-    }
-  });
-};
 
 const adjustAuthorisationForm = (type) => {
   authorisationForm.classList.remove("seller", "buyer");
@@ -82,11 +53,28 @@ const adjustAuthorisationForm = (type) => {
     authorisationForm.classList.add("sign-in");
   }
 
-  updateHelpTextReference();
-  attachHelpTextEventListener();
+  clearButtons();
+  if (authorisationForm.classList.contains("buyer")) {
+    buyerButton.classList.add("selected");
+  } else if (authorisationForm.classList.contains("seller")) {
+    sellerButton.classList.add("selected");
+  }
 };
 
-attachHelpTextEventListener();
+authorisationForm.querySelector(".help p").addEventListener("click", (e) => {
+  if (e.target.matches("a")) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (authorisationForm.classList.contains("sign-in")) {
+      authorisationForm.classList.remove("sign-in", "seller", "buyer");
+      adjustAuthorisationForm("sign-up");
+    } else {
+      authorisationForm.classList.remove("sign-up", "seller", "buyer");
+      adjustAuthorisationForm("sign-in");
+    }
+  }
+});
 
 // Switch logic
 const authorisationSwitch = authorisationForm.querySelector(".switch");
@@ -151,9 +139,7 @@ const checkModals = () => {
 
 const updateOverlay = (header = false) => {
     if (checkModals()) {
-      if (header){
         document.body.classList.add("overlay-header");
-      }  
         document.body.classList.add("overlay");
         document.body.classList.add("steady");
     } else {
@@ -280,9 +266,11 @@ const languageModal = document.querySelectorAll(".header .language-modal");
 languageButton.forEach(b => {
     b.addEventListener("click", ()=>{
         if (b.parentElement.querySelector(".header-modal").classList.contains("shown")){
-            closeAllModals(true);
+          b.classList.add("active");  
+          closeAllModals(true);
         }
         else{
+            b.classList.add("active");
             closeAllModals(true);
             b.parentElement.querySelector(".header-modal").classList.add("shown");
             
@@ -307,17 +295,6 @@ const openAuthorisationForm = (modal, type) => {
     modal.classList.remove("shown");
     authorisationForm.classList.add("shown");
     adjustAuthorisationForm(type)
-    updateHelpTextReference();
-    attachHelpTextEventListener();
-    if (type == "sign-in"){
-        authorisationForm.classList.remove("sign-up");
-        authorisationForm.classList.add("sign-in");
-    }
-    else{
-        authorisationForm.classList.remove("sign-in");
-        authorisationForm.classList.add("sign-up");
-        authorisationForm.classList.add("buyer")
-    }
     updateOverlay(true);
 }
 accountSignInButton.forEach(b => {
