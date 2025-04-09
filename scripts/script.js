@@ -339,9 +339,11 @@ const checkCounter = (c, p) => {
 const shoppingCartButton = document.querySelectorAll(".header .cart");
 const shoppingCart = document.querySelector(".shopping-cart");
 const closeCart = shoppingCart.querySelector(".shopping-cart-nav button");
-
+const inputText = shoppingCart.querySelectorAll(".shopping-cart .count-text");
 const counterMore = shoppingCart.querySelectorAll(".count-more");
 const counterLess = shoppingCart.querySelectorAll(".count-less");
+
+
 
 const checkSaved = (input) => {
     if (input.value == ""){
@@ -358,7 +360,12 @@ const checkInputCounter = (input) => {
     }
     
 }
-
+document.addEventListener("DOMContentLoaded", () => {
+  inputText.forEach(t => {
+    t.addEventListener("input", () => checkInputCounter(t));
+    t.addEventListener("change", () => checkSaved(t));
+  });
+});
 
 counterMore.forEach(c => {
     checkCounter(c, false);
