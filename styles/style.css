@@ -5189,6 +5189,9 @@ gap: 4px;
         justify-content: space-between;
         gap: 0;
     }
+    .header .header-list{
+        gap: 0.75rem;
+    }
     /* Hero */
     .hero .container{
         flex-direction: column;
