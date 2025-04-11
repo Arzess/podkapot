@@ -342,8 +342,13 @@ const closeCart = shoppingCart.querySelector(".shopping-cart-nav button");
 const inputText = shoppingCart.querySelectorAll(".shopping-cart .count-text");
 const counterMore = shoppingCart.querySelectorAll(".count-more");
 const counterLess = shoppingCart.querySelectorAll(".count-less");
+const makeOrder = shoppingCart.querySelectorAll("button.apply-button");
 
-
+makeOrder.forEach(o => {
+  o.addEventListener("click", ()=>{
+    shoppingCart.classList.add("application");
+  })
+})
 
 const checkSaved = (input) => {
     if (input.value == ""){
@@ -497,15 +502,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
 
 // Header scroll
-const scrollHeader = () => {
-    if (window.scrollY > document.querySelector(".header").clientHeight){
-        document.querySelector(".header").classList.add("floating");
+// const scrollHeader = () => {
+//     if (window.scrollY > document.querySelector(".header").clientHeight){
+//         document.querySelector(".header").classList.add("floating");
         
-    }
-    else{
-        document.querySelector(".header").classList.remove("floating")
-    }
-}
+//     }
+//     else{
+//         document.querySelector(".header").classList.remove("floating")
+//     }
+// }
 // To the top button scroll
 const scrollToTheTop = (top) => {
     if (window.scrollY > 100){
@@ -519,11 +524,11 @@ const scrollToTheTop = (top) => {
 }
 
 
-    scrollHeader();
+    // scrollHeader();
     scrollToTheTop(toTheTop);
     
     window.addEventListener("scroll", ()=>{
-        scrollHeader();
+        // scrollHeader();
         scrollToTheTop(toTheTop);
     })
     

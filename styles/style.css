@@ -321,6 +321,9 @@ form .condition .radio-list{
     display: flex;
     gap: 1rem;
 }
+form .condition .selectize-select{
+    width: 100%;
+}
 form .condition .radio-list label{
     position: relative;
     top: auto;
@@ -1024,11 +1027,13 @@ form .dropdown .selected-option{
     overflow: auto;
     flex-direction: column;
     flex-wrap: wrap;
+    position: relative;
     width: 100%;
     gap: 0.75rem 40px;
 }
 .catalog-modal .category-inside-list li{
-    max-width: 280px;
+    max-width: 50%;
+    width: 50%;
 }
 .catalog-modal .category-inside-list li a {
     transition: 0.3s;
@@ -1558,6 +1563,7 @@ body.overlay-header .header:has(.search-bar-input){
 
 body.overlay-header .header:has(.search-bar-input)::after{
     opacity: 0.3;
+    pointer-events: all;
 }
 .header:has(.search-bar-input)::after{
     content: "";
@@ -1612,6 +1618,7 @@ body::after{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    height: 100%;
 }
 .find-part .container .find-part-bg-img{
     position: absolute;
@@ -1889,6 +1896,7 @@ padding: 1rem;
     align-items: flex-start;
     justify-content: space-between;
     gap: 1rem;
+    width: 100%;
 }
 .seller-card .contact{
     display: flex;
@@ -3150,7 +3158,6 @@ input[type="checkbox"] {
     justify-content: flex-end;
     width: 100%;
     gap: 0.5rem;
-    flex-wrap: wrap;
     border-radius: 0.25rem;
     background-color: #fff;
 }
@@ -4844,6 +4851,7 @@ gap: 4px;
     }
     .details .page-list.outer{
         display: flex;
+        justify-content: center;
     }
     .details .filter-and-offers.rows .filter{
         width: 100%;
@@ -4996,6 +5004,7 @@ gap: 4px;
     .catalog-modal{
         height: calc(100vh - 5rem);
         padding: 0;
+
     }
     .catalog-modal .catalog-header h6{
         visibility: visible;
@@ -5063,6 +5072,8 @@ gap: 4px;
     /* Catalog */
     .catalog-modal.section-opened .category-inside-list{
         display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
     .catalog-modal .category-inside-list{
         display: none;
@@ -5075,6 +5086,7 @@ gap: 4px;
     }
     .catalog-modal .category-list, .catalog-modal .category-inside-list{
         width: 100%;
+        min-width: unset;
     }
     .catalog-modal .category-list li img:last-child{
         transform: rotateZ(-90deg);
@@ -5117,7 +5129,8 @@ gap: 4px;
         margin-top: 5rem;
         width: 100%;
         border-radius: 0;
-        height: calc(100vh - 5rem);
+        height: calc(100vh - var(--header-height));
+        max-height: unset;
     }
     .shopping-cart.application .primary-button{
         width: 100%;
