@@ -266,11 +266,11 @@ const languageModal = document.querySelectorAll(".header .language-modal");
 languageButton.forEach(b => {
     b.addEventListener("click", ()=>{
         if (b.parentElement.querySelector(".header-modal").classList.contains("shown")){
-          b.classList.add("active");  
+          b.parentElement.classList.add("active");  
           closeAllModals(true);
         }
         else{
-            b.classList.add("active");
+            b.parentElement.classList.remove("active");
             closeAllModals(true);
             b.parentElement.querySelector(".header-modal").classList.add("shown");
             

@@ -614,7 +614,7 @@ form .dropdown .selected-option{
     gap: 0.5rem;
     justify-content: space-between;
     background: #FFF;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 0.25rem 0 rgba(0, 0, 0, 0.1);
 }
 .products-list .product .product-container{
     padding: 0;
@@ -1428,7 +1428,9 @@ box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     top: 0;
     transition: 0.3s padding-top, padding-bottom;
 }
-
+.header i{
+    font-size: 2rem;
+}
 .header.floating .container{
     width: calc(100% - 40px);
 }
@@ -1617,7 +1619,10 @@ body::after{
     z-index: -1;
     height: 100%;
 }
-.find-part .container{
+.find-part:not(.header-modal) .container{
+    padding: 1.5rem 0;
+}
+.find-part.header-modal .container{
     height: max-content;
     flex-grow: 1;
     width: 100%;
@@ -3158,8 +3163,15 @@ input[type="checkbox"] {
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
     /* flex: 1; */
+    display: flex;
 }
 .page-list .page button{
+    padding: 0.75rem 1.5rem;
+}
+.page-list .page.selected a{
+    color: white;
+}
+.page-list .page a{
     padding: 0.75rem 1.5rem;
 }
 .page-list .page.last img{
@@ -3375,7 +3387,7 @@ section.find-part .background::after{
 section.find-part .heading{
     color: var(--text-color-2);
 }
-section.find-part .find-part-text h4, section.find-part .find-part-text h6, section.find-part .find-part-text p{
+section.find-part .find-part-text span, section.find-part .find-part-text p{
     color: var(--text-color-2);
 }
 section.find-part h4{
@@ -4663,7 +4675,7 @@ gap: 4px;
     gap: 1.5rem;
 }
 .f-2-1 .f-el{
-    width: calc(50% - 1.5rem);
+    width: calc(50% - 1.5rem / 2);
 }
 
 /* Adaptive styles */
@@ -5737,6 +5749,7 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
 .breadcrumbs-list a {
    transition: 0.3s;
    display: flex;
+   align-items: center;
    gap: 0.25rem;
 }
 .breadcrumbs-list a img{
@@ -5764,8 +5777,11 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
 .product{
     transition: 0.3s;
 }
-.catalog-list-element:hover, .verified-sellers-list .seller:hover, .products-list:not(.rows) .product:hover{
+.catalog-list-element:hover, .verified-sellers-list .seller:hover{
     box-shadow: 0px 1rem 48px 0px rgba(0, 0, 0, 0.17);
+}
+.products-list:not(.rows) .product:hover{
+    box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.1);
 }
 
 .media:hover{
@@ -5873,10 +5889,10 @@ button.search:hover{
     border: 1px solid #23B643;
     background: #22A03D;
 }
-.header button:hover svg path{
-    fill: var(--theme-color);
+.header button:hover i{
+    color: var(--theme-color);
 }
-.header button svg path{
+.header button i{
     transition: 0.3s;
 }
 
