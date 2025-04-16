@@ -602,7 +602,7 @@ if (buttonList != null){
 // ** Tag list **
 
 const tags = document.querySelectorAll(".details .tag-list .tag");
-const cancel = document.querySelector(".details .cancel");
+const cancel = document.querySelectorAll(".details .cancel");
 if (tags.length != 0){
     const deleteTags = (all, removeTag = "") => {
         if (all){
@@ -627,9 +627,13 @@ if (tags.length != 0){
     })
     
     // Cancel button
-    cancel.addEventListener("click", ()=>{
-        deleteTags(true);
-    })
+    if (cancel.length != 0){
+      cancel.forEach(c => {
+        c.addEventListener("click", ()=>{
+          deleteTags(true);
+      })
+      })  
+    }
     
     
     document.addEventListener("DOMContentLoaded", ()=>{
