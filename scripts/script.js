@@ -351,9 +351,12 @@ makeOrder.forEach(o => {
 })
 
 const checkSaved = (input) => {
-    if (input.value == ""){
+  if (input.value == ""){
         input.value = 1;
         checkCounter(input.parentElement.querySelector(".count-less"), true)
+    }
+    else if (input.value == 1){
+      checkCounter(input.parentElement.querySelector(".count-less"), true)
     }
 }
 const checkInputCounter = (input) => {
