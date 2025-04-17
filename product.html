@@ -6,6 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
+        <!-- Bootstrap icons -->
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      />
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css" />
     <!-- JQuery -->
@@ -18,6 +23,217 @@
   </head>
   <body>
     <!-- ** Modals start ** -->
+    <!-- Get price -->
+    <form class="get-price pop-up">
+      <div class="top">
+        <span class="sub-minor-heading">Взнати актуальну ціну</span>
+        <button type="button">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="pop-up-inner">
+        <div class="heading-inputs">
+          <div class="heading-container">
+            <span class="sub-section-heading">Ручка бардачка Chery Amulet, A15-5305430 Лицензия</span>
+            <span class="minor-heading">Ручка бардачка Chery Amulet, A15-5305430 Лицензия</span>
+          </div>
+          <ul class="inputs-list">
+            <li>
+              <!-- Text field -->
+              <div class="mdc-text-field mdc-text-field--outlined">
+                <input
+                  type="text"
+                  id="get-price-name"
+                  class="mdc-text-field__input"
+                  data-error-message="Please enter a valid name"
+                />
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label for="get-price-name" class="mdc-floating-label"
+                      >Ваше ім’я та Прізвище</label
+                    >
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
+                <div id="get-price-name-error" class="error-message"></div>
+              </div>
+            </li>
+            <li>
+              <!-- Text field -->
+              <div class="mdc-text-field mdc-text-field--outlined">
+                <input
+                  type="email"
+                  id="get-price-email"
+                  class="mdc-text-field__input"
+                  data-error-message="Please enter a valid email"
+                />
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label for="get-price-email" class="mdc-floating-label"
+                      >Ваш e-mail</label
+                    >
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
+                <div id="get-price-email-error" class="error-message"></div>
+              </div>
+            </li>
+            <li>
+              <!-- Text field -->
+              <div class="mdc-text-field mdc-text-field--outlined">
+                <input
+                  type="tel"
+                  id="get-price-email"
+                  class="mdc-text-field__input"
+                  data-error-message="Please enter a valid phone"
+                />
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label for="get-price-phone" class="mdc-floating-label"
+                      >Ваш телефон</label
+                    >
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
+                <div id="get-price-phone-error" class="error-message"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="condition">
+          <label for="comment">Коментар</label>
+          <div class="comment-container">
+            <textarea
+              class="main-text"
+              id="comment"
+              rows="4"
+              cols="40"
+              placeholder="Залишити коментар"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="pop-up-options">
+        <button type="reset" class="big-button primary-button">Відміна</button>
+        <button type="submit" class="big-button primary-button">Надіслати</button>
+      </div>
+    </form>
+    <!-- Message seller -->
+    <form class="seller-message pop-up">
+      <div class="top">
+        <span class="sub-minor-heading">Написати повідомлення</span>
+        <button type="button">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="pop-up-inner">
+        <!-- Text field -->
+        <div class="mdc-text-field mdc-text-field--outlined">
+                    <input
+                      type="tel"
+                      id="seller-message-topic"
+                      class="mdc-text-field__input"
+                      data-error-message="Please enter a valid topic"
+                    />
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label for="seller-message-topic" class="mdc-floating-label"
+                          >Тема</label
+                        >
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                    <div id="seller-message-topic-error" class="error-message"></div>
+        </div>
+        <div class="condition">
+          <label for="comment">Відгук</label>
+          <div class="comment-container">
+            <textarea
+              class="main-text"
+              id="comment"
+              rows="4"
+              cols="40"
+              placeholder="Залишити відгук"
+            ></textarea>
+          </div>
+        </div>
+        <ul class="inputs-list">
+          <li>
+            <!-- Text field -->
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="text"
+                id="seller-message-name"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid name"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="seller-message-name" class="mdc-floating-label"
+                    >Ваше ім’я та Прізвище</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="seller-message-name-error" class="error-message"></div>
+            </div>
+          </li>
+          <li>
+            <!-- Text field -->
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="email"
+                id="seller-message-email"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid email"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="seller-message-email" class="mdc-floating-label"
+                    >Ваш e-mail</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="seller-message-email-error" class="error-message"></div>
+            </div>
+          </li>
+          <li>
+            <!-- Text field -->
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="tel"
+                id="seller-message-email"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid phone"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="seller-message-phone" class="mdc-floating-label"
+                    >Ваш телефон</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="seller-message-phone-error" class="error-message"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pop-up-options">
+        <button type="reset" class="big-button primary-button">Відміна</button>
+        <button type="submit" class="big-button primary-button">Надіслати</button>
+      </div>
+    </form>
     <!-- Authorisation form -->
     <form class="header-modal authorisation-form">
       <div class="top">
@@ -2024,39 +2240,65 @@
                   </div>
                   <!-- Options -->
                   <aside class="options">
-                    <button class="primary-button">
+                    <button class="primary-button get-price">
                       <img src="./images/icons/chat.svg" alt="chat icon" />
                       <p class="main-text">Уточнити ціну</p>
                     </button>
-                    <button class="primary-button outline">
-                      <svg
-                        width="25"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g id="Lightning" clip-path="url(#clip0_215_12068)">
-                          <path
-                            id="Vector"
-                            d="M8.78044 0.5385C8.82615 0.382993 8.921 0.246478 9.0508 0.1494C9.1806 0.0523218 9.33835 -9.47797e-05 9.50044 1.28657e-07H15.5004C15.6192 9.02905e-05 15.7363 0.028389 15.842 0.0825666C15.9477 0.136744 16.039 0.215251 16.1084 0.311625C16.1778 0.407999 16.2234 0.519484 16.2413 0.636901C16.2592 0.754318 16.249 0.874311 16.2114 0.987L13.5414 9H19.2504C19.3909 8.9999 19.5285 9.03924 19.6477 9.11355C19.7669 9.18785 19.8628 9.29413 19.9246 9.42028C19.9863 9.54643 20.0114 9.68738 19.997 9.82709C19.9826 9.96679 19.9292 10.0996 19.8429 10.2105L9.34294 23.7105C9.23537 23.8495 9.08243 23.9462 8.91079 23.984C8.73915 24.0217 8.55972 23.9979 8.40381 23.9168C8.24791 23.8357 8.12542 23.7025 8.05773 23.5403C7.99004 23.3782 7.98144 23.1974 8.03344 23.0295L10.7349 14.25H5.75044C5.63384 14.2501 5.51882 14.2229 5.41453 14.1708C5.31025 14.1186 5.21955 14.0429 5.14966 13.9496C5.07977 13.8562 5.0326 13.7479 5.01191 13.6331C4.99121 13.5184 4.99756 13.4004 5.03044 13.2885L8.78044 0.5385ZM10.0614 1.5L6.75244 12.75H11.7504C11.8678 12.75 11.9836 12.7775 12.0883 12.8304C12.1931 12.8832 12.2841 12.9599 12.3538 13.0543C12.4236 13.1487 12.4702 13.2582 12.4899 13.3739C12.5096 13.4896 12.5019 13.6083 12.4674 13.7205L10.6704 19.56L17.7174 10.5H12.5004C12.3817 10.4999 12.2646 10.4716 12.1589 10.4174C12.0532 10.3633 11.9619 10.2847 11.8925 10.1884C11.823 10.092 11.7775 9.98052 11.7596 9.8631C11.7417 9.74568 11.7519 9.62569 11.7894 9.513L14.4594 1.5H10.0614Z"
-                            fill="#DC3545"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_215_12068">
-                            <rect
-                              width="24"
-                              height="24"
-                              fill="white"
-                              transform="translate(0.5)"
+                    <div class="buy-container">
+                      <button class="primary-button outline">
+                        <svg
+                          width="25"
+                          height="24"
+                          viewBox="0 0 25 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="Lightning" clip-path="url(#clip0_215_12068)">
+                            <path
+                              id="Vector"
+                              d="M8.78044 0.5385C8.82615 0.382993 8.921 0.246478 9.0508 0.1494C9.1806 0.0523218 9.33835 -9.47797e-05 9.50044 1.28657e-07H15.5004C15.6192 9.02905e-05 15.7363 0.028389 15.842 0.0825666C15.9477 0.136744 16.039 0.215251 16.1084 0.311625C16.1778 0.407999 16.2234 0.519484 16.2413 0.636901C16.2592 0.754318 16.249 0.874311 16.2114 0.987L13.5414 9H19.2504C19.3909 8.9999 19.5285 9.03924 19.6477 9.11355C19.7669 9.18785 19.8628 9.29413 19.9246 9.42028C19.9863 9.54643 20.0114 9.68738 19.997 9.82709C19.9826 9.96679 19.9292 10.0996 19.8429 10.2105L9.34294 23.7105C9.23537 23.8495 9.08243 23.9462 8.91079 23.984C8.73915 24.0217 8.55972 23.9979 8.40381 23.9168C8.24791 23.8357 8.12542 23.7025 8.05773 23.5403C7.99004 23.3782 7.98144 23.1974 8.03344 23.0295L10.7349 14.25H5.75044C5.63384 14.2501 5.51882 14.2229 5.41453 14.1708C5.31025 14.1186 5.21955 14.0429 5.14966 13.9496C5.07977 13.8562 5.0326 13.7479 5.01191 13.6331C4.99121 13.5184 4.99756 13.4004 5.03044 13.2885L8.78044 0.5385ZM10.0614 1.5L6.75244 12.75H11.7504C11.8678 12.75 11.9836 12.7775 12.0883 12.8304C12.1931 12.8832 12.2841 12.9599 12.3538 13.0543C12.4236 13.1487 12.4702 13.2582 12.4899 13.3739C12.5096 13.4896 12.5019 13.6083 12.4674 13.7205L10.6704 19.56L17.7174 10.5H12.5004C12.3817 10.4999 12.2646 10.4716 12.1589 10.4174C12.0532 10.3633 11.9619 10.2847 11.8925 10.1884C11.823 10.092 11.7775 9.98052 11.7596 9.8631C11.7417 9.74568 11.7519 9.62569 11.7894 9.513L14.4594 1.5H10.0614Z"
+                              fill="#DC3545"
                             />
-                          </clipPath>
-                        </defs>
-                      </svg>
-
-                      <p class="main-text">Купити в один клік</p>
-                    </button>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_215_12068">
+                              <rect
+                                width="24"
+                                height="24"
+                                fill="white"
+                                transform="translate(0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+  
+                        <p class="main-text">Купити в один клік</p>
+                      </button>
+                      <!-- Buy modal -->
+                       <form class="pop-up one-click">
+                          <!-- Text field -->
+                          <div class="mdc-text-field mdc-text-field--outlined">
+              <input
+                type="tel"
+                id="product-seller-phone"
+                class="mdc-text-field__input"
+                data-error-message="Please enter a valid phone number"
+                value="+380"
+              />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="product-seller-phone" class="mdc-floating-label"
+                    >Номер телефону</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+              <div id="product-seller-phone-error" class="error-message"></div>
+                          </div>
+                          <button type="submit" class="primary-button">Купити</button>
+                        </form>
+                    </div>
                   </aside>
                 </div>
               </div>

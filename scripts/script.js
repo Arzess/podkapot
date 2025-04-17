@@ -110,7 +110,11 @@ buyerButton.addEventListener("click", () => {
 // *** Menu ***
 
 const closeAllModals = (keepSidebar = false) => {
-    let allOpenedModals = document.querySelectorAll(".header-modal.shown");
+    const popUps = document.querySelectorAll(".pop-up.shown");
+    const headerModals = document.querySelectorAll(".header-modal.shown")
+    let allOpenedModals = [...popUps, ...headerModals];
+    
+    document.querySelectorAll(".pop-up.shown");
     let allActiveButtons = document.querySelectorAll("button.active");
     allActiveButtons.forEach(b => {
         b.classList.remove("active");
@@ -133,8 +137,10 @@ const closeAllModals = (keepSidebar = false) => {
 
 // Returns true if one or more modals are opened at the same time
 const checkModals = () => {
-    const openedModals = document.querySelectorAll(".header-modal");
-    return Array.from(openedModals).some(modal => modal.classList.contains("shown"));
+  const popUps = document.querySelectorAll(".pop-up");
+  const headerModals = document.querySelectorAll(".header-modal")
+  let openedModals = [...popUps, ...headerModals];
+    return openedModals.some(modal => modal.classList.contains("shown"));
 };
 
 const updateOverlay = (header = false) => {
@@ -600,6 +606,27 @@ if (buttonList != null){
         location.href = "details-rows.html"
     })
     
+}
+// Products
+
+const products = document.querySelectorAll(".product.f-el");
+
+if (products.length != 0){
+  Array.from(products).forEach(p => {
+    let manufacturer = p.querySelector(".manufacturer");
+    manufacturer.addEventListener('mouseover', ()=>{
+        let bottomValue = -manufacturer.clientHeight/2;
+        if (bottomValue < -40){
+          manufacturer.style.bottom = `${bottomValue}px`
+        }
+        else{
+          manufacturer.style.bottom = '-20px'
+        }
+    });
+    manufacturer.addEventListener('mouseout', ()=>{
+      manufacturer.style.bottom = '0px';
+    })
+  })  
 }
 
 // ** Tag list **
@@ -1306,5 +1333,49 @@ if (expandText.length != 0){
       
       b.parentElement.classList.add("expanded");
     })
+  })
+}
+
+// Pop-ups
+const popUps = document.querySelectorAll(".pop-up");
+if (popUps.length != 0){
+  Array.from(popUps).forEach(pop => {
+    const close = pop.querySelector(".top button");
+    if (close){
+      close.addEventListener("click", ()=>{
+        pop.classList.remove("shown")
+        closeAllModals();
+        updateOverlay();
+      })
+    }
+  })
+}
+
+
+// One click purchase button
+
+const oneClick = document.querySelector(".product-section .options .primary-button.outline");
+if (oneClick){
+  oneClick.addEventListener("click", ()=>{
+    document.querySelector(".pop-up.one-click").classList.add("shown");
+    updateOverlay();
+  })
+}
+
+const messageSeller = document.querySelector(".seller-card .primary-button")
+
+if(messageSeller){
+  messageSeller.addEventListener("click", ()=>{
+    document.querySelector(".pop-up.seller-message").classList.add("shown");
+    updateOverlay();
+  })
+}
+
+
+const checkPrice = document.querySelector(".product-section .options .get-price")
+if (checkPrice){
+  checkPrice.addEventListener("click", ()=>{
+    document.querySelector(".pop-up.get-price").classList.add("shown");
+    updateOverlay();
   })
 }
