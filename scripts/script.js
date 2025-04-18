@@ -42,7 +42,7 @@ authorisationCloseButton.addEventListener("click", () => {
 
 const adjustAuthorisationForm = (type) => {
   authorisationForm.classList.remove("seller", "buyer");
-
+  authorisationForm.classList.remove("sign-up", "sign-in");
   if (type === "sign-up") {
     topText.innerHTML = "Реєстрація";
     bottomText.innerHTML = `Уже маєте акаунт? <span><a href="#" class="small-text">Увійти</a></span>`;
@@ -271,12 +271,14 @@ const languageModal = document.querySelectorAll(".header .language-modal");
 
 languageButton.forEach(b => {
     b.addEventListener("click", ()=>{
+      let headerInputList = document.querySelector(".header:has(.search-bar) .header-list");
+      
         if (b.parentElement.querySelector(".header-modal").classList.contains("shown")){
-          b.parentElement.classList.add("active");  
+          headerInputList.classList.remove("language-active");
           closeAllModals(true);
         }
         else{
-            b.parentElement.classList.remove("active");
+          headerInputList.classList.add("language-active");
             closeAllModals(true);
             b.parentElement.querySelector(".header-modal").classList.add("shown");
             
@@ -319,13 +321,16 @@ logOutButton.forEach(b => {
 })
 
 accountButton.forEach(button => {
-    let accountModal = button.parentElement.querySelector(".account-modal")
+    let accountModal = button.parentElement.querySelector(".account-modal");  
+    let headerInputList = document.querySelector(".header:has(.search-bar) .header-list");
     button.addEventListener("click", () => {
         if (accountModal.classList.contains("shown")){
-            closeAllModals(true);
+          headerInputList.classList.remove("account-active");
+          closeAllModals(true);
         }
         else{
-            closeAllModals(true);
+          closeAllModals(true);
+          headerInputList.classList.add("account-active");
             accountModal.classList.add("shown");
             
         }
@@ -496,11 +501,7 @@ window.onload = () => {
 // "To-the-top" button logic
 document.addEventListener("DOMContentLoaded", ()=>{
     document.body.insertAdjacentHTML('beforeend', `<button class="to-the-top hidden">
-      <img
-        src="./images/icons/arrow-right.svg"
-        alt="arrow"
-        style="transform: rotate(-90deg)"
-      />
+      <i class="bi bi-arrow-right" style="transform: rotate(-90deg)"></i>
     </button>`);
     const toTheTop = document.querySelector(".to-the-top");
     toTheTop.addEventListener("click", ()=>{
@@ -615,12 +616,16 @@ if (products.length != 0){
   Array.from(products).forEach(p => {
     let manufacturer = p.querySelector(".manufacturer");
     manufacturer.addEventListener('mouseover', ()=>{
-        let bottomValue = -manufacturer.clientHeight/2;
+        let bottomValue = -manufacturer.clientHeight/2;   
         if (bottomValue < -40){
           manufacturer.style.bottom = `${bottomValue}px`
         }
+        else if(bottomValue == -33){
+          manufacturer.style.bottom = '-15px'
+          
+        }
         else{
-          manufacturer.style.bottom = '-20px'
+          manufacturer.style.bottom = `0`;
         }
     });
     manufacturer.addEventListener('mouseout', ()=>{
@@ -1377,5 +1382,18 @@ if (checkPrice){
   checkPrice.addEventListener("click", ()=>{
     document.querySelector(".pop-up.get-price").classList.add("shown");
     updateOverlay();
+  })
+}
+
+// Catalog list
+
+const catalogListShow = document.querySelectorAll(".auto-catalog.list-section .show-all-button")
+
+if (catalogListShow.length != 0){
+  Array.from(catalogListShow).forEach(cls => {
+    cls.addEventListener("click", ()=>{
+      cls.parentElement.querySelector(".link-list").classList.toggle("shown");
+      cls.classList.toggle("opened");
+    })
   })
 }
