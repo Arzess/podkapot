@@ -6,6 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css" />
     <!-- JQuery -->
@@ -1563,13 +1568,11 @@
     <!-- Main -->
     <main class="main has-breadcrumbs">
       <!-- Breadcrumbs -->
-      <nav class="breadcrumbs">
+      <nav class="breadcrumbs green-breadcrumbs">
         <div class="container">
           <ul class="breadcrumbs-list">
             <li class="breadcrumb home">
-              <a href="#"
-                ><img src="./images/icons/house-icon.svg" alt="" /> Home</a
-              >
+              <a href="#"><i class="bi bi-house-door"></i> Home</a>
             </li>
             <li class="breadcrumb"><a href="#">Item 1</a></li>
             <li class="breadcrumb"><a href="#">Item 2</a></li>
@@ -1672,25 +1675,14 @@
               <!-- Show all -->
               <a href="#" class="show-all-button">
                 Дивитись все
-                <svg
-                  width="21"
-                  height="16"
-                  viewBox="0 0 21 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0V9Z"
-                    fill="#151515"
-                  />
-                </svg>
+                <i class="bi bi-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
       </section>
       <!-- Details -->
-      <section class="details">
+      <section class="details rows">
         <div class="container">
           <span class="section-heading">Деталі двигуна</span>
           <div class="result">
@@ -1698,32 +1690,20 @@
             <ul class="details-options-list">
               <li class="option">
                 <button class="primary-button filter-button">
-                  <img src="./images/icons/filter.svg" alt="filter icon" />
+                  <i class="bi bi-filter"></i>
                 </button>
                 <p class="small-button">Сортування:</p>
-                <div class="dropdown">
-                  <div class="selected-option">
-                    <p class="main-text">За популярністю</p>
-                    <p class="mobile placeholder main-text">Сортувати по</p>
-                    <img
-                      src="./images/icons/dropdown-icon.svg"
-                      alt="arrow down"
-                    />
-                  </div>
-                  <ul class="options-list">
-                    <li class="option">
-                      <p class="main-text">За популярністю</p>
-                    </li>
-                    <li class="option">
-                      <p class="main-text">Від дешевих до дорогих</p>
-                    </li>
-                    <li class="option">
-                      <p class="main-text">Від дорогих до дешевих</p>
-                    </li>
-                    <li class="option">
-                      <p class="main-text">За назвою</p>
-                    </li>
-                  </ul>
+                <div class="select-container">
+                  <!-- Placeholder -->
+                  <select
+                    class="selectize-select"
+                    data-placeholder="-Всі марки-"
+                  >
+                    <option value="option1">За популярністю</option>
+                    <option value="option2">Від дешевих до дорогих</option>
+                    <option value="option3">Від дорогих до дешевих</option>
+                    <option value="option4">За назвою</option>
+                  </select>
                 </div>
               </li>
               <li class="option">
@@ -1734,12 +1714,9 @@
                       <img src="./images/icons/rows.svg" alt="rows icon" />
                     </button>
                   </li>
-                  <li class="">
+                  <li>
                     <button value="grid">
-                      <img
-                        src="./images/icons/grid3x3.svg"
-                        alt="grid 3 by 3 icon"
-                      />
+                      <i class="bi bi-grid-3x3-gap"></i>
                     </button>
                   </li>
                 </ul>
@@ -1748,14 +1725,14 @@
           </div>
           <ul class="tag-list">
             <li class="tag">
-              <img src="./images/icons/tag.svg" alt="tag icon" />
+              <i class="bi bi-tag"></i>
               <p class="small-text">Alfa romeo</p>
               <button class="close">
                 <img src="./images/icons/gray-cross.svg" alt="cross icon" />
               </button>
             </li>
             <li class="tag">
-              <img src="./images/icons/tag.svg" alt="tag icon" />
+              <i class="bi bi-tag"></i>
               <p class="small-text">3 Series E92</p>
               <button class="close">
                 <img src="./images/icons/gray-cross.svg" alt="cross icon" />
@@ -1767,7 +1744,7 @@
             </li>
           </ul>
           <!-- Filter and offers -->
-          <div class="filter-and-offers rows">
+          <div class="filter-and-offers">
             <form class="filter" action="">
               <header class="filter-top mobile">
                 <button class="cancel" type="reset">
@@ -1845,10 +1822,7 @@
                   </ul>
                   <button class="show-all-button no-outline" type="button">
                     <p class="main-text">Відкрити все</p>
-                    <img
-                      src="./images/icons/chevron-down-blue.svg"
-                      alt="chevron down bluse"
-                    />
+                    <i class="bi bi-chevron-down"></i>
                   </button>
                 </section>
               </section>
@@ -1984,41 +1958,35 @@
               <!-- Inner page list -->
               <ul class="page-list inner">
                 <li class="page">
-                  <button>
-                    <img
-                      src="./images/icons/chevron-left-small.svg"
-                      alt="small chevron to the left"
-                    />
+                  <button type="button" disabled>
+                    <i class="bi bi-chevron-left"></i>
                   </button>
                 </li>
                 <li class="page first-page">
-                  <button>1</button>
+                  <a href="#">1</a>
                 </li>
-                <li class="page">
-                  <button>...</button>
+                <li class="page" type="button">
+                  <a href="#">...</a>
                 </li>
-                <li class="page">
-                  <button>1</button>
+                <li class="page" type="button">
+                  <a href="#">1</a>
                 </li>
-                <li class="page selected">
-                  <button>1</button>
+                <li class="page selected" type="button">
+                  <a href="#">1</a>
                 </li>
-                <li class="page">
-                  <button>1</button>
+                <li class="page" type="button">
+                  <a href="#">1</a>
                 </li>
-                <li class="page">
-                  <button>...</button>
+                <li class="page" type="button">
+                  <a href="#">...</a>
                 </li>
-                <li class="page last-page">
-                  <button>1</button>
+                <li class="page last-page" type="button">
+                  <a href="#">1</a>
                 </li>
-                <li class="page last">
-                  <button>
-                    <img
-                      src="./images/icons/chevron-left-small.svg"
-                      alt="small chevron to the left"
-                    />
-                  </button>
+                <li class="page last" type="button">
+                  <a href="#">
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -2027,10 +1995,7 @@
           <ul class="page-list outer">
             <li class="page control-page">
               <button>
-                <img
-                  src="./images/icons/chevron-left-small.svg"
-                  alt="small chevron to the left"
-                />
+                <i class="bi bi-chevron-left"></i>
               </button>
             </li>
             <li class="page first-page">
@@ -2062,10 +2027,7 @@
             </li>
             <li class="page last control-page">
               <button>
-                <img
-                  src="./images/icons/chevron-left-small.svg"
-                  alt="small chevron to the left"
-                />
+                <i class="bi bi-chevron-right"></i>
               </button>
             </li>
           </ul>
@@ -2234,19 +2196,7 @@
             <!-- Show all -->
             <button class="show-all-button small-button">
               Більше компаній
-              <svg
-                width="21"
-                height="16"
-                viewBox="0 0 21 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                style="transform: rotate(90deg)"
-              >
-                <path
-                  d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0V9Z"
-                  fill="#151515"
-                />
-              </svg>
+              <i class="bi bi-arrow-down"></i>
             </button>
           </div>
         </div>
@@ -2772,57 +2722,19 @@
                     <span class="minor-heading">5.0</span>
                     <ul class="rating-list">
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
                       </li>
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
                       </li>
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
                       </li>
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
                       </li>
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
-                      </li>
-                    </ul>
-                  </div>
-                  <p class="review-text main-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="review f-el">
-              <a class="seller-desc" href="#">
-                <img src="./images/tesla-company.png" alt="tesla company" />
-                <span class="minor-heading">Tesla Company</span>
-              </a>
-              <div class="inner">
-                <div class="author">
-                  <span class="author-name sub-section-heading">Olha K.</span>
-                  <p class="small-text">23.05.2024</p>
-                </div>
-                <div class="rating">
-                  <div>
-                    <span class="minor-heading">5.0</span>
-                    <ul class="rating-list">
-                      <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
-                      </li>
-                      <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
-                      </li>
-                      <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
-                      </li>
-                      <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
-                      </li>
-                      <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
                       </li>
                     </ul>
                   </div>
@@ -2848,19 +2760,57 @@
                     <span class="minor-heading">5.0</span>
                     <ul class="rating-list">
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
                       </li>
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
                       </li>
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
                       </li>
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
                       </li>
                       <li>
-                        <img src="./images/icons/star.svg" alt="star icon" />
+                        <i class="bi bi-star-fill"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="review-text main-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="review f-el">
+              <a class="seller-desc" href="#">
+                <img src="./images/tesla-company.png" alt="tesla company" />
+                <span class="minor-heading">Tesla Company</span>
+              </a>
+              <div class="inner">
+                <div class="author">
+                  <span class="author-name sub-section-heading">Olha K.</span>
+                  <p class="small-text">23.05.2024</p>
+                </div>
+                <div class="rating">
+                  <div>
+                    <span class="minor-heading">5.0</span>
+                    <ul class="rating-list">
+                      <li>
+                        <i class="bi bi-star-fill"></i>
+                      </li>
+                      <li>
+                        <i class="bi bi-star-fill"></i>
+                      </li>
+                      <li>
+                        <i class="bi bi-star-fill"></i>
+                      </li>
+                      <li>
+                        <i class="bi bi-star-fill"></i>
+                      </li>
+                      <li>
+                        <i class="bi bi-star-fill"></i>
                       </li>
                     </ul>
                   </div>
@@ -2874,21 +2824,9 @@
           </ul>
           <div class="list-section-additional-features">
             <div class="slider-show">
-              <!-- Show all -->
               <a href="#" class="show-all-button"
                 >Дивитись все
-                <svg
-                  width="21"
-                  height="16"
-                  viewBox="0 0 21 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0V9Z"
-                    fill="#151515"
-                  />
-                </svg>
+                <i class="bi bi-arrow-right"></i>
               </a>
             </div>
           </div>
