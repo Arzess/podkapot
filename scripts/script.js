@@ -501,7 +501,7 @@ window.onload = () => {
 // "To-the-top" button logic
 document.addEventListener("DOMContentLoaded", ()=>{
     document.body.insertAdjacentHTML('beforeend', `<button class="to-the-top hidden">
-      <i class="bi bi-arrow-right" style="transform: rotate(-90deg)"></i>
+      <i class="bi bi-arrow-up"></i>
     </button>`);
     const toTheTop = document.querySelector(".to-the-top");
     toTheTop.addEventListener("click", ()=>{
