@@ -58,6 +58,7 @@ body{
     font-family: Inter, sans-serif;
     max-width: 1800px;
     margin: 0 auto;
+    background-color: #FAFAFA;
 }
 body.steady{
     overflow: hidden;
@@ -480,12 +481,15 @@ input.wrong~p{
 .breadcrumbs.green-breadcrumbs i{
     color: var(--theme-color);
 }
-
+.breadcrumbs a:hover{
+    text-decoration: none;
+}
 .breadcrumbs.green-breadcrumbs .breadcrumb::after{
     color: var(--theme-color);
 }
 .breadcrumbs-list a{
-    color: var(--accent-color);
+    color: var(--theme-color);
+    text-decoration: underline;
 }
 .breadcrumbs-list .breadcrumb::after{
     content: "/";
@@ -3267,6 +3271,9 @@ input[type="checkbox"] {
 }
 .products-review{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 /* Page list */
 .page-list{
@@ -3370,6 +3377,7 @@ input[type="checkbox"] {
 /* Layout */
 .auto-catalog .auto-catalog-list .auto-desc{
     flex-direction: row;
+    align-items: center;
 }
 .auto-catalog-list{
     display: flex;
@@ -4926,7 +4934,7 @@ gap: 4px;
 }
 .buy-container .pop-up{
     max-width: 307px;
-    left: 150%;
+    left: calc(100% + 300px);
     position: absolute;
 }
 .pop-up .heading-container{
@@ -5174,7 +5182,7 @@ gap: 4px;
         min-width: unset;
         width: 100%;
     }
-    .gallery-main-image .controls button {
+    .gallery-main-image .controls button, .hero .controls button {
         width: 30px;
         height: 30px;
     }
