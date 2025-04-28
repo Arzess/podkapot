@@ -447,11 +447,19 @@ let opened = false;
 document.addEventListener("click", (e) => {
     const openedModals = document.querySelectorAll(".header-modal.shown");
     const clickedInsideModal = Array.from(openedModals).some(modal => modal.contains(e.target));
-    if (!clickedInsideModal && !e.target.closest("button")) {
-        closeAllModals();
-        document.body.classList.remove("steady");
-        resetChangingIcons();
+    const clickedInsideSidebar = document.querySelector(".sidebar-menu").contains(e.target);
+
+    if (clickedInsideSidebar && e.target.nodeName != "I"){
+      if (Array.from(document.querySelectorAll(".sidebar-modal.shown")).length > 0){
+        closeAllModals(true)
+      }
+      return;
     }
+    if (!clickedInsideModal && !e.target.closest("button")) {
+      closeAllModals();
+      document.body.classList.remove("steady");
+      resetChangingIcons();
+  }
     // Dropdown check
     const openedDropdowns = document.querySelectorAll(".dropdown.opened");
     const clickedInsideDropdown = Array.from(openedDropdowns).some(drop => drop.contains(e.target));
@@ -617,11 +625,11 @@ if (products.length != 0){
     let manufacturer = p.querySelector(".manufacturer");
     manufacturer.addEventListener('mouseover', ()=>{
         let bottomValue = -manufacturer.clientHeight/2;   
-        if (bottomValue < -40){
+        if (bottomValue < -35){
           manufacturer.style.bottom = `${bottomValue}px`
         }
         else if(bottomValue == -33){
-          manufacturer.style.bottom = '-15px'
+          manufacturer.style.bottom = '-1.25rem'
           
         }
         else{
@@ -1089,6 +1097,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           0: {
             slidesPerView: 2,
+            spaceBetween: 16,
             grid: {
               rows: 2,
             },

@@ -1060,7 +1060,7 @@
                 <i class="bi bi-globe"></i>
               </button>
               <!-- Language -->
-              <div class="header-modal language-modal">
+              <div class="header-modal language-modal sidebar-modal">
                 <ul class="language-list">
                   <li class="selected">
                     <p class="minor-heading">UA</p>
@@ -1075,7 +1075,7 @@
               <button class="account">
                 <i class="bi bi-person-circle"></i>
               </button>
-              <div class="header-modal account-modal">
+              <div class="header-modal account-modal sidebar-modal">
                 <!-- Signed in -->
                 <ul class="account-list logged-in">
                   <li class="account-details">
@@ -1728,14 +1728,14 @@
               <i class="bi bi-tag"></i>
               <p class="small-text">Alfa romeo</p>
               <button class="close">
-                <img src="./images/icons/gray-cross.svg" alt="cross icon" />
+                <i class="bi bi-x-lg"></i>
               </button>
             </li>
             <li class="tag">
               <i class="bi bi-tag"></i>
               <p class="small-text">3 Series E92</p>
               <button class="close">
-                <img src="./images/icons/gray-cross.svg" alt="cross icon" />
+                <i class="bi bi-x-lg"></i>
               </button>
             </li>
             <!-- Cancel -->
@@ -1776,7 +1776,7 @@
                         id="alfa-romeo"
                       />
                       <label for="alfa-romeo" class="small-text"
-                        >Alfa romeo (734)</label
+                        ><span class="hover-text">Alfa romeo</span> (734)</label
                       >
                     </li>
                     <li>
@@ -1786,7 +1786,7 @@
                         id="alfa-romeo-1"
                       />
                       <label for="alfa-romeo-1" class="small-text"
-                        >Alfa romeo (734)</label
+                        ><span class="hover-text">Alfa romeo</span> (734)</label
                       >
                     </li>
                     <li>
@@ -1796,7 +1796,7 @@
                         id="alfa-romeo-2"
                       />
                       <label for="alfa-romeo-2" class="small-text"
-                        >Alfa romeo (734)</label
+                        ><span class="hover-text">Alfa romeo</span> (734)</label
                       >
                     </li>
                     <li>
@@ -1806,7 +1806,7 @@
                         id="alfa-romeo-3"
                       />
                       <label for="alfa-romeo-3" class="small-text"
-                        >Alfa romeo (734)</label
+                        ><span class="hover-text">Alfa romeo</span> (734)</label
                       >
                     </li>
                     <li>
@@ -1816,7 +1816,7 @@
                         id="alfa-romeo-4"
                       />
                       <label for="alfa-romeo-4" class="small-text"
-                        >Alfa romeo (734)</label
+                        ><span class="hover-text">Alfa romeo</span> (734)</label
                       >
                     </li>
                   </ul>
@@ -2795,36 +2795,36 @@
               </ul>
               <!-- Inner page list -->
               <ul class="page-list inner">
-                <li class="page">
-                  <button type="button" disabled>
+                <li class="page control-page">
+                  <button disabled>
                     <i class="bi bi-chevron-left"></i>
                   </button>
                 </li>
                 <li class="page first-page">
-                  <a href="#">1</a>
+                  <button>1</button>
                 </li>
-                <li class="page" type="button">
-                  <a href="#">...</a>
+                <li class="page ellipsis">
+                  <button>...</button>
                 </li>
-                <li class="page" type="button">
-                  <a href="#">1</a>
+                <li class="page">
+                  <button>1</button>
                 </li>
-                <li class="page selected" type="button">
-                  <a href="#">1</a>
+                <li class="page selected">
+                  <p>1</p>
                 </li>
-                <li class="page" type="button">
-                  <a href="#">1</a>
+                <li class="page">
+                  <button>1</button>
                 </li>
-                <li class="page" type="button">
-                  <a href="#">...</a>
+                <li class="page ellipsis">
+                  <button>...</button>
                 </li>
-                <li class="page last-page" type="button">
-                  <a href="#">1</a>
+                <li class="page last-page">
+                  <button>1</button>
                 </li>
-                <li class="page last" type="button">
-                  <a href="#">
+                <li class="page last control-page">
+                  <button>
                     <i class="bi bi-chevron-right"></i>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -2832,7 +2832,7 @@
           <!-- Outer page list -->
           <ul class="page-list outer">
             <li class="page control-page">
-              <button>
+              <button disabled>
                 <i class="bi bi-chevron-left"></i>
               </button>
             </li>
@@ -2845,14 +2845,8 @@
             <li class="page">
               <button>1</button>
             </li>
-            <li class="page">
-              <button>1</button>
-            </li>
-            <li class="page">
-              <button>1</button>
-            </li>
             <li class="page selected">
-              <button>1</button>
+              <p>1</p>
             </li>
             <li class="page">
               <button>1</button>
@@ -3462,7 +3456,7 @@
           <span class="section-heading">Статі та новини</span>
           <ul class="news-list f-4-2-1">
             <li class="news-piece f-el">
-              <div class="news-heading-background">
+              <a class="news-heading-background" href="#">
                 <img
                   src="./images/news-background.jpg"
                   class="news-background"
@@ -3474,14 +3468,14 @@
                   </span>
                   <p class="small-text">20.09.2024</p>
                 </div>
-              </div>
-              <div class="publisher">
+              </a>
+              <a class="publisher" href="seller.html">
                 <img src="./images/avtrans.png" alt="ducato" />
                 <p class="small-text">Інтернет-магазин Ducato.in.ua</p>
-              </div>
+              </a>
             </li>
             <li class="news-piece f-el">
-              <div class="news-heading-background">
+              <a class="news-heading-background" href="#">
                 <img
                   src="./images/news-background.jpg"
                   class="news-background"
@@ -3493,14 +3487,14 @@
                   </span>
                   <p class="small-text">20.09.2024</p>
                 </div>
-              </div>
-              <div class="publisher">
+              </a>
+              <a class="publisher" href="seller.html">
                 <img src="./images/avtrans.png" alt="ducato" />
                 <p class="small-text">Інтернет-магазин Ducato.in.ua</p>
-              </div>
+              </a>
             </li>
             <li class="news-piece f-el">
-              <div class="news-heading-background">
+              <a class="news-heading-background" href="#">
                 <img
                   src="./images/news-background.jpg"
                   class="news-background"
@@ -3512,14 +3506,14 @@
                   </span>
                   <p class="small-text">20.09.2024</p>
                 </div>
-              </div>
-              <div class="publisher">
+              </a>
+              <a class="publisher" href="seller.html">
                 <img src="./images/avtrans.png" alt="ducato" />
                 <p class="small-text">Інтернет-магазин Ducato.in.ua</p>
-              </div>
+              </a>
             </li>
             <li class="news-piece f-el">
-              <div class="news-heading-background">
+              <a class="news-heading-background" href="#">
                 <img
                   src="./images/news-background.jpg"
                   class="news-background"
@@ -3531,11 +3525,11 @@
                   </span>
                   <p class="small-text">20.09.2024</p>
                 </div>
-              </div>
-              <div class="publisher">
+              </a>
+              <a class="publisher" href="seller.html">
                 <img src="./images/avtrans.png" alt="ducato" />
                 <p class="small-text">Інтернет-магазин Ducato.in.ua</p>
-              </div>
+              </a>
             </li>
           </ul>
         </div>
