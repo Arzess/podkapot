@@ -2362,6 +2362,7 @@ flex-shrink: 0;
 .hero .gallery-unit{
     padding: 5rem;
     width: 100%;
+    min-width: calc(100% / 2);
     overflow: hidden;
     display: flex;
     /* border-radius: 1rem; */
@@ -4981,7 +4982,7 @@ gap: 4px;
 }
 .f-4-2-1 .f-el{
    /* width: calc(25% - 1.5rem); */
-   
+   max-width: calc(25% - 1.5rem);
    width: calc(25% - 1.13rem);
 }
 .f-3-2-1 .f-el{
@@ -6443,8 +6444,28 @@ footer .footer-info-list a:hover p{
 
 /* Additional styles apart from the main pages */
 .swiper-container{
+    height: 100%; 
+    max-height: 100vw;
+    min-height: 0;
+    min-width: 0;
+    max-width: 100vw; 
     width: 100%;
-}
+  }
+   
+  .swiper-slide{
+    width: auto;
+    flex-shrink: 0;
+    display: block;
+    height: 100%;
+    max-height: 100%;
+  }
+  
+  .swiper-wrapper{
+    max-height: 100%;
+    height: 100%t;
+    display: flex;
+  }
+  
 .swiper-wrapper{
     gap: 1.5rem 0 !important;
 }
