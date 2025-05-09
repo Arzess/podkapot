@@ -1083,16 +1083,32 @@ form .dropdown .selected-option{
 .catalog-modal .category-inside-list{
     display: flex;
     overflow: auto;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     position: relative;
+    height: 100%;
     width: 100%;
     gap: 0.75rem 40px;
 }
 .catalog-modal .category-inside-list li{
-    max-width: 50%;
-    width: 50%;
+    max-width: calc(50% - 40px);
+    width: calc(50% - 40px);
+    height: 45px;
+    display: flex;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
 }
+.catalog-modal .categories-inside-list li a{
+    width: 100%;
+    text-overflow: ellipsis;
+}
+.catalog-modal .categories-inside-list li
 .catalog-modal .category-inside-list li a {
     transition: 0.3s;
 }
