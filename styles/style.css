@@ -3732,7 +3732,8 @@ section.search img{
     width: 25%;
 } */
 .news-piece{
-    /* width: 300px; */
+    width: calc(100% / 4) !important;
+    max-width: unset !important;
     cursor: pointer;
     flex-grow: 1;
     overflow: hidden;
@@ -5247,6 +5248,32 @@ gap: 4px;
     .f-2-1.condition-list .f-el{
         width: 100%; 
      }
+    /* News pieces */
+    .news-heading{
+        padding: 0.5rem;
+    }
+    .news-heading .sub-minor-heading{
+        font-size: 0.75rem;
+    }
+    .news-heading .small-text{
+        font-size: 0.5rem
+    }
+    .news .publisher{
+        align-items: center;
+    }
+    .news .publisher .small-text{
+        font-size: 0.5rem;
+        line-height: 1;
+    }
+    /* Media */
+    .media-gallery-list .media{
+        max-width: unset;
+        width: calc((100% / 2) - 1.5rem);
+    }
+    /* Product */
+    .products-list .product{
+        max-width: unset;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -5266,6 +5293,13 @@ gap: 4px;
     /* Details */
     .details .product {
         width: 100%;
+    }
+    .news .news-piece{
+        width: calc(100% / 2) !important;
+    }
+    /* Catalog */
+    .catalog-list-element .catalog-element-image {
+        padding: 1rem 3rem;
     }
 
 }
@@ -5566,6 +5600,7 @@ gap: 4px;
     }
     .header .header-list{
         gap: 0.75rem;
+        max-width: 8rem;
     }
     /* Hero */
     .hero .container{
@@ -6461,7 +6496,7 @@ footer .footer-info-list a:hover p{
 /* Additional styles apart from the main pages */
 .swiper-container{
     height: 100%; 
-    max-height: 100vw;
+    /* max-height: 100vw; */
     min-height: 0;
     min-width: 0;
     max-width: 100vw; 
@@ -6478,7 +6513,7 @@ footer .footer-info-list a:hover p{
   
   .swiper-wrapper{
     max-height: 100%;
-    height: 100%t;
+    height: 100%;
     display: flex;
   }
   

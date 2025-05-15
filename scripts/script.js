@@ -624,7 +624,7 @@ if (products.length != 0){
   Array.from(products).forEach(p => {
     let manufacturer = p.querySelector(".manufacturer");
     manufacturer.addEventListener('mouseover', ()=>{
-        let bottomValue = -manufacturer.clientHeight/2;   
+        let bottomValue = -manufacturer.clientHeight/2 - 8;   
         if (bottomValue < -35){
           manufacturer.style.bottom = `${bottomValue}px`
         }
