@@ -1539,9 +1539,6 @@ i{
     flex-direction: row;
     gap: 41.75px;
 }
-.logo{
-    cursor: pointer;
-}
 .header .menu-logo{
     display: flex;
     flex-direction: row;
@@ -3164,6 +3161,9 @@ input[type="checkbox"] {
 }
 .product .manufacturer .chevron-down{
     display: none;
+}
+.product .manufacturer{
+    box-shadow: 0 12px 1rem rgba(0, 0, 0, 0.05);
 }
 .details .filter-and-offers.rows .offers{
     width: calc(100vw - 7.5rem - 384px - 1.5em);
@@ -6187,7 +6187,7 @@ a.show-all-button:disabled, button.show-all-button.small-button:disabled, .afu-d
     transition: 0.3s;
 }
 .product{
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 .catalog-list-element:hover, .verified-sellers-list .seller:hover{
     box-shadow: 0px 1rem 48px 0px rgba(0, 0, 0, 0.17);

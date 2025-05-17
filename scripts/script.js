@@ -624,13 +624,15 @@ if (products.length != 0){
   Array.from(products).forEach(p => {
     let manufacturer = p.querySelector(".manufacturer");
     manufacturer.addEventListener('mouseover', ()=>{
-        let bottomValue = -manufacturer.clientHeight/2 - 8;   
-        if (bottomValue < -35){
-          manufacturer.style.bottom = `${bottomValue}px`
+        let bottomValue = -manufacturer.clientHeight/2;      
+        if (bottomValue < -35 && bottomValue > -49){
+          manufacturer.style.bottom = `${bottomValue}px`;
+        }
+        else if (bottomValue < -50){
+          manufacturer.style.bottom = `${bottomValue - 8}px`;
         }
         else if(bottomValue == -33){
-          manufacturer.style.bottom = '-1.25rem'
-          
+          manufacturer.style.bottom = '-1.25rem';
         }
         else{
           manufacturer.style.bottom = `0`;
